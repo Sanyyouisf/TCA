@@ -30,52 +30,52 @@
 			"parentId":"parent01",
 			"childName":"Sandra Yousif",
 			"age":"6",
-			"pic":""
+			"pic":"avatar01"
 		},
 		"child02":{
 			"parentId":"parent01",
 			"childName":"Celine Yousif",
 			"age":"5",
-			"pic":""
+			"pic":"avatar02"
 		},
 		"child03":{
 			"parentId":"parent02",
 			"childName":"Mick Mena",
 			"age":"7",
-			"pic":""
+			"pic":"avatar03"
 		},
 		"child04":{
 			"parentId":"parent02",
 			"childName":"Noi Mena",
 			"age":"9",
-			"pic":""
+			"pic":"avatar04"
 		},
 		"child05":{
 			"parentId":"parent03",
 			"childName":"solimen jack",
 			"age":"5",
-			"pic":""
+			"pic":"avatar05"
 		},
 		"child06":{
 			"parentId":"parent03",
 			"childName":"Andreia jack",
 			"age":"6",
-			"pic":""
+			"pic":"avatar06"
 		},
 		"child07":{
 			"parentId":"parent04",
 			"childName":"lauren Stewart",
 			"age":"8",
-			"pic":""
+			"pic":"avatar07"
 		},
 		"child08":{
 			"parentId":"parent04",
 			"childName":"maria Stewart",
 			"age":"6",
-			"pic":""
+			"pic":"avatar08"
 		}
 	},
-	"activity":{
+	"activities":{
 		"activity01":{
 			"title":"reading",
 			"fileName":"The_Birth_of_Jesus",

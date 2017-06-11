@@ -1,0 +1,48 @@
+app.run(function(FIREBASE_CONFIG) {
+    firebase.initializeApp(FIREBASE_CONFIG);
+});
+
+app.config(function($routeProvider){
+	$routeProvider
+	.when('/auth',{
+		templateUrl:"partials/home.html",
+		controller:"auth-Ctrl"
+	})
+	.when('/parentChildLogin',{
+		templateUrl:"partials/parentChildLogin.html",
+		controller:"parentChildLogin-Ctrl"
+	})
+	.when('/parentProfile',{
+		templateUrl:"partials/parentProfile.html",
+		controller:"parentProfile-Ctr"
+	})
+	.when('/newChild',{
+		templateUrl:"partials/newChild.html",
+		controller:"newChild-Ctrl"
+	})
+	.when( '/childList',{
+		templateUrl:"partials/childList.html",
+		controller:"ChildList-Ctrl"
+	})
+	.when('/activityList',{
+		templateUrl:"partials/activityList.html",
+		controller:"activityList-Ctrl"
+	})
+	.when('/viewSingleChild',{
+		templateUrl:"partials/viewSingleChild.html",
+		controller:"viewSingleChild-Ctrl"
+	})
+	.when('/childLogin',{
+		templateUrl:"partials/childLogin.html",
+		controller:"child-Ctrl"
+	})
+	.when('/childProfile',{
+		templateUrl:"partials/childProfile.html",
+		controller:"childActivity-Ctrl"
+	})
+	.when('/singleChildActivity',{
+		templateUrl:"partials/singleChildActivity.html",
+		controller:"singleChildActivity-Ctrl"
+	})
+	.otherwise('/auth');
+});
