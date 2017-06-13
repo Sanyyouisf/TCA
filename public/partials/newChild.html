@@ -1,1 +1,35 @@
-<h1>inside new child.html</h1>
+<div class="aligner">
+    <h1 class="username">{{user.username}}</h1>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a ng-href="#!/logout">Logout</a></li>
+            <li><a ng-href="#!/parentProfile">activities</a></li>
+            <li class="dropdown">
+                <a href="#!/parentProfile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">child <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#!/newChild">Add Child</a></li>
+                    <li><a href="#!/childList">Child List</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="input-group col-xs-6 col-xs-offset-3">
+    <span class="input-group-addon" id="sizing-addon1"></span>
+    <input type="text" class="form-control" placeholder="Childname" ng-model="newChild.childName">
+</div>
+<div class="input-group col-xs-6 col-xs-offset-3">
+    <span class="input-group-addon " id="sizing-addon1"></span>
+    <input type="text" class="form-control" placeholder="Age" ng-model="newChild.age">
+</div>
+<div class="input-group col-xs-6 col-xs-offset-3">
+    <span class="input-group-addon" id="sizing-addon1"></span>
+    <input type="text" class="form-control" placeholder="Picture" ng-model="newChild.pic">
+</div>
+<div class="btn-group col-xs-4 col-xs-offset-5">
+    <button type="button" class="btn btn-default"  ng-click="addNewChild()">
+        Add New Child
+    </button>
+</div>
