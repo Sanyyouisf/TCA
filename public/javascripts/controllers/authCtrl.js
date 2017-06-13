@@ -16,7 +16,7 @@ app.controller("authCtrl", function($scope,AuthFactory,UserFactory,$location,$ro
 		.then((user)=>{
     		// console.log("user",user);
     		$rootScope.user = user ;
-      		console.log("$rootScope.user in logMeIn :",$rootScope.user);
+      		// console.log("$rootScope.user in logMeIn :",$rootScope.user);
     		$location.url('/parentChildLogin');
 		})
 		.catch((error)=>{
