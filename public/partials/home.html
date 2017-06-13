@@ -1,1 +1,21 @@
-<h1>inside home</h1>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a ng-href="#!/auth" ng-click="loginUser()">Login</a></li>
+            <li><a ng-href="#!/auth" ng-click="registerUser()">Register</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="input-group col-xs-6 col-xs-offset-3">
+  <span class="input-group-addon" id="sizing-addon1"></span>
+  <input type="email" class="form-control" placeholder="Email" ng-model="auth.email">
+</div>
+
+<div class="input-group col-xs-6 col-xs-offset-3">
+  <span class="input-group-addon " id="sizing-addon1"></span>
+  <input type="password" class="form-control" placeholder="Password" ng-model="auth.password">
+</div>
+<div class="input-group col-xs-6 col-xs-offset-3">
+  <span class="input-group-addon" id="sizing-addon1"></span>
+  <input type="text" class="form-control" placeholder="Username" ng-model="auth.username">
+</div>
