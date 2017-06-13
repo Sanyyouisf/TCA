@@ -1,9 +1,5 @@
 app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
-	// console.log(" inside Auth-Factory");
 
-	// let isAuthenticated =()=>{
-	// 	return firebase.auth().currentUser;
-	// };
 
 	let registerWithEmail =(user)=>{
 		return $q((resolve,reject)=>{
@@ -18,6 +14,7 @@ app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
 			});
 		});
 	};
+
 
 	let authenticate =(credentials)=>{
 		return $q ((resolve,reject)=>{
@@ -34,5 +31,10 @@ app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 
-	return{registerWithEmail:registerWithEmail ,authenticate:authenticate};
+	let logout =() => {
+		firebase.auth().signOut();
+	};
+
+
+	return{registerWithEmail:registerWithEmail ,authenticate:authenticate ,logout:logout};
 });
