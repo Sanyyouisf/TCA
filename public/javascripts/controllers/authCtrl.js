@@ -1,7 +1,7 @@
 app.controller("authCtrl", function($scope,AuthFactory,UserFactory,$location,$rootScope){
 	
 	$scope.auth = {
-    	email:"s@s.com",
+    	email:"k@k.com",
     	password:"111111"
     };
 
@@ -14,9 +14,9 @@ app.controller("authCtrl", function($scope,AuthFactory,UserFactory,$location,$ro
 			console.log("error in authenticate:",error);
 		})
 		.then((user)=>{
-    		// console.log("user",user);
+    		console.log("user",user);
     		$rootScope.user = user ;
-      		// console.log("$rootScope.user in logMeIn :",$rootScope.user);
+      		console.log("$rootScope.user in logMeIn :",$rootScope.user);
     		$location.url('/parentChildLogin');
 		})
 		.catch((error)=>{

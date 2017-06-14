@@ -1,0 +1,23 @@
+body {
+	.avatarPic {
+		width: 100px;
+		height:100px;
+	}
+
+	.childProfilePic {
+		width: 100px;
+		height:100px;
+	}
+
+	.container {
+		display: inline-flex;
+		flex-wrap: nowrap;
+		justify-content: flex-start
+	}
+
+	.activityPic {
+		width: 100px;
+		height:100px;
+	}
+	
+}

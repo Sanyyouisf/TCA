@@ -1,5 +1,7 @@
-app.controller("newChildCtrl", function($location,$scope,$rootScope,ChildFactory){
-	console.log(" inside newChild-Ctrl");
+app.controller("newChildCtrl", function($location,$scope,$routeParams,$rootScope,ChildFactory,AvatarFactory){
+
+	$scope.allPictures =[];
+	$scope.newChild= {};
 
 	if($location.path()==='/logout'){
 		AuthFactory.logout();
@@ -8,15 +10,48 @@ app.controller("newChildCtrl", function($location,$scope,$rootScope,ChildFactory
 	}
 
 	$scope.addNewChild = ()=>{
-		$scope.newChild.parenId = $rootScope.user.uid;
+		$scope.newChild.parentId = $rootScope.user.uid;
 		console.log("$scope.newChild in addNewChild:",$scope.newChild);		
 		ChildFactory.postNewChild($scope.newChild)
 		.then((reponse)=>{
-			console.log("reponse in addNewChild:",reponse);
+			console.log("reponse in addNewChild:",reponse.config.data);
+			$location.url('/childList');
 		})
 		.catch((error)=>{
 			console.log("error addNewChild :",error);
 		});
+	};
+
+
+	$scope.displayAllPictures = ()=>{
+		AvatarFactory.getAllPictures ()
+		.then((allPicturez) => {
+			$scope.allPictures = allPicturez;
+			// console.log("allPictures in displayAllPictures :",allPicturez);
+		})
+		.catch((error)=>{
+			console.log("error addNewChild :",error);
+		});
+	};
+
+	$scope.addProfilePicture = (avatarId) => {
+		console.log("ipicId",avatarId);
+		console.log("$rootScope.user",$rootScope.user);
+
+		$scope.newChild.pic = avatarId;
+		$scope.newChild.parentId=$rootScope.user.uid;
+
+		// console.log("$scope.id :",$scope.id);
+		// AvatarFactory.getSinglePicture($scope.id)
+		// .then((results)=>{
+		// 	console.log("results in addProfilePicture",results);
+			// $scope.newChild.pic = results
+			console.log("$scope.newChild",$scope.newChild);
+
+		// })
+		// .catch((error)=>{
+		// 	console.log("error in addProfilePicture :",error);
+		// });
 	};
 
 

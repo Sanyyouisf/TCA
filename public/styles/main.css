@@ -1,2 +1,19 @@
+body .avatarPic {
+  width: 100px;
+  height: 100px; }
+
+body .childProfilePic {
+  width: 100px;
+  height: 100px; }
+
+body .container {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start; }
+
+body .activityPic {
+  width: 100px;
+  height: 100px; }
+
 body {
   background-color: #dbbaff; }

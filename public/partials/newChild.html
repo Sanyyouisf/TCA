@@ -1,5 +1,5 @@
 <div class="aligner">
-    <h1 class="username">{{user.username}}</h1>
+    <h1 class="username">{{user.pName}}</h1>
 </div>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -25,11 +25,13 @@
     <input type="text" class="form-control" placeholder="Age" ng-model="newChild.age">
 </div>
 <div class="input-group col-xs-6 col-xs-offset-3">
-    <span class="input-group-addon" id="sizing-addon1"></span>
+    <span class="input-group-addon" id="sizing-addon1" ng-click="displayAllPictures()"></span>
     <input type="text" class="form-control" placeholder="Picture" ng-model="newChild.pic">
 </div>
+<div class="container" ng-repeat="picture in allPictures">
+    <a ng-href="#!/newChild"> <img ng-src="{{picture.path}}" class="avatarPic" ng-click="addProfilePicture(picture.id)"></a>
+</div>
 <div class="btn-group col-xs-4 col-xs-offset-5">
-    <button type="button" class="btn btn-default"  ng-click="addNewChild()">
-        Add New Child
+    <button type="button" class="btn btn-default" ng-click="addNewChild()" > Add New Child
     </button>
 </div>

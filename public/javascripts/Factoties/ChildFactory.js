@@ -1,5 +1,4 @@
 app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG){
-	console.log(" inside Child-Factory");
 
 	// let addChild =(childData , parentId) => {
 	// 	return $q ((resolve,reject) => {
@@ -39,6 +38,31 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG){
 		});
 	};
 
-	return{postNewChild:postNewChild};
+
+	let getChildrenForParent=(parentId)=>{
+		selectedChildren=[];
+		return $q ((resolve,reject)=>{
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/children.json?orderBy="parentId"&equalTo="${parentId}"`)
+			.then((fbChildren)=>{
+				var childrenCollection = fbChildren.data;
+				// console.log("fbChildren.data in getChildrenForParent",fbChildren.data);
+                if (childrenCollection !== null) {
+                Object.keys(childrenCollection).forEach((key)=> {
+					// console.log("childrenCollection",childrenCollection);
+                    childrenCollection[key].id = key;
+                    selectedChildren.push(childrenCollection[key]); 
+                    });
+			}
+			resolve(selectedChildren);
+			console.log("selectedChildren",selectedChildren);
+		})
+			.catch((error)=>{
+				reject(error);
+				console.log("error in getAllChildren :",error);
+			});
+		});
+	};
+
+	return{postNewChild:postNewChild , getChildrenForParent:getChildrenForParent};
 
 });
