@@ -26,6 +26,11 @@
         <div class="panel-body container ">
             <img ng-src="{{child.url}}" class="childProfilePic">
         </div>
+        <div ng-repeat="cat in selectedChildActivities">
+            <p>{{cat.activity.title}}</p>
+            <p>{{cat.activity.fileName}}</p>
+        </div>
+
         <div class="btn-group col-xs-4 col-xs-offset-5 ">
             <!-- <button class="btn btn-danger fa fa-pencil-square-o" ng-click="editChild(child.id)"></button>
             <button class="btn btn-danger fa fa-trash-o" ng-click="deleteChild(child.id)"></button> -->

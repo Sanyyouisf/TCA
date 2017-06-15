@@ -23,8 +23,23 @@ app.factory("ActivityFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 
+	let getSingleActivity = (activityId) => {
+		return $q ((resolve,reject)=>{
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/activities/${activityId}.json`)
+			.then((fbactivity)=>{
+                resolve(fbactivity.data);
+                // console.log("activityz in getSingleActivity ",activityz);
+			})
+			.catch((error)=>{
+				reject(error);
+				console.log("error in getSingleActivity :",error);
+			});
+		});
+	};
 
 
-	return {getAllActivities:getAllActivities};
+
+
+	return {getAllActivities:getAllActivities ,getSingleActivity:getSingleActivity};
 
 });

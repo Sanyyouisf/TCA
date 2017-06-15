@@ -172,7 +172,7 @@
 			"path":"https://steamuserimages-a.akamaihd.net/ugc/792939615963306792/12E2E8F92218E7FEB594F7B9CCE30EF77989CAD9/"
 		}
 	},
-	"childActivity":{
+	"childActivities":{
 		"childActivity01":{
 			"activityId":"activity01",
 			"childId":"child01",
@@ -180,22 +180,46 @@
 			"dueDate":"7/25/2017"
 		},
 		"childActivity02":{
+			"activityId":"activity01",
+			"childId":"child01",
+			"isCompleted":"false",
+			"dueDate":"7/25/2017"
+		},
+		"childActivity03":{
 			"activityId":"activity02",
 			"childId":"child02",
 			"isCompleted":"false",
 			"dueDate":"7/17/2017"
 		},
-		"childActivity03":{
+		"childActivity04":{
 			"activityId":"activity03",
-			"childId":"child03",
+			"childId":"child02",
 			"isCompleted":"false",
 			"dueDate":"7/9/2017"
 		},
-		"childActivity04":{
+		"childActivity05":{
 			"activityId":"activity04",
-			"childId":"child04",
+			"childId":"child03",
 			"isCompleted":"false",
 			"dueDate":"7/11/2017"
+		},
+		"childActivity06":{
+			"activityId":"activity01",
+			"childId":"child03",
+			"isCompleted":"false",
+			"dueDate":"7/25/2017"
+		},
+		"childActivity07":{
+			"activityId":"activity01",
+			"childId":"child04",
+			"isCompleted":"false",
+			"dueDate":"7/25/2017"
+		},
+		"childActivity08":{
+			"activityId":"activity01",
+			"childId":"child04",
+			"isCompleted":"false",
+			"dueDate":"7/25/2017"
 		}
 	}
 }
