@@ -2,66 +2,66 @@
 	"parents":{
 		"parent01":{
 			"pName":"Sany Yousif",
-			"uid":"1Ra3DBfiBCTsCumtGfB1Gddj0XM2"
+			"uid":"DnZppecHJhUJUaP8q2Bn4pdismH3"
 		},
 		"parent02":{
 			"pName":"mariana Mena",
-			"uid":"CEMOcrukVERV9Ktfb2oq4SYXuPX2"
+			"uid":"Dh9HcP6volfl5zfu6YmlKdmpQth1"
 		},
 		"parent03":{
 			"pName":"Andrew jack",
-			"uid":"CEMOcrukVERV9Ktfb2oq4SYXuPX2"
+			"uid":"93SPJYMSs5g1rIOWo4jnhdKfsIJ3"
 		},
 		"parent04":{
 			"pName":"Rayen Stewart",
-			"uid":"CEMOcrukVERV9Ktfb2oq4SYXuPX2"
+			"uid":"z3yZ8ToIcCPpUK1jJroqqThIeIt1"
 		}
 	},
 	"children":{
 		"child01":{
-			"parentId":"parent01",
+			"parentId":"DnZppecHJhUJUaP8q2Bn4pdismH3",
 			"childName":"Sandra Yousif",
 			"age":"6",
 			"pic":"avatar01"
 		},
 		"child02":{
-			"parentId":"parent01",
+			"parentId":"DnZppecHJhUJUaP8q2Bn4pdismH3",
 			"childName":"Celine Yousif",
 			"age":"5",
 			"pic":"avatar02"
 		},
 		"child03":{
-			"parentId":"parent02",
+			"parentId":"Dh9HcP6volfl5zfu6YmlKdmpQth1",
 			"childName":"Mick Mena",
 			"age":"7",
 			"pic":"avatar03"
 		},
 		"child04":{
-			"parentId":"parent02",
+			"parentId":"Dh9HcP6volfl5zfu6YmlKdmpQth1",
 			"childName":"Noi Mena",
 			"age":"9",
 			"pic":"avatar04"
 		},
 		"child05":{
-			"parentId":"parent03",
+			"parentId":"93SPJYMSs5g1rIOWo4jnhdKfsIJ3",
 			"childName":"solimen jack",
 			"age":"5",
 			"pic":"avatar05"
 		},
 		"child06":{
-			"parentId":"parent03",
+			"parentId":"93SPJYMSs5g1rIOWo4jnhdKfsIJ3",
 			"childName":"Andreia jack",
 			"age":"6",
 			"pic":"avatar06"
 		},
 		"child07":{
-			"parentId":"parent04",
+			"parentId":"z3yZ8ToIcCPpUK1jJroqqThIeIt1",
 			"childName":"lauren Stewart",
 			"age":"8",
 			"pic":"avatar07"
 		},
 		"child08":{
-			"parentId":"parent04",
+			"parentId":"z3yZ8ToIcCPpUK1jJroqqThIeIt1",
 			"childName":"maria Stewart",
 			"age":"6",
 			"pic":"avatar08"
@@ -71,61 +71,73 @@
 		"activity01":{
 			"title":"reading",
 			"fileName":"The_Birth_of_Jesus",
+			"picture":"/DataBase/images/Jesus_Birth.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/The_Birth_of_Jesus_English.pdf"
 		},
 		"activity02":{
 			"title":"reading",
 			"fileName":"Samuel_Gods_BoyServant",
+			"picture":"/DataBase/images/Samuel.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Samuel_Gods_BoyServant_English.pdf"
 		},
 		"activity03":{
 			"title":"reading",
 			"fileName":"David_the_King_Part_1",
+			"picture":"/DataBase/images/David_1.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/David_the_King_Part_1_English.pdf"
 		},
 		"activity04":{
 			"title":"reading",
 			"fileName":"David_the_King_Part_2",
+			"picture":"/DataBase/images/David_2.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/David_the_King_Part_2_English.pdf"
 		},
 		"activity05":{
 			"title":"reading",
 			"fileName":"Noah_and_the_Great_Flood",
+			"picture":"/DataBase/images/Noah.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Noah_and_the_Great_Flood_English.pdf"
 		},
 		"activity06":{
 			"title":"reading",
 			"fileName":"Jacob_the_Deceiver",
+			"picture":"/DataBase/images/Jacob.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Jacob_the_Deceiver_English.pdf"
 		},
 		"activity07":{
 			"title":"reading",
 			"fileName":"Rich_Man_Poor_Man",
+			"picture":"./DataBase/images/Rich_Man_Poor_Man.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Rich_Man_Poor_Man_English.pdf"
 		},
 		"activity08":{
 			"title":"reading",
 			"fileName":"Jesus_and_Lazarus",
+			"picture":"./DataBase/images/Jesus_and_Lazarus.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_and_Lazarus_English.pdf"
 		},
 		"activity09":{
 			"title":"painting",
 			"fileName":"When_God_Made_Everything",
+			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/When_God_Made_Everything_English_CB.pdf"
 		},
 		"activity10":{
 			"title":"painting",
 			"fileName":"The_Good_Samaritan",
+			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/The_Good_Samaritan_English_CB.pdf"
 		},
 		"activity11":{
 			"title":"painting",
 			"fileName":"Samson_Gods_Strong_Man",
+			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Samson_Gods_Strong_Man_English_CB.pdf"
 		},
 		"activity12":{
 			"title":"painting",
 			"fileName":"Jesus_Feeds_5000_People",
+			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_Feeds_5000_People_English_CB.pdf"
 		}
 	},

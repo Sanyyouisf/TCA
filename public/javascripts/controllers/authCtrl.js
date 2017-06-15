@@ -1,7 +1,7 @@
 app.controller("authCtrl", function($scope,AuthFactory,UserFactory,$location,$rootScope){
 	
 	$scope.auth = {
-    	email:"k@k.com",
+    	email:"d@d.com",
     	password:"111111"
     };
 

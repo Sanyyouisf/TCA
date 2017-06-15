@@ -63,6 +63,11 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG){
 		});
 	};
 
+
+	// let editChild = () => {
+		
+	// };
+
 	return{postNewChild:postNewChild , getChildrenForParent:getChildrenForParent};
 
 });
