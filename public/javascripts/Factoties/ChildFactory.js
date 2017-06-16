@@ -60,7 +60,21 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 
+	let getAllChildren = ()=>{
+		return $q ((resolve,reject)=>{
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/children.json`)
+			.then((fbChildren)=>{
+			resolve(fbChildren.data);
+			console.log("fbChildren",fbChildren.data);
+		})
+			.catch((error)=>{
+				reject(error);
+				console.log("error in getAllChildren :",error);
+			});
+		});
+	};
 
-	return{postNewChild:postNewChild , getChildrenForParent:getChildrenForParent , getSingleChild:getSingleChild};
+
+	return{postNewChild:postNewChild , getChildrenForParent:getChildrenForParent , getSingleChild:getSingleChild ,getAllChildren:getAllChildren };
 
 });

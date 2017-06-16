@@ -2,13 +2,11 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
 
 
 	let postChildActivity = (newChildActivity)=>{
-		console.log("newChildActivity",newChildActivity);
 		return $q ((resolve,reject)=>{
 			$http.post(`${FIREBASE_CONFIG.databaseURL}/childActivities.json`,
 			JSON.stringify(newChildActivity))
 			.then((fbchildActivity)=>{
 				resolve(fbchildActivity);
-				console.log("fbchildActivity in addChild",fbchildActivity);
 			})
 			.catch((error)=>{
 				reject(error);
