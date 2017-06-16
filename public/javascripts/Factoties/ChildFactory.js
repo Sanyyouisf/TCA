@@ -17,6 +17,24 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 
+	let getSingleChild = (childId) => {
+        return $q((resolve, reject) => {
+            $http.get(`${FIREBASE_CONFIG.databaseURL}/children/${childId}.json`)
+                .then((resultz) => {
+                    resultz.data.id = id;
+                    console.log("id in getSingleChile",id);
+                    resolve(resultz);
+
+                })
+                .catch((error)=>{
+				reject(error);
+				console.log("error in getSingleChild :",error);
+			});
+        });
+    };
+
+
+
 	let getChildrenForParent=(parentId)=>{
 		selectedChildren=[];
 		return $q ((resolve,reject)=>{
@@ -43,6 +61,6 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG){
 
 
 
-	return{postNewChild:postNewChild , getChildrenForParent:getChildrenForParent};
+	return{postNewChild:postNewChild , getChildrenForParent:getChildrenForParent , getSingleChild:getSingleChild};
 
 });

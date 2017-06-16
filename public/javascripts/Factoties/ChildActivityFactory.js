@@ -1,11 +1,21 @@
 app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
 
 
-	// let postChildActivity = (newChildActivity)=>{
-	// 	return $q ((resolve,reject)=>{
-	// 		$http.post (`${FIREBASE_CONFIG.database.URL}/childActivities.json`,JSON.stringify(newChildActivity))
-	// 	});
-	// }
+	let postChildActivity = (newChildActivity)=>{
+		console.log("newChildActivity",newChildActivity);
+		return $q ((resolve,reject)=>{
+			$http.post(`${FIREBASE_CONFIG.databaseURL}/childActivities.json`,
+			JSON.stringify(newChildActivity))
+			.then((fbchildActivity)=>{
+				resolve(fbchildActivity);
+				console.log("fbchildActivity in addChild",fbchildActivity);
+			})
+			.catch((error)=>{
+				reject(error);
+				console.log("error in postChildActivity :",error);
+			});
+		});
+	};
 
 
 	let getChildActivitiesForChild = (childId) => {
@@ -33,6 +43,6 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
 
 
 
-	return{getChildActivitiesForChild:getChildActivitiesForChild};
+	return{getChildActivitiesForChild:getChildActivitiesForChild, postChildActivity:postChildActivity};
 
 });

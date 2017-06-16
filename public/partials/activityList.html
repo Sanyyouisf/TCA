@@ -1,1 +1,30 @@
-<h1>inside activity List.html</h1>
+<div class="aligner">
+    <h1 class="username">{{user.pName}}</h1>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a ng-href="#!/logout">Logout</a></li>
+            <li><a ng-href="#!/parentProfile">activities</a></li>
+            <li class="dropdown">
+                <a href="#!/parentProfile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">child <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#!/newChild">Add Child</a></li>
+                    <li><a href="#!/childList">Child List</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div>
+
+<div class="container panel panel-success col-xs-3" ng-repeat="activity in activities">
+    <div class="panel-heading">
+        <a ng-href="#!/childList" ng-click="addChildActivity()"> 
+            <p> {{activity.title}}</p>
+            <p> {{activity.fileName}}</p>
+        </a>
+        <p>display here</p>
+        <img ng-src="{{activity.picture}}" class="activityPic">
+    </div>
+</div>

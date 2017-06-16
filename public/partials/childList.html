@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
             <li><a ng-href="#!/logout">Logout</a></li>
-            <li><a ng-href="#!/parentProfile">activities</a></li>
+            <li><a ng-href="#!/activityList">activities</a></li>
             <li class="dropdown">
                 <a href="#!/parentProfile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">child <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -19,41 +19,38 @@
 
 <div ng-repeat="child in selectedchildren">
     <div class="panel panel-success col-xs-4">
+        
         <div class="panel-heading">
             <p> Name :{{child.childName}}</p>
             <p> Age :{{child.age}}</p>
         </div>
+        
         <div class="panel-body container ">
             <img ng-src="{{child.url}}" class="childProfilePic">
-            <!-- <p>{{child.activity.title}}</p>
-            <p>{{child.activity.fileName}}</p> -->
-
         </div>
-        <div>
+        
         <div ng-repeat="activity in child.activities">
             <p>{{activity.title}}</p><br>
             <p>{{activity.fileName}}</p>
-            <!-- <p>{{cat.activity.title}}</p>
-            <p>{{cat.activity.fileName}}</p> -->
         </div>
 
         <div class="btn-group col-xs-4 col-xs-offset-5 ">
             <!-- <button class="btn btn-danger fa fa-pencil-square-o" ng-click="editChild(child.id)"></button>
             <button class="btn btn-danger fa fa-trash-o" ng-click="deleteChild(child.id)"></button> -->
-            <button type="button" class="btn btn-default" ng-click="displayAllActivities()"> assign activity
+            <button type="button" class="btn btn-default" ng-click="displayAllActivities(child.id)"> assign activity
             </button>
         </div>
         
-
     </div>
 </div>
 
 <div class="container panel panel-success col-xs-3" ng-repeat="activity in activities">
     <div class="panel-heading">
-        <!-- <a ng-href="#!/childList">  -->
+        <a ng-href="#!/childList" ng-click="addChildActivity(activity.id)"> 
             <p> {{activity.title}}</p>
             <p> {{activity.fileName}}</p>
-        <!-- </a> -->
+        </a>
+        <p>display here</p>
         <img ng-src="{{activity.picture}}" class="activityPic">
     </div>
 </div>

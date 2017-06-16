@@ -27,7 +27,6 @@ app.controller("newChildCtrl", function($location,$scope,$routeParams,$rootScope
 		AvatarFactory.getAllPictures ()
 		.then((allPicturez) => {
 			$scope.allPictures = allPicturez;
-			// console.log("allPictures in displayAllPictures :",allPicturez);
 		})
 		.catch((error)=>{
 			console.log("error addNewChild :",error);
@@ -37,21 +36,8 @@ app.controller("newChildCtrl", function($location,$scope,$routeParams,$rootScope
 	$scope.addProfilePicture = (avatarId) => {
 		console.log("ipicId",avatarId);
 		console.log("$rootScope.user",$rootScope.user);
-
 		$scope.newChild.pic = avatarId;
 		$scope.newChild.parentId=$rootScope.user.uid;
-
-		// console.log("$scope.id :",$scope.id);
-		// AvatarFactory.getSinglePicture($scope.id)
-		// .then((results)=>{
-		// 	console.log("results in addProfilePicture",results);
-			// $scope.newChild.pic = results
-			console.log("$scope.newChild",$scope.newChild);
-
-		// })
-		// .catch((error)=>{
-		// 	console.log("error in addProfilePicture :",error);
-		// });
 	};
 
 
