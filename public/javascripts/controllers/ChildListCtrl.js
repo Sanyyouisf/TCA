@@ -33,12 +33,12 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
                 ChildActivityFactory.getChildActivitiesForChild(kid.id)
                     .then((childActivities) => {
                         kid.activities = [];
-                        console.log("childActivities", childActivities);
+                        // console.log("childActivities", childActivities);
                         childActivities.forEach((x) => {
                             ActivityFactory.getSingleActivity(x.activityId)
                                 .then((result) => {
-                                    console.log("result", result);
-                                    console.log("kid.childName", kid.childName);
+                                    // console.log("result", result);
+                                    // console.log("kid.childName", kid.childName);
                                     kid.activities.push(result);
                                 });
                         });
@@ -74,7 +74,7 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
         $scope.newChildActivity.isCompleted = false;
         $scope.newChildActivity.childId = $scope.tempSelectChild;
         $scope.newChildActivity.activityId = activityId;
-        console.log("$scope.newChildActivity :", $scope.newChildActivity);
+        // console.log("$scope.newChildActivity :", $scope.newChildActivity);
         ChildActivityFactory.postChildActivity($scope.newChildActivity)
             .then((response) => {
                 $location.url('/childList');

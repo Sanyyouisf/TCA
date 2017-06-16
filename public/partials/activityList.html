@@ -16,28 +16,34 @@
         </ul>
     </div>
 </nav>
+
+<!-- displaying all the activities -->
 <div ng-repeat="activity in activities">
     <div class=" panel panel-success col-xs-4">
         <div class="panel-heading">
-            <a ng-href="#!/childList" ng-click="addChildActivity(activity.id)">
+            <!-- <a ng-href="#!/childList" ng-click="addChildActivity(activity.id)"> -->
                 <p> {{activity.title}}</p>
                 <p> {{activity.fileName}}</p>
-            </a>
+            <!-- </a> -->
         </div>
+
         <div class="panel-body container ">
             <img ng-src="{{activity.picture}}" class="activityPic">
         </div>
+
         <div class="btn-group col-xs-4 col-xs-offset-5 ">
-            <button type="button" class="btn btn-default" ng-click="displayAllChildren(activityId)"> assign to child
+            <button type="button" class="btn btn-default" ng-click="displayAllChildren(activity.id)"> assign to child
             </button>
         </div>
+
     </div>
 </div>
 
+<!-- display all the children   -->
 <div ng-repeat="child in selectedchildren">
     <div class="panel panel-success col-xs-4">
         <div class="panel-heading">
-            <a ng-href="#!/activityList" ">
+            <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)">
                 <p> Name :{{child.childName}}</p>
                 <p> Age :{{child.age}}</p>
                 </a>
