@@ -25,10 +25,16 @@
         </div>
         <div class="panel-body container ">
             <img ng-src="{{child.url}}" class="childProfilePic">
+            <!-- <p>{{child.activity.title}}</p>
+            <p>{{child.activity.fileName}}</p> -->
+
         </div>
-        <div ng-repeat="cat in selectedChildActivities">
-            <p>{{cat.activity.title}}</p>
-            <p>{{cat.activity.fileName}}</p>
+        <div>
+        <div ng-repeat="activity in child.activities">
+            <p>{{activity.title}}</p><br>
+            <p>{{activity.fileName}}</p>
+            <!-- <p>{{cat.activity.title}}</p>
+            <p>{{cat.activity.fileName}}</p> -->
         </div>
 
         <div class="btn-group col-xs-4 col-xs-offset-5 ">

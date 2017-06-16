@@ -1,5 +1,4 @@
 app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
-	console.log(" inside ChildActivity-Factory");
 
 
 	// let postChildActivity = (newChildActivity)=>{
@@ -14,7 +13,7 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
 		return $q ((resolve,reject)=>{
 			$http.get(`${FIREBASE_CONFIG.databaseURL}/childActivities.json?orderBy="childId"&equalTo="${childId}"`)
 			.then((fbChildActivities)=>{
-                console.log("fbChildActivities in getChildActivitiesForChild ",fbChildActivities);
+                // console.log("fbChildActivities in getChildActivitiesForChild ",fbChildActivities);
 				let ChildActivityCollection = fbChildActivities.data;
                 if (ChildActivityCollection !== null) {
                     Object.keys(ChildActivityCollection).forEach((key) => {
@@ -23,7 +22,7 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
                         });
                     }
                 resolve(ChildActivityz);
-                console.log("ChildActivityz in getChildActivitiesForChild ",ChildActivityz);
+                // console.log("ChildActivityz in getChildActivitiesForChild ",ChildActivityz);
 			})
 			.catch((error)=>{
 				reject(error);
