@@ -51,7 +51,6 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
     $scope.deleteChildActivity = (childActivityId) =>{
     	ChildActivityFactory.deletz(childActivityId)
     	.then(()=>{
-    		console.log("here");
     		displaySingleChildData();
     	})
     	.catch((error)=>{

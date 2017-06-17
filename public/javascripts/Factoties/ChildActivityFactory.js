@@ -42,7 +42,9 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
 	let deletz = (childActivityId) => {
         return $q((resolve, reject) => {
             $http.delete(`${FIREBASE_CONFIG.databaseURL}/childActivities/${childActivityId}.json`)
-                .then(() => { })
+                .then(() => { 
+                	resolve();
+                })
                 .catch((error) => {
                     reject(error);
                     console.log("error in deletz :", error);
