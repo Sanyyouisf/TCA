@@ -7,6 +7,7 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
     $scope.newChildActivity = {};
     $scope.tempSelectChild = "";
 
+
     // displayChildrenForParent
     let displayChildData =()=>{
     ChildFactory.getChildrenForParent($rootScope.user.uid)
@@ -85,6 +86,19 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
             .catch((error) => {
                 console.log("error in addChildActivity: ", error);
             });
+    };
+
+    $scope.deleteChild = (id)=>{
+    	console.log("id inside the delete",id);
+    	$scope.tempSelectChild = id;
+    	ChildFactory.deletz($scope.tempSelectChild)
+    	.then((result)=>{
+    		console.log("result inside deleteChild :",result);
+    		displayChildData();
+    	})
+    	.catch(()=>{
+
+    	});
     };
 
 

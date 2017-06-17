@@ -75,6 +75,21 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 
-	return{postNewChild:postNewChild , getChildrenForParent:getChildrenForParent , getSingleChild:getSingleChild ,getAllChildren:getAllChildren };
+	let deletz = (childId) => {
+		return $q ((resolve,reject) => {
+			$http.delete(`${FIREBASE_CONFIG.databaseURL}/children/${childId}.json`)
+			.then((result)=>{
+				resolve(result);
+				console.log("result in deletz",result);
+			})
+			.catch((error)=>{
+				reject(error);
+				console.log("error in deletz :",error);
+			});
+		});
+	};
+
+
+	return{postNewChild:postNewChild , getChildrenForParent:getChildrenForParent , getSingleChild:getSingleChild ,getAllChildren:getAllChildren ,deletz:deletz};
 
 });
