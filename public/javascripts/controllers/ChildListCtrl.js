@@ -56,7 +56,9 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
 
     $scope.displayAllActivities = (id) => {
         $scope.tempSelectChild = id;
-        console.log("scope.tempSelectChild", $scope.tempSelectChild);
+        $rootScope.selectedChild = id;
+        console.log("$scope.tempSelectChild", $scope.tempSelectChild);
+        console.log("$rootScope.selectedCild", $rootScope.selectedChild);
         ActivityFactory.getAllActivities()
             .then((results) => {
                 // console.log("results", results);
@@ -69,12 +71,12 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
 
 
     $scope.addChildActivity = (activityId) => {
-        console.log("$scope.tempSelectChild", $scope.tempSelectChild);
-        console.log("activityId insideaddChildActivity ", activityId);
+        // console.log("$scope.tempSelectChild", $scope.tempSelectChild);
+        // console.log("activityId insideaddChildActivity ", activityId);
         $scope.newChildActivity.isCompleted = false;
         $scope.newChildActivity.childId = $scope.tempSelectChild;
         $scope.newChildActivity.activityId = activityId;
-        // console.log("$scope.newChildActivity :", $scope.newChildActivity);
+        console.log("$scope.newChildActivity in postChildActivity:",$scope.newChildActivity);
         ChildActivityFactory.postChildActivity($scope.newChildActivity)
             .then((response) => {
                 $location.url('/childList');

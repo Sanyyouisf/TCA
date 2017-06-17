@@ -17,14 +17,14 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 
-	let getSingleChild = (childId) => {
+	let getSingleChild = (id) => {
         return $q((resolve, reject) => {
-            $http.get(`${FIREBASE_CONFIG.databaseURL}/children/${childId}.json`)
+            $http.get(`${FIREBASE_CONFIG.databaseURL}/children/${id}.json`)
                 .then((resultz) => {
                     resultz.data.id = id;
                     console.log("id in getSingleChile",id);
-                    resolve(resultz);
-
+                    resolve(resultz.data);
+                    console.log("resultz.data in getSingleChild:",resultz.data);
                 })
                 .catch((error)=>{
 				reject(error);

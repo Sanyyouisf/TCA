@@ -28,7 +28,7 @@ app.config(function($routeProvider){
 		templateUrl:"partials/activityList.html",
 		controller:"activityListCtrl"
 	})
-	.when('/viewSingleChild',{
+	.when('/viewSingleChild/:childId',{
 		templateUrl:"partials/viewSingleChild.html",
 		controller:"viewSingleChildCtrl"
 	})
