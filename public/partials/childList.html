@@ -25,6 +25,10 @@
                 <p> Name :{{child.childName}}</p>
                 <p> Age :{{child.age}}</p>
             </a>
+            <div class="btn-group col-xs-4 col-xs-offset-5 ">
+                <button class="btn btn-danger fa fa-pencil-square-o" ng-click="editChild(child.id)"></button>
+                <button class="btn btn-danger fa fa-trash-o" ng-click="deleteChild(child.id)"></button>
+            </div>
         </div>
         
         <div class="panel-body container ">
@@ -37,11 +41,6 @@
         </div>
 
         <div class="btn-group col-xs-4 col-xs-offset-5 ">
-            
-            <button class="btn btn-danger fa fa-pencil-square-o" ng-click="editChild(child.id)"></button>
-
-            <button class="btn btn-danger fa fa-trash-o" ng-click="deleteChild(child.id)"></button>
-
             <button type="button" class="btn btn-default" ng-click="displayAllActivities(child.id)"> assign activity
             </button>
         </div>

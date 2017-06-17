@@ -9,10 +9,10 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
  	ChildFactory.getSingleChild($routeParams.childId)
     .then((result) => {
         $scope.selectedChild = result;
-        console.log("result in displayChildrenForParent",result);
+        // console.log("result in displayChildrenForParent",result);
         AvatarFactory.getSinglePicture($scope.selectedChild.pic)
         .then((image) => {
-            console.log("image inside forEach :",image);
+            // console.log("image inside forEach :",image);
             $scope.selectedChild.url = image.path;
         })
         .catch((error) => {
@@ -22,7 +22,7 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
 	    ChildActivityFactory.getChildActivitiesForChild($scope.selectedChild.id)
 	    .then((childActivities) => {
 	        let kidActivities = [];
-	        console.log("childActivities", childActivities);
+	        // console.log("childActivities", childActivities);
 	        childActivities.forEach((x) => {
 	            console.log("childActivities.isCompleted :",x.isCompleted);
 	            ActivityFactory.getSingleActivity(x.activityId)

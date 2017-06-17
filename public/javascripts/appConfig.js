@@ -34,9 +34,9 @@ app.config(function($routeProvider){
 	})
 	.when('/childLogin',{
 		templateUrl:"partials/childLogin.html",
-		controller:"childCtrl"
+		controller:"childLoginCtrl"
 	})
-	.when('/childProfile',{
+	.when('/childProfile/:childId',{
 		templateUrl:"partials/childProfile.html",
 		controller:"childActivityCtrl"
 	})
