@@ -30,7 +30,7 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
                         });
                     }
                 resolve(ChildActivityz);
-                // console.log("ChildActivityz in getChildActivitiesForChild ",ChildActivityz);
+                console.log("ChildActivityz in getChildActivitiesForChild ",ChildActivityz);
 			})
 			.catch((error)=>{
 				reject(error);
@@ -39,8 +39,19 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
 		});
 	};
 
+	let deletz = (childActivityId) => {
+        return $q((resolve, reject) => {
+            $http.delete(`${FIREBASE_CONFIG.databaseURL}/childActivities/${childActivityId}.json`)
+                .then(() => { })
+                .catch((error) => {
+                    reject(error);
+                    console.log("error in deletz :", error);
+                });
+        });
+    };
 
 
-	return{getChildActivitiesForChild:getChildActivitiesForChild, postChildActivity:postChildActivity};
+
+	return{getChildActivitiesForChild:getChildActivitiesForChild, postChildActivity:postChildActivity ,deletz:deletz};
 
 });

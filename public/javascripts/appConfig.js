@@ -44,5 +44,9 @@ app.config(function($routeProvider){
 		templateUrl:"partials/singleChildActivity.html",
 		controller:"singleChildActivityCtrl"
 	})
+	.when('/editChild/:childId',{
+		templateUrl:"partials/editChild.html",
+		controller:"editChildCtrl"
+	})
 	.otherwise('/auth');
 });

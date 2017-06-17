@@ -92,13 +92,12 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
     	console.log("id inside the delete",id);
     	$scope.tempSelectChild = id;
     	ChildFactory.deletz($scope.tempSelectChild)
-    	.then((result)=>{
-    		console.log("result inside deleteChild :",result);
+    	.then(()=>{
     		displayChildData();
     	})
-    	.catch(()=>{
-
-    	});
+    	.catch((error) => {
+            console.log("error in deleteChild: ", error);
+        });
     };
 
 
