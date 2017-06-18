@@ -53,7 +53,22 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
     };
 
 
+    let getSingleChildActivity = (childActivityId)=>{
+    	return $q ((resolve,reject)=>{
+    		$http.get(`${FIREBASE_CONFIG.databaseURL}/childActivities/${childActivityId}.json`)
+    		.then((fbResult)=>{
+    			resolve(fbResult.data);
+    			console.log("fbResult.data",fbResult.data);
+    		})
+    		.catch((error) => {
+                reject(error);
+                console.log("error in getSingleChildActivity :", error);
+            });
+    	});
+    };
 
-	return{getChildActivitiesForChild:getChildActivitiesForChild, postChildActivity:postChildActivity ,deletz:deletz};
+
+
+	return{getChildActivitiesForChild:getChildActivitiesForChild, postChildActivity:postChildActivity ,deletz:deletz,getSingleChildActivity:getSingleChildActivity};
 
 });

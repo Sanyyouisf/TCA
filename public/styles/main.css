@@ -15,5 +15,11 @@ body .activityPic {
   width: 100px;
   height: 100px; }
 
+body .title {
+  text-align: center; }
+
+body object:focus {
+  outline: none; }
+
 body {
   background-color: #dbbaff; }
