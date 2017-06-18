@@ -1,7 +1,7 @@
 app.controller("newChildCtrl", function($location,$scope,$routeParams,$rootScope,ChildFactory,AvatarFactory){
 
 	$scope.allPictures =[];
-	$scope.newChild= {};
+	// $scope.newChild= {};
 
 	if($location.path()==='/logout'){
 		AuthFactory.logout();
@@ -14,6 +14,7 @@ app.controller("newChildCtrl", function($location,$scope,$routeParams,$rootScope
 		console.log("$scope.newChild in addNewChild:",$scope.newChild);		
 		ChildFactory.postNewChild($scope.newChild)
 		.then((reponse)=>{
+			$scope.newChild= {};
 			console.log("reponse in addNewChild:",reponse.config.data);
 			$location.url('/childList');
 		})

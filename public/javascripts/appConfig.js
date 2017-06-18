@@ -40,7 +40,7 @@ app.config(function($routeProvider){
 		templateUrl:"partials/childProfile.html",
 		controller:"childActivityCtrl"
 	})
-	.when('/singleChildActivity',{
+	.when('/singleChildActivity/:childActivityId',{
 		templateUrl:"partials/singleChildActivity.html",
 		controller:"singleChildActivityCtrl"
 	})

@@ -1,3 +1,35 @@
-<h1>inside child profile.html</h1>
+<div class="aligner">
+    <h1 class="username">{{user.pName}}</h1>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+    	<ul class="nav navbar-nav navbar-left">
+    	<li> <h4 >{{selectedChild.childName}}</h4> </li>
+    	</ul>
+        <ul class="nav navbar-nav navbar-right">
+        	<li><a ng-href="#!/parentProfile">Parent</a></li>
+            <li><a ng-href="#!/childLogin">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div ng-repeat="activity in activities">
+    <ul>
+       <li>
+            <div class="panel-heading">
+	           	<p>{{activity.title}}</p>
+	            <a ng-href="#!/singleChildActivity/{{activity.childActivityId}}">
+	                <p>{{activity.fileName}}</p>
+	            </a>
+	                <p>{{activity.isCompleted}}</p>	          
+            </div>
+
+            <div class="panel-body container ">
+                <img ng-src="{{activity.picture}}" class="activityPic">
+            </div>
+        </li>
+    </ul>
+</div>
+
 
 

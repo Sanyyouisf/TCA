@@ -16,14 +16,15 @@
         </ul>
     </div>
 </nav>
-<!-- <div ng-repeat="child in selectedChild">
- -->
+ 
 <div class="panel panel-success col-lg-10">
     <div class="panel-heading ">
         <h1> Name :{{selectedChild.childName}}</h1>
         <p> Age :{{selectedChild.age}}</p>
         <div class="btn-group col-xs-4 col-xs-offset-5 ">
-            <button class="btn btn-danger fa fa-pencil-square-o" ng-click="editChild(selectedChild.id)"></button>
+            <a href="#!/editChild/{{selectedChild.id}}" >
+                <button class="btn btn-danger fa fa-pencil-square-o"></button>
+            </a>
         </div>
     </div>
 
@@ -32,24 +33,20 @@
     </div>
 
     <div ng-repeat="activity in activities">
-        <!-- </div ng-repeat="childActivity in childActivities"> -->
-            <ul>
-                <li>
-                    <div class="panel-heading">
-                        <p>{{activity.title}}</p>
-                        <br>
-                        <p>{{activity.fileName}}</p>
-                        <p>{{activity.isCompleted}}</p>
-                    </div>
+        <ul>
+            <li>
+                <div class="panel-heading">
+                    <p>{{activity.title}}</p>
+                    <br>
+                    <p>{{activity.fileName}}</p>
+                    <p>{{activity.isCompleted}}</p>
+                </div>
 
-                    <div class="panel-body container ">
-                        <img ng-src="{{activity.picture}}" class="activityPic">
-                    </div>
-                    <!-- </div ng-repeat="childActivity in childActivities"> -->
-                        <button class="btn btn-danger fa fa-trash-o" ng-click="deleteChildActivity(activity.childActivityId)"></button>
-                    <!-- </div> -->
-                </li>
-            </ul>
-        <!-- </div> -->
+                <div class="panel-body container ">
+                    <img ng-src="{{activity.picture}}" class="activityPic">
+                </div>
+                    <button class="btn btn-danger fa fa-trash-o" ng-click="deleteChildActivity(activity.childActivityId)"></button>
+            </li>
+        </ul>
     </div>
 </div>

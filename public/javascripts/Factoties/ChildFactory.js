@@ -22,7 +22,6 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG) {
             $http.get(`${FIREBASE_CONFIG.databaseURL}/children/${id}.json`)
                 .then((resultz) => {
                     resultz.data.id = id;
-                    console.log("id in getSingleChile", id);
                     resolve(resultz.data);
                     console.log("resultz.data in getSingleChild:", resultz.data);
                 })
@@ -87,13 +86,21 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG) {
     };
 
 
-    let editSingleChild = (childId) => {
+    let editSingleChild = (child) => {
+        console.log(child);
+        console.log("inside editSingleChild in factory");
         return $q((resolve, reject) => {
-            $http.put(`${FIREBASE_CONFIG.databaseURL}/children/${childId}.json`,
-                    JSON.stringify(childId))
+            $http.put(`${FIREBASE_CONFIG.databaseURL}/children/${child.Id}.json`,
+                    JSON.stringify({
+                        childName:child.childName,
+                        parentId:child.parentId,
+                        age:child.age,
+                        pic:child.pic,
+                        // id:child.childId
+                    }))
                 .then((resultz) => {
-                    resolve(resultz);
-                    console.log("resultz inside editChild : ", resultz);
+                    resolve(resultz.data);
+                    console.log("resultz.data inside editChild : ", resultz.data);
                 })
                 .catch((error) => {
                     reject(error);

@@ -12,6 +12,7 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
 	 	ChildFactory.getSingleChild($routeParams.childId)
 	    .then((result) => {
 	        $scope.selectedChild = result;
+	        console.log("$scope.selectedChild",$scope.selectedChild);
 	        AvatarFactory.getSinglePicture($scope.selectedChild.pic)
 	        .then((image) => {
 	            $scope.selectedChild.url = image.path;
@@ -22,11 +23,11 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
 
 		    ChildActivityFactory.getChildActivitiesForChild($scope.selectedChild.id)
 		    .then((childActivities) => {
-		    	console.log("childActivities from getChildActivitiesForChild:",childActivities);
+		    	// console.log("childActivities from getChildActivitiesForChild:",childActivities);
 		        let kidActivities = [];
-		        console.log("childActivities", childActivities);
+		        // console.log("childActivities", childActivities);
 		        $scope.childActivities = childActivities;
-		        console.log("$scope.childActivities", $scope.childActivities);
+		        // console.log("$scope.childActivities", $scope.childActivities);
 		        childActivities.forEach((x) => {
 		            // console.log("childActivities.isCompleted :",x.isCompleted);
 		            ActivityFactory.getSingleActivity(x.activityId)
@@ -57,31 +58,6 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
     		console.log("error in deleteChildActivity ",error);
     	});
     };	
-
-
-    $scope.editChild = (childId) =>{
-    	console.log("childId in editChild",childId);
-    	$location.url('/editChild/{childId}'); 
-    };
-    	// $scope.newChild = {};
-    	// ChildFactory.getSingleChild(id)
-    	// .then((result)=>{
-    	// 	console.log("resultin editChild",result);
-    	// 	// $scope.newChild = result;
-    	// 	// $scope.newChild
-    	// 	console.log("resultin editChild",result);
-    	// });
-    	// ChildFactory.editSingleChild($scope.newChild)
-    	// .then((resulted)=>{
-    	// 	console.log("resulted",resulted);
-    	// 	$location.url('/childList');
-    	// })
-
-    	// .catch((error) => {
-     //    console.log("error in editChild: ", error);
-    	// });
-
-    // };
 
 
  	if ($location.path() === '/logout') {

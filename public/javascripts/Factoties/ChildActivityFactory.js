@@ -30,7 +30,7 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
                         });
                     }
                 resolve(ChildActivityz);
-                console.log("ChildActivityz in getChildActivitiesForChild ",ChildActivityz);
+                // console.log("ChildActivityz in getChildActivitiesForChild ",ChildActivityz);
 			})
 			.catch((error)=>{
 				reject(error);

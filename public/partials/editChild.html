@@ -16,22 +16,36 @@
         </ul>
     </div>
 </nav>
+
 <div class="input-group col-xs-6 col-xs-offset-3">
     <span class="input-group-addon" id="sizing-addon1"></span>
-    <input type="text" class="form-control" placeholder="Childname" ng-model="newChild.childName">
+    <input type="text" class="form-control" placeholder="{{selectedChild.childName}}" ng-model="updatedChild.childName">
 </div>
+
 <div class="input-group col-xs-6 col-xs-offset-3">
     <span class="input-group-addon " id="sizing-addon1"></span>
-    <input type="text" class="form-control" placeholder="Age" ng-model="newChild.age">
+    <input type="text" class="form-control" placeholder="{{selectedChild.age}}" ng-model="updatedChild.age">
 </div>
+
 <div class="input-group col-xs-6 col-xs-offset-3">
     <span class="input-group-addon" id="sizing-addon1" ng-click="displayAllPictures()"></span>
-    <input type="text" class="form-control" placeholder="Picture" ng-model="newChild.pic">
+    <input type="text" class="form-control" placeholder="{{selectedChild.pic}}" ng-model="updatedChild.pic">
 </div>
+
 <div class="container" ng-repeat="picture in allPictures">
-    <a ng-href="#!/newChild"> <img ng-src="{{picture.path}}" class="avatarPic" ng-click="addProfilePicture(picture.id)"></a>
+    <!-- <a ng-href="#!/editChild/{{selectedChild.id}}" > -->
+
+        <a>
+        <img ng-src="{{picture.path}}" class="avatarPic" ng-click="updateProfilePicture(picture.id)">
+        </a>
 </div>
+
 <div class="btn-group col-xs-4 col-xs-offset-5">
-    <button type="button" class="btn btn-default" ng-click="updatedChild()" > update
-    </button>
+<!--     <a ng-href ="#!/viewSingleChild/{{updatedChild.id}}">
+ --> 
+    <!-- <a ng-href ="#!/viewSingleChild/{{updatedChild.id}}"> -->
+    <!-- <a ng-href="#!/childList"> -->
+        <button type="button" class="btn btn-default" ng-click="updateChild(updatedChild)" > Update
+        </button>
+    <!-- </a> -->
 </div>
