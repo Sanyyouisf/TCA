@@ -5,6 +5,7 @@ app.controller("authCtrl", function($scope,AuthFactory,UserFactory,$location,$ro
     	password:"111111"
     };
 
+    //function to log in 
 	let logMeIn = () => {
 		AuthFactory.authenticate($scope.auth)
 		.then((usercred) => {
@@ -22,7 +23,7 @@ app.controller("authCtrl", function($scope,AuthFactory,UserFactory,$location,$ro
 	};
 
 
-
+	//function to register new user 
 	$scope.registerUser = () => {
 		AuthFactory.registerWithEmail($scope.auth)
 		.then((didRegister)=>{
@@ -39,7 +40,7 @@ app.controller("authCtrl", function($scope,AuthFactory,UserFactory,$location,$ro
 		});
 	};
 
-
+	
 	$scope.loginUser = () => {
     	logMeIn();
     };

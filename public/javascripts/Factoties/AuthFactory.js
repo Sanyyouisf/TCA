@@ -1,12 +1,19 @@
 app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
 
+	let currentUser = null;
 
+	//function to check if the user is authenticated or not 
+	let isAuthenticated = () => {
+    	return firebase.auth().currentUser ? true : false;
+  	};
+
+
+  	//function to register the new user with email and password
 	let registerWithEmail =(user)=>{
 		return $q((resolve,reject)=>{
       		firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
 			.then((resultz)=>{
 				resolve(resultz);
-				// console.log("resultz in registerWithEmail :",resultz);
 			})
 			.catch((error)=>{
 				reject(error);
@@ -36,5 +43,5 @@ app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 
-	return{registerWithEmail:registerWithEmail ,authenticate:authenticate ,logout:logout};
+	return{isAuthenticated:isAuthenticated, registerWithEmail:registerWithEmail ,authenticate:authenticate ,logout:logout};
 });
