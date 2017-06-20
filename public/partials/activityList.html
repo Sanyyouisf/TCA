@@ -1,1 +1,60 @@
-<h1>inside activity List.html</h1>
+<div class="aligner">
+    <h1 class="username">{{user.pName}}</h1>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a ng-href="#!/logout">Logout</a></li>
+            <li><a ng-href="#!/parentProfile">activities</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">child <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#!/newChild">Add Child</a></li>
+                    <li><a href="#!/childList">Child List</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- displaying all the activities -->
+<div ng-repeat="activity in activities">
+    <div class=" panel panel-success col-xs-4">
+        <div class="panel-heading">
+            <!-- <a ng-href="#!/childList" ng-click="addChildActivity(activity.id)"> -->
+                <p> {{activity.title}}</p>
+                <p> {{activity.fileName}}</p>
+            <!-- </a> -->
+        </div>
+
+        <div class="panel-body container ">
+            <img ng-src="{{activity.picture}}" class="activityPic">
+        </div>
+
+        <div class="btn-group col-xs-4 col-xs-offset-5 ">
+            <button type="button" class="btn btn-default" ng-click="displayAllChildren(activity.id)"> assign to child
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- display all the children   -->
+<div ng-repeat="child in selectedchildren">
+    <div class="panel panel-success col-xs-4">
+        <div class="panel-heading">
+            <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)">
+                <p> Name :{{child.childName}}</p>
+                <p> Age :{{child.age}}</p>
+                </a>
+        </div>
+        <div class="panel-body container ">
+            <img ng-src="{{child.url}}" class="childProfilePic">
+        </div>
+        <div ng-repeat="activity in child.activities">
+            <p>{{activity.title}}</p>
+            <br>
+            <p>{{activity.fileName}}</p>
+        </div>
+    </div>
+</div>

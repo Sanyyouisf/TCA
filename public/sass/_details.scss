@@ -1,0 +1,35 @@
+/*body {*/
+	.avatarPic {
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+	}
+
+	.childProfilePic {
+		width: 100px;
+		height:100px;
+	}
+
+	.containertext {
+		display: flex;
+		/*flex-flow: row nowrap;*/
+		flex-direction: row;
+		/*justify-content: flex-start;*/
+		overflow: auto;
+		max-width: 300px;
+	}
+
+	.activityPic {
+		width: 100px;
+		height:100px;
+	}
+	
+	.title {
+		text-align: center;
+	}
+
+	object:focus {
+    outline: none;
+}
+	
+/*}*/

@@ -6,43 +6,47 @@ app.config(function($routeProvider){
 	$routeProvider
 	.when('/auth',{
 		templateUrl:"partials/home.html",
-		controller:"auth-Ctrl"
+		controller:"authCtrl"
 	})
 	.when('/parentChildLogin',{
 		templateUrl:"partials/parentChildLogin.html",
-		controller:"parentChildLogin-Ctrl"
+		controller:"parentChildLoginCtrl"
 	})
 	.when('/parentProfile',{
 		templateUrl:"partials/parentProfile.html",
-		controller:"parentProfile-Ctr"
+		controller:"parentProfileCtr"
 	})
 	.when('/newChild',{
 		templateUrl:"partials/newChild.html",
-		controller:"newChild-Ctrl"
+		controller:"newChildCtrl"
 	})
 	.when( '/childList',{
 		templateUrl:"partials/childList.html",
-		controller:"ChildList-Ctrl"
+		controller:"ChildListCtrl"
 	})
 	.when('/activityList',{
 		templateUrl:"partials/activityList.html",
-		controller:"activityList-Ctrl"
+		controller:"activityListCtrl"
 	})
-	.when('/viewSingleChild',{
+	.when('/viewSingleChild/:childId',{
 		templateUrl:"partials/viewSingleChild.html",
-		controller:"viewSingleChild-Ctrl"
+		controller:"viewSingleChildCtrl"
 	})
 	.when('/childLogin',{
 		templateUrl:"partials/childLogin.html",
-		controller:"child-Ctrl"
+		controller:"childLoginCtrl"
 	})
-	.when('/childProfile',{
+	.when('/childProfile/:childId',{
 		templateUrl:"partials/childProfile.html",
-		controller:"childActivity-Ctrl"
+		controller:"childActivityCtrl"
 	})
-	.when('/singleChildActivity',{
+	.when('/singleChildActivity/:childActivityId',{
 		templateUrl:"partials/singleChildActivity.html",
-		controller:"singleChildActivity-Ctrl"
+		controller:"singleChildActivityCtrl"
+	})
+	.when('/editChild/:childId',{
+		templateUrl:"partials/editChild.html",
+		controller:"editChildCtrl"
 	})
 	.otherwise('/auth');
 });

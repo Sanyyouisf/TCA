@@ -1,1 +1,28 @@
-<h1>inside child login.html</h1>
+<div class="aligner">
+    <h1 class="username">{{user.pName}}</h1>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+        <li><a ng-href="#!/parentProfile">Parent</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div ng-repeat="child in selectedchildren">
+    <div class="panel panel-success col-xs-4">
+        
+        <div class="panel-heading">
+            <a href="#!/childProfile/{{child.id}}" >
+                <p> Name :{{child.childName}}</p>
+                <p> Age :{{child.age}}</p>
+            </a>
+        </div>
+        
+        <div class="panel-body container ">
+            <img ng-src="{{child.url}}" class="childProfilePic">
+        </div>
+        
+    </div>
+</div>
+
