@@ -14,18 +14,17 @@
     </div>
 </nav>
 
-<div >
-    <div >
+<div>
+    <div>
         <h5> {{activity.fileName}}</h5>
         <object data="{{activity.filePath}}" type="application/pdf" width="1000" height="1200"">
         </object>
-        <!-- <embed src="{{activity.filePath}}" style="width: 100%;height: 100%;border: none;"> -->
-           <!-- <span>Test Link: <a href="{{activity.filePath}}">Variable Web Link</a> </span> -->
-    <!-- <img src="{{activity.filePath}}"> -->
     </div>
 </div>
 
 <div class="col-xs-1">
     <label> Done</label>
-        <input type="checkbox" name="isCompleted" ng-checked="childActivity.isCompleted" ng-change="completedChange(childActivity)" ng-model="childActivity.isCompleted"/>
+        <a ng-href="#!/childProfile/{{childActivity.childId}}"> 
+            <input type="checkbox" name="isCompleted" ng-checked="childActivity.isCompleted" ng-change="completedChange(childActivity)" ng-model="childActivity.isCompleted"/>
+        </a>
 </div>

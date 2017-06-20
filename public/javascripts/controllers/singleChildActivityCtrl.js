@@ -5,12 +5,11 @@ app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildA
 	$scope.childActivity ={};
 
 	let displayChildActivity =()=>{
-		// console.log("$routeParams.childActivityId :",$routeParams.childActivityId);
 		ChildActivityFactory.getSingleChildActivity($routeParams.childActivityId)
 		.then((result)=>{
-			console.log("tvhe result ChildActivity",result);
+			// console.log("tvhe result ChildActivity",result);
 			$scope.childActivity = result ;
-			console.log("$scope.childActivity",$scope.childActivity);
+			// console.log("$scope.childActivity",$scope.childActivity);
 			ActivityFactory.getSingleActivity(result.activityId)
 			.then((resultActivity)=>{
 				// console.log("resultActivity",resultActivity);
