@@ -1,25 +1,31 @@
-body .avatarPic {
+/*body {*/
+.avatarPic {
+  width: 100px;
+  height: 100px;
+  display: inline-block; }
+
+.childProfilePic {
   width: 100px;
   height: 100px; }
 
-body .childProfilePic {
+.containertext {
+  display: flex;
+  /*flex-flow: row nowrap;*/
+  flex-direction: row;
+  /*justify-content: flex-start;*/
+  overflow: auto;
+  max-width: 300px; }
+
+.activityPic {
   width: 100px;
   height: 100px; }
 
-body .container {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start; }
-
-body .activityPic {
-  width: 100px;
-  height: 100px; }
-
-body .title {
+.title {
   text-align: center; }
 
-body object:focus {
+object:focus {
   outline: none; }
 
+/*}*/
 body {
   background-color: #dbbaff; }

@@ -1,7 +1,8 @@
-body {
+/*body {*/
 	.avatarPic {
 		width: 100px;
-		height:100px;
+		height: 100px;
+		display: inline-block;
 	}
 
 	.childProfilePic {
@@ -9,10 +10,13 @@ body {
 		height:100px;
 	}
 
-	.container {
-		display: inline-flex;
-		flex-wrap: nowrap;
-		justify-content: flex-start
+	.containertext {
+		display: flex;
+		/*flex-flow: row nowrap;*/
+		flex-direction: row;
+		/*justify-content: flex-start;*/
+		overflow: auto;
+		max-width: 300px;
 	}
 
 	.activityPic {
@@ -21,11 +25,11 @@ body {
 	}
 	
 	.title {
-		text-align: center;;
+		text-align: center;
 	}
-	
+
 	object:focus {
     outline: none;
 }
 	
-}
+/*}*/

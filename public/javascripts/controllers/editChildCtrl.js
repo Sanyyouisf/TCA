@@ -1,4 +1,4 @@
-app.controller("editChildCtrl", function($scope, $routeParams,ChildFactory, AvatarFactory, $rootScope) {
+app.controller("editChildCtrl", function($scope, $routeParams,$location,ChildFactory, AvatarFactory, $rootScope) {
 
 	$scope.selectedChild ="";
 	$scope.updatedChild = {};
@@ -36,12 +36,14 @@ app.controller("editChildCtrl", function($scope, $routeParams,ChildFactory, Avat
 	};
 
 	$scope.updateChild = (updatedChild) => {
-		console.log("inside updateChild in ctrl");
+		// console.log("inside updateChild in ctrl");
+		// console.log("$scope.updatedChild",$scope.updatedChild);
+		$scope.updatedChild.id =$routeParams.childId;
 		console.log("$scope.updatedChild",$scope.updatedChild);
 		ChildFactory.editSingleChild($scope.updatedChild)
 		.then((result)=>{
-			console.log("result",result);
-			// $location.url("/addressBooks/list");
+			console.log("result final ",result);
+			// $location.url("/childProfile/:childId");
 		}).catch((error)=>{
 			console.log("error in addNewAddress :",error);
 		});

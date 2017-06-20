@@ -28,8 +28,8 @@
     <span class="input-group-addon" id="sizing-addon1" ng-click="displayAllPictures()"></span>
     <input type="text" class="form-control" placeholder="Picture" ng-model="newChild.pic">
 </div>
-<div class="container" ng-repeat="picture in allPictures">
-    <a ng-href="#!/newChild"> <img ng-src="{{picture.path}}" class="avatarPic" ng-click="addProfilePicture(picture.id)"></a>
+<div class="containertext" ng-repeat="picture in allPictures">
+    <a ng-href="#!/newChild" class="avatarPic" > <img ng-src="{{picture.path}}" class="avatarPic" ng-click="addProfilePicture(picture.id)"></a>
 </div>
 <div class="btn-group col-xs-4 col-xs-offset-5">
     <button type="button" class="btn btn-default" ng-click="addNewChild()" > Add New Child

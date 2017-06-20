@@ -3,6 +3,7 @@ app.controller("newChildCtrl", function($location,$scope,$routeParams,$rootScope
 	$scope.allPictures =[];
 	// $scope.newChild= {};
 
+
 	if($location.path()==='/logout'){
 		AuthFactory.logout();
 		$rootScope.user={};

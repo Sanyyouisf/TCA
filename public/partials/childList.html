@@ -36,8 +36,9 @@
         </div>
         
         <div ng-repeat="activity in child.activities">
-            <p>{{activity.title}}</p><br>
+            <p>{{activity.title}}</p>
             <p>{{activity.fileName}}</p>
+            <br>
         </div>
 
         <div class="btn-group col-xs-4 col-xs-offset-5 ">
@@ -54,7 +55,6 @@
             <p> {{activity.title}}</p>
             <p> {{activity.fileName}}</p>
         </a>
-        <p>display here</p>
         <img ng-src="{{activity.picture}}" class="activityPic">
     </div>
 </div>

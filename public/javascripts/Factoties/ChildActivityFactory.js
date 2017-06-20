@@ -52,6 +52,25 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
         });
     };
 
+    let editChildActivity = (childActivity) => {
+    	console.log("childActivity :",childActivity);
+        return $q((resolve, reject) => {
+            $http.put(`${FIREBASE_CONFIG.databaseURL}/childActivities/${childActivity.childActivityId}.json`, JSON.stringify({
+                    activityId: childActivity.activityId,
+                    isCompleted: childActivity.isCompleted,
+                    childId: childActivity.childId,
+                    dueDate: childActivity.dueDate
+                })).then((resultz) => {
+                    resolve(resultz.data);
+                    console.log("resolved resultz",resultz.data);
+                })
+                .catch((error) => {
+                    reject("error in editChildActivities",error);
+                });
+        });
+    };
+
+
 
     let getSingleChildActivity = (childActivityId)=>{
     	return $q ((resolve,reject)=>{
@@ -69,6 +88,6 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
 
 
 
-	return{getChildActivitiesForChild:getChildActivitiesForChild, postChildActivity:postChildActivity ,deletz:deletz,getSingleChildActivity:getSingleChildActivity};
+	return{getChildActivitiesForChild:getChildActivitiesForChild, postChildActivity:postChildActivity ,deletz:deletz,getSingleChildActivity:getSingleChildActivity,editChildActivity:editChildActivity};
 
 });

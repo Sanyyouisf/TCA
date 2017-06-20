@@ -1,4 +1,4 @@
-app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG) {
+app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
 
     let postNewChild = (childData) => {
         console.log("childData in postNewChild:", childData);
@@ -87,20 +87,20 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG) {
 
 
     let editSingleChild = (child) => {
-        console.log(child);
-        console.log("inside editSingleChild in factory");
+        // console.log("child :",child);
+        // console.log("inside editSingleChild in factory");
         return $q((resolve, reject) => {
-            $http.put(`${FIREBASE_CONFIG.databaseURL}/children/${child.Id}.json`,
+            $http.put(`${FIREBASE_CONFIG.databaseURL}/children/${child.id}.json`,
                     JSON.stringify({
                         childName:child.childName,
                         parentId:child.parentId,
                         age:child.age,
                         pic:child.pic,
-                        // id:child.childId
                     }))
                 .then((resultz) => {
+                    resultz.data.id =$routeParams.childId;
                     resolve(resultz.data);
-                    console.log("resultz.data inside editChild : ", resultz.data);
+                    console.log(" resolved resultz.data inside editChild : ", resultz.data);
                 })
                 .catch((error) => {
                     reject(error);
