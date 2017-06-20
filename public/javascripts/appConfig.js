@@ -13,7 +13,6 @@ app.run(function(FIREBASE_CONFIG,$rootScope,$location,AuthFactory) {
     firebase.initializeApp(FIREBASE_CONFIG);
     $rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute){
     	var logged = AuthFactory.isAuthenticated();
-		console.log("logged is : ",logged );
     	var appTo;
     	// if the path is /auth  
     	if (currRoute.originalPath) {

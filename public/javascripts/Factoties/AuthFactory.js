@@ -28,7 +28,6 @@ app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
 			firebase.auth().signInWithEmailAndPassword(credentials.email,credentials.password)
 			.then((resultz)=>{
 				resolve(resultz);
-				// console.log("resultz in authenticate :",resultz);
 			})
 			.catch((error)=>{
 				reject(error);
