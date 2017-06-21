@@ -69,7 +69,7 @@ app.config(function($routeProvider){
 	})
 	.when('/childProfile/:childId',{
 		templateUrl:"partials/childProfile.html",
-		controller:"childActivityCtrl",
+		controller:"childProfileCtrl",
 		resolve:{isAuth}
 	})
 	.when('/singleChildActivity/:childActivityId',{

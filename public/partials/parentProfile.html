@@ -1,18 +1,28 @@
-<div class="aligner">
-    <h1 class="username">{{user.pName}}</h1>
+<div class="aligner text-center">
+    <h1 class="username  col-xs-offset-8">{{user.pName}}</h1>
 </div>
 <nav class="col-md-10 col-xs-offset-1 navbar navbar-default">
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
             <li><a ng-href="#!/logout">Logout</a></li>
-            <li><a ng-href="#!/activityList">activities</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">child <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#!/newChild">Add Child</a></li>
-                    <li><a href="#!/childList">Child List</a></li>
-                </ul>
-            </li>
         </ul>
     </div>
 </nav>
+
+
+<div class="col-md-10 col-xs-offset-1">
+    <div class="panel-heading box" ><h2 class= "aligner"> to find the activities </h2><br>
+        <a ng-href="#!/activityList">
+            <button type="button" class="btn3:hover btn3 " ng-href="#!/parentProfile">click here</button>
+        </a>
+    </div>
+
+    <div class="panel-body box"><h2 class= "aligner" >Child Manager</h2><br>
+        <a href="#!/newChild">
+            <button type="button" class="btn2:hover btn2 " ng-href="#!/childLogin">Add Child</button>
+        </a>
+        <a href="#!/childList">
+            <button type="button" class="btn2:hover btn2 " ng-href="#!/childLogin">Child List</button>
+        </a>
+    </div>
+</div>
