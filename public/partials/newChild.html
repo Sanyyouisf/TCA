@@ -32,15 +32,15 @@
     <input type="text" class="form-control" placeholder="Picture" ng-model="newChild.pic">
 </div>
 
-<div class="outsideflex-container">
-    <div class="flex-container" >
+<!-- <div class="outsideflex-container"> -->
+    <div class="container" >
         <div ng-repeat="picture in allPictures">
-            <div class="flex-item">
+            <div class="col-xs-3">
                 <a ng-href="#!/newChild" > <img ng-src="{{picture.path}}" class="avatarPic" ng-click="addProfilePicture(picture.id)"></a>
             </div>
         </div>
     </div>
-</div>
+<!-- </div> -->
 
 <div class="btn-group col-xs-4 col-xs-offset-5">
     <button type="button" class="btn btn-default" ng-click="addNewChild()" > Add New Child

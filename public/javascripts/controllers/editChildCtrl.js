@@ -4,7 +4,7 @@ app.controller("editChildCtrl", function($scope, $routeParams,$location,ChildFac
 	$scope.updatedChild = {};
 	$scope.allPictures =[];
 	// $scope.newChild= {};
-	 	
+
 	console.log("$routeParams.childId :",$routeParams.childId);
 	ChildFactory.getSingleChild($routeParams.childId)
 	.then ((results) => {
@@ -27,28 +27,21 @@ app.controller("editChildCtrl", function($scope, $routeParams,$location,ChildFac
 	};
 
 	$scope.updateProfilePicture = (avatarId) => {
-		// console.log("ipicId",avatarId);
-		// console.log("$rootScope.user",$rootScope.user);
 		$scope.updatedChild.pic = avatarId;
 		$scope.updatedChild.parentId=$rootScope.user.uid;
 		$scope.updatedChild.id = $routeParams.childId;
-		console.log("$scope.updatedChild",$scope.updatedChild);
 	};
 
+
 	$scope.updateChild = (updatedChild) => {
-		// console.log("inside updateChild in ctrl");
-		// console.log("$scope.updatedChild",$scope.updatedChild);
 		$scope.updatedChild.id =$routeParams.childId;
-		console.log("$scope.updatedChild",$scope.updatedChild);
 		ChildFactory.editSingleChild($scope.updatedChild)
 		.then((result)=>{
-			console.log("result final ",result);
-			// $location.url("/childProfile/:childId");
+			$location.url("/childList");
 		}).catch((error)=>{
 			console.log("error in addNewAddress :",error);
 		});
 	};
-
 
 
 });

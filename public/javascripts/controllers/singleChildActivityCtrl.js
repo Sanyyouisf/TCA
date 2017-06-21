@@ -1,4 +1,4 @@
-app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildActivityFactory,$routeParams){
+app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildActivityFactory,$routeParams,$location){
 
 	$scope.childActivityId = "";
 	$scope.activity={};
@@ -25,12 +25,10 @@ app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildA
 
 
 	$scope.completedChange = (completed) => {
-		console.log("completed",completed);
 		$scope.childActivity.childActivityId = $routeParams.childActivityId;
-		console.log("final $scope.childActivity",$scope.childActivity);
     	ChildActivityFactory.editChildActivity($scope.childActivity)
     	.then((resulted)=>{
-    		console.log("resulted",resulted);
+    		$location.url(`/childProfile/${$scope.childActivity.childId}`);
     	}).catch((error)=>{
     		console.log("inputChange error",error);
     	});

@@ -77,7 +77,10 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
     let deletz = (childId) => {
         return $q((resolve, reject) => {
             $http.delete(`${FIREBASE_CONFIG.databaseURL}/children/${childId}.json`)
-                .then(() => {})
+                .then(() => {
+                    resolve();
+                    // console.log("response",response);
+                })
                 .catch((error) => {
                     reject(error);
                     console.log("error in deletz :", error);
@@ -86,8 +89,34 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
     };
 
 
+    // let editSingleChild = (child) => {
+    //     // console.log("child :",child);
+    //     // console.log("inside editSingleChild in factory");
+    //     return $q((resolve, reject) => {
+    //         $http.put(`${FIREBASE_CONFIG.databaseURL}/children/${child.id}.json`,
+    //                 JSON.stringify({
+    //                     childName:child.childName,
+    //                     parentId:child.parentId,
+    //                     age:child.age,
+    //                     pic:child.pic,
+    //                     id :child.id
+    //                 }))
+    //             .then((resultz) => {
+    //                 console.log("$routeParams.childId",$routeParams.childId);
+    //                 resultz.data.id =$routeParams.childId;
+    //                 resolve(resultz.data);
+    //                 console.log(" resolved resultz.data inside editChild : ", resultz.data);
+    //             })
+    //             .catch((error) => {
+    //                 reject(error);
+    //                 console.log("error in editChild :", error);
+    //             });
+    //     });
+    // };
+
+
     let editSingleChild = (child) => {
-        // console.log("child :",child);
+        console.log("child :",child);
         // console.log("inside editSingleChild in factory");
         return $q((resolve, reject) => {
             $http.put(`${FIREBASE_CONFIG.databaseURL}/children/${child.id}.json`,
@@ -98,6 +127,8 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
                         pic:child.pic,
                     }))
                 .then((resultz) => {
+                    console.log("$routeParams.childId",$routeParams.childId);
+                    console.log("resultz",resultz);
                     resultz.data.id =$routeParams.childId;
                     resolve(resultz.data);
                     console.log(" resolved resultz.data inside editChild : ", resultz.data);
