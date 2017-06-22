@@ -107,5 +107,9 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
         $location.url('/auth');
     }
 
+    $scope.displaySingleChild = (childId) =>{
+        $location.url(`/viewSingleChild/${childId}`);
+    };
+
 
 });

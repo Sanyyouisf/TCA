@@ -17,23 +17,18 @@
     </div>
 </nav>
 
-<div >
+<div class="container">
     <div ng-repeat="child in selectedchildren" >
-        <div class="panel panel-success col-xs-4 ">
-            
+        <div class="panel panel-success col-xs-5 item"> 
             <div class="panel-heading">
-                <a href="#!/viewSingleChild/{{child.id}}" >
-                    <p> Name :{{child.childName}}</p>
-                    <p> Age :{{child.age}}</p>
-                </a>
-                <div class="btn-group col-xs-4 col-xs-offset-5 ">
-                    <button class="btn btn-danger fa fa-trash-o" ng-click="deleteChild(child.id)"></button>
+                <div >{{child.childName}}  <button class="btn btn-success fa fa-trash-o  pull-right" ng-click="deleteChild(child.id)"></button></div>
+            </div>
+ 
+            <a href="">
+                <div class="panel-body container ">
+                    <img ng-src="{{child.url}}" class="childProfilePic" ng-click="displaySingleChild(child.id)">
                 </div>
-            </div>
-            
-            <div class="panel-body container ">
-                <img ng-src="{{child.url}}" class="childProfilePic">
-            </div>
+            </a>
             
             <div ng-repeat="activity in child.activities">
                 <p>{{activity.title}}</p>
@@ -50,14 +45,37 @@
     </div>
 </div>
 
-<div >
-    <div class=" panel panel-success col-xs-4 " ng-repeat="activity in activities">
-        <div class="panel-heading">
-            <a ng-href="#!/childList" ng-click="addChildActivity(activity.id)"> 
+
+ <!-- <div class="panel-heading"> -->
+<!-- <div class="container">
+    <div class=" panel panel-success " ng-repeat="activity in activities">
+        <div class="panel panel-heading col-xs-4">
+            <a ng-href="#!/childList" ng-click="addChildActivity(activity.id)" class="panel-heading"> 
                 <p> {{activity.title}}</p>
                 <p> {{activity.fileName}}</p>
             </a>
             <img ng-src="{{activity.picture}}" class="activityPic">
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<div class="container">
+    <div ng-repeat="activity in activities">
+        <div class="panel panel-success col-xs-4 item">
+            <div class="panel-heading">
+                <!-- <a ng-href="#!/childList" ng-click="addChildActivity(activity.id)" >  -->
+                    <p> {{activity.title}}</p>
+                    <p> {{activity.fileName}}</p>
+                <!-- </a> -->
+            </div>
+            <a href="">
+                <div class="panel-body">
+                    <img ng-src="{{activity.picture}}" class="activityPic" ng-click="addChildActivity(activity.id)">
+                </div>
+            </a>
         </div>
     </div>
 </div>
