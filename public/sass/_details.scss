@@ -15,10 +15,6 @@ h2 {
     font-family: 'Lora', serif;
 }
 
-.childProfilePic {
-    width: 100px;
-    height: 100px;
-}
 
 .containertext {
     display: flex;
@@ -110,8 +106,13 @@ object:focus {
 .container {
 	width : 50%;
 	height: 50%;
-	border: 2px red solid;
-	overflow: scroll;
+	/*border: 2px red solid;*/
+	/*overflow: scroll;*/
+}
+
+
+a {
+	text-decoration: none;
 }
 
 

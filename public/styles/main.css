@@ -9,10 +9,6 @@ h2 {
 .username {
   font-family: 'Lora', serif; }
 
-.childProfilePic {
-  width: 100px;
-  height: 100px; }
-
 .containertext {
   display: flex;
   /*flex-flow: row nowrap;*/
@@ -91,8 +87,11 @@ object:focus {
 .container {
   width: 50%;
   height: 50%;
-  border: 2px red solid;
-  overflow: scroll; }
+  /*border: 2px red solid;*/
+  /*overflow: scroll;*/ }
+
+a {
+  text-decoration: none; }
 
 /*}*/
 #footer {
@@ -170,6 +169,15 @@ object:focus {
   border-radius: 4px;
   padding: 5px;
   width: 150px; }
+
+.item {
+  margin: 15px;
+  border: 1px solid black; }
+
+.childProfilePic {
+  width: 100px;
+  height: 100px;
+  margin: auto; }
 
 /*.activityPic:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
