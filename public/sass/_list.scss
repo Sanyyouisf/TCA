@@ -6,12 +6,23 @@
    height:50px;
    width:100%;
    background:#D4CECE;
-   padding: 25px;
-   /*margin-top: 70px;*/
+   padding: 15px 50px;
+	}
+
+	.navBar {
+		position: fixed;
+		width:100%;
+		padding: 10px;
+		margin: auto;
+		height:75px;
+		top:0px;
+		left:0px;
+		color: white;
+		background-color: #008080;
 	}
 
 	.TCA {
-		margin-bottom: 100px; 
+		margin: 100px 0; 
 	}
 
 	.flexContainer {

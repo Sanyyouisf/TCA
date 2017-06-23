@@ -1,9 +1,10 @@
-<div class="aligner text-center">
-    <h1 class="username  col-xs-offset-8">{{user.pName}}</h1>
-</div>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <ul class="col-md-10 col-xs-offset-1 nav navbar-nav navbar-right">
+<nav class="navbar navbar-inverse navBar">
+    <!-- <div class="container-fluid"> -->
+    <!-- <div class="aligner text-center"> -->
+        <h3 class="username navbar-right">{{user.pName}}</h3>
+    <!-- </div> -->
+        <ul class="nav navbar-nav navbar-left" >
+            <li> <img ng-src="./DataBase/images/logo.png" class="logo"></li>
             <li><a ng-href="#!/logout">Logout</a></li>
             <li><a ng-href="#!/parentProfile">activities</a></li>
             <li class="dropdown">
@@ -14,28 +15,35 @@
                 </ul>
             </li>
         </ul>
-    </div>
+    <!-- </div> -->
 </nav>
 
+<!-- <div class="aligner text-center">
+    <h1 class="username  col-xs-offset-8">{{user.pName}}</h1>
+</div> -->
+
+
 <!-- displaying all the activities -->
-<div ng-repeat="activity in activities" class="contain" >
-    <div class=" panel panel-success col-xs-4">
-        <div class="panel-heading">
-            <!-- <a ng-href="#!/childList" ng-click="addChildActivity(activity.id)"> -->
-                <p> {{activity.title}}</p>
-                <p> {{activity.fileName}}</p>
-            <!-- </a> -->
-        </div>
+<div class="container">
+    <div ng-repeat="activity in activities" >
+        <div class=" panel col-xs-3 item">
+            <div class=" col-xs-12 ">
+                <!-- <a ng-href="#!/childList" ng-click="addChildActivity(activity.id)"> -->
+                    <p> {{activity.title}}</p>
+                    <p> {{activity.fileName}}</p>
+                <!-- </a> -->
+            </div>
 
-        <div class="panel-body container ">
-            <img ng-src="{{activity.picture}}" class="activityPic">
-        </div>
+            <div class="panel-body">
+                <img ng-src="{{activity.picture}}" class="activityPic">
+            </div>
 
-        <div class="btn-group col-xs-4 col-xs-offset-5 ">
-            <button type="button" class="btn btn-default" ng-click="displayAllChildren(activity.id)"> assign to child
-            </button>
-        </div>
+            <div class="btn col-xs-4 col-xs-offset-1 ">
+                <button type="button" class="btn btn-default" ng-click="displayAllChildren(activity.id)"> assign to child
+                </button>
+            </div>
 
+        </div>
     </div>
 </div>
 

@@ -69,74 +69,74 @@
 	},
 	"activities":{
 		"activity01":{
-			"title":"reading",
-			"fileName":"The_Birth_of_Jesus",
+			"title":"Reading",
+			"fileName":"The Birth of Jesus",
 			"picture":"/DataBase/images/Jesus_Birth.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/The_Birth_of_Jesus_English.pdf"
 		},
 		"activity02":{
-			"title":"reading",
-			"fileName":"Samuel_Gods_BoyServant",
+			"title":"Reading",
+			"fileName":"Samuel Gods BoyServant",
 			"picture":"/DataBase/images/Samuel.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Samuel_Gods_BoyServant_English.pdf"
 		},
 		"activity03":{
 			"title":"Reading",
-			"fileName":"David_the_King_Part_1",
+			"fileName":"David the King Part 1",
 			"picture":"/DataBase/images/David_1.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/David_the_King_Part_1_English.pdf"
 		},
 		"activity04":{
 			"title":"Reading",
-			"fileName":"David_the_King_Part_2",
+			"fileName":"David the King Part 2",
 			"picture":"/DataBase/images/David_2.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/David_the_King_Part_2_English.pdf"
 		},
 		"activity05":{
 			"title":"Reading",
-			"fileName":"Noah_and_the_Great_Flood",
+			"fileName":"Noah and the Great Flood",
 			"picture":"/DataBase/images/Noah.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Noah_and_the_Great_Flood_English.pdf"
 		},
 		"activity06":{
 			"title":"Reading",
-			"fileName":"Jacob_the_Deceiver",
+			"fileName":"Jacob the Deceiver",
 			"picture":"/DataBase/images/Jacob.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Jacob_the_Deceiver_English.pdf"
 		},
 		"activity07":{
 			"title":"Reading",
-			"fileName":"Rich_Man_Poor_Man",
+			"fileName":"Rich Man Poor Man",
 			"picture":"./DataBase/images/Rich_Man_Poor_Man.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Rich_Man_Poor_Man_English.pdf"
 		},
 		"activity08":{
 			"title":"Reading",
-			"fileName":"Jesus_and_Lazarus",
+			"fileName":"Jesus and Lazarus",
 			"picture":"./DataBase/images/Jesus_and_Lazarus.png",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_and_Lazarus_English.pdf"
 		},
 		"activity09":{
 			"title":"Painting",
-			"fileName":"When_God_Made_Everything",
+			"fileName":"When God Made Everything",
 			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/When_God_Made_Everything_English_CB.pdf"
 		},
 		"activity10":{
 			"title":"Painting",
-			"fileName":"The_Good_Samaritan",
+			"fileName":"The Good Samaritan",
 			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/The_Good_Samaritan_English_CB.pdf"
 		},
 		"activity11":{
 			"title":"Painting",
-			"fileName":"Samson_Gods_Strong_Man",
+			"fileName":"Samson Gods Strong Man",
 			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Samson_Gods_Strong_Man_English_CB.pdf"
 		},
 		"activity12":{
 			"title":"Painting",
-			"fileName":"Jesus_Feeds_5000_People",
+			"fileName":"Jesus Feeds 5000 People",
 			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_Feeds_5000_People_English_CB.pdf"
 		}
