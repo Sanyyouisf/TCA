@@ -17,18 +17,18 @@
 <!-- displaying all the activities -->
 <div class="container">
     <div ng-repeat="activity in activities">
-        <div class=" panel col-xs-2 item">
+        <div class=" panel col-xs-3 item">
             <div class=" col-xs-12 "> 
                 <p>{{activity.title}}</p>
-                <p> {{activity.fileName}}</p>
+                <p>{{activity.fileName}}</p>
             </div>
 
             <!-- <div class="col-xs-12" ng-model="{{activity.title}}" ng-init="activity.title = Reading"> 
-                <ul ng-if="{{activity.title}}">
+                <ul ng-if="{{activity.title == 'Reading'}} ">
                     <i class="fa fa-book fa-fw" aria-hidden="true"></i>
                     <p>{{activity.title}}</p> 
                 </ul>
-                <ul ng-if="!{{activity.title}}">
+                <ul ng-if="{{activity.title == Painting}}">
                     <i class="fa fa-paint-brush" aria-hidden="true"></i>
                     <p>{{activity.title}}</p> 
                 </ul>
@@ -57,8 +57,8 @@
                 <!-- </a> -->
             </div> 
             <div class="panel-body container col-xs-12">
-             <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)">
-                <img ng-src="{{child.url}}" class="childProfilePic ">
+                <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)">
+                    <img ng-src="{{child.url}}" class="childProfilePic ">
                 </a>
             </div>
             <div ng-repeat="activity in child.activities" class="col-xs-12 activityList">

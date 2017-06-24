@@ -96,7 +96,9 @@ a {
   height: 50px;
   width: 100%;
   background: #D4CECE;
-  padding: 15px 50px; }
+  padding: 15px 50px;
+  z-index: 1000;
+  margin-top: 20px; }
 
 .navBar {
   position: fixed;
@@ -104,11 +106,12 @@ a {
   padding: 10px;
   margin: auto;
   height: 75px;
-  top: 0px;
-  left: 0px;
   color: white;
   background-color: #008080;
-  float: left; }
+  float: left;
+  left: 0px;
+  top: 0px;
+  z-index: 1000; }
 
 .TCA {
   margin: 100px 0; }
@@ -124,37 +127,6 @@ a {
   flex-wrap: wrap;
   justify-content: flex-start; }
 
-.flex-container {
-  /*list-style: none;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;*/
-  display: inline-flex;
-  /*flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		justify-content: space-around;*/
-  border: 2px solid red;
-  width: 500px;
-  height: 200px;
-  margin: auto; }
-
-.flex-item {
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  justify-content: space-around;
-  /*margin-top: 10px;*/
-  /*line-height: 150px;*/
-  /*color: white;*/
-  /*font-weight: bold;*/
-  /*font-size: 3em;*/
-  /*text-align: center;*/ }
-
 .avatarPic {
   width: 100px;
   height: 100px;
@@ -169,6 +141,11 @@ a {
   border: 1px solid #ddd;
   border-radius: 5px; }
 
+.frame {
+  box-shadow: 3px 3px 3px grey;
+  border: 1px solid grey;
+  border-radius: 3px; }
+
 .item {
   margin: 15px;
   box-shadow: 10px 10px 5px grey;
@@ -182,8 +159,9 @@ a {
   margin: auto; }
 
 .home-bg {
-  background-image: url("../DataBase/images/homebackground.jpg");
+  background-image: url("../DataBase/images/homeBackground.jpg");
   opacity: .9;
+  /*background-position: fixed ;*/
   /*background-position: center center;*/
   background-repeat: no-repeat;
   background-size: cover;
@@ -193,20 +171,40 @@ a {
   top: 75px;
   left: 0; }
 
+.childProfile-bg {
+  background-image: url("../DataBase/images/childProfileBackground.jpg");
+  opacity: .9;
+  /*background-position: center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  /*position: fixed;*/
+  position: absolute;
+  top: 75px;
+  left: 0; }
+
+.childProfilePagePic {
+  background-image: url("../DataBase/images/childProfilePic.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  border-radius: 5px; }
+
+.childLoginPic {
+  background-image: url("../DataBase/images/childLoginPic.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  border-radius: 5px; }
+
 .childProfilePic {
   width: 100px;
   height: 100px;
   margin: auto;
   border-radius: 5px;
   border: 1px solid #ddd; }
-
-/*.home-bg {
-background-image: url("../DataBase/images/homebackground.jpg") no-repeat center center fixed;
-}
-*/
-/*.activityPic:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}*/
-/*body {
-	background-color: $green;
-}*/

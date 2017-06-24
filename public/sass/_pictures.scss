@@ -14,6 +14,12 @@
     border-radius: 5px;
     }
 
+.frame {
+    box-shadow: 3px 3px 3px grey;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
 .item {
 	margin: 15px;
 	box-shadow: 10px 10px 5px grey;
@@ -29,8 +35,9 @@
 }
 
 .home-bg{
-	background-image: url("../DataBase/images/homebackground.jpg");
+	background-image: url("../DataBase/images/homeBackground.jpg");
 	opacity: .9;
+    /*background-position: fixed ;*/
     /*background-position: center center;*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,6 +46,41 @@
     position: fixed; 
     top: 75px; 
     left: 0; 
+    }
+
+.childProfile-bg{
+    background-image: url("../DataBase/images/childProfileBackground.jpg");
+    opacity: .9;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    /*position: fixed;*/
+    position: absolute; 
+    top: 75px; 
+    left: 0; 
+    }
+
+
+.childProfilePagePic {
+    background-image: url("../DataBase/images/childProfilePic.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    }
+
+.childLoginPic {
+    background-image: url("../DataBase/images/childLoginPic.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
     }
  
 
@@ -49,14 +91,4 @@
     border-radius: 5px;
     border: 1px solid #ddd;
 }
-
-/*.home-bg {
-background-image: url("../DataBase/images/homebackground.jpg") no-repeat center center fixed;
-}
-*/
-
-
-/*.activityPic:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}*/
 
