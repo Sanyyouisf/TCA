@@ -71,50 +71,50 @@
 		"activity01":{
 			"title":"Reading",
 			"fileName":"The Birth of Jesus",
-			"picture":"/DataBase/images/Jesus_Birth.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/The_Birth_of_Jesus_English.pdf"
+			"picture":"./DataBase/images/Jesus_Birth.png",
+			"filePath":"./DataBase/pdf/The_Birth_of_Jesus_English.pdf"
 		},
 		"activity02":{
 			"title":"Reading",
 			"fileName":"Samuel Gods BoyServant",
-			"picture":"/DataBase/images/Samuel.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Samuel_Gods_BoyServant_English.pdf"
+			"picture":"./DataBase/images/Samuel.png",
+			"filePath":"./DataBase/pdf/Samuel_Gods_BoyServant_English.pdf"
 		},
 		"activity03":{
 			"title":"Reading",
-			"fileName":"David the King Part 1",
-			"picture":"/DataBase/images/David_1.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/David_the_King_Part_1_English.pdf"
+			"fileName":"David the King 1",
+			"picture":"./DataBase/images/David_1.png",
+			"filePath":"./DataBase/pdf/David_the_King_Part_1_English.pdf"
 		},
 		"activity04":{
 			"title":"Reading",
-			"fileName":"David the King Part 2",
-			"picture":"/DataBase/images/David_2.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/David_the_King_Part_2_English.pdf"
+			"fileName":"David the King 2",
+			"picture":"./DataBase/images/David_2.png",
+			"filePath":"./DataBase/pdf/David_the_King_Part_2_English.pdf"
 		},
 		"activity05":{
 			"title":"Reading",
 			"fileName":"Noah and the Great Flood",
-			"picture":"/DataBase/images/Noah.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Noah_and_the_Great_Flood_English.pdf"
+			"picture":"./DataBase/images/Noah.png",
+			"filePath":"./DataBase/pdf/Noah_and_the_Great_Flood_English.pdf"
 		},
 		"activity06":{
 			"title":"Reading",
 			"fileName":"Jacob the Deceiver",
-			"picture":"/DataBase/images/Jacob.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Jacob_the_Deceiver_English.pdf"
+			"picture":"./DataBase/images/Jacob.png",
+			"filePath":"./DataBase/pdf/Jacob_the_Deceiver_English.pdf"
 		},
 		"activity07":{
 			"title":"Reading",
 			"fileName":"Rich Man Poor Man",
 			"picture":"./DataBase/images/Rich_Man_Poor_Man.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Rich_Man_Poor_Man_English.pdf"
+			"filePath":"./DataBase/pdf/Rich_Man_Poor_Man_English.pdf"
 		},
 		"activity08":{
 			"title":"Reading",
 			"fileName":"Jesus and Lazarus",
 			"picture":"./DataBase/images/Jesus_and_Lazarus.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_and_Lazarus_English.pdf"
+			"filePath":"./DataBase/pdf/Jesus_and_Lazarus_English.pdf"
 		},
 		"activity09":{
 			"title":"Painting",
