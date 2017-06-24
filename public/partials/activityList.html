@@ -50,18 +50,21 @@
 <!-- display all the children   -->
 <div class="container">
     <div ng-repeat="child in selectedchildren">
-        <div class="panel panel-success col-xs-3 item">
-            <div class="panel-heading ">
-                <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)">
+        <div class="panel panel-success col-xs-4 item">
+            <div class="panel-heading col-xs-12">
+                <!-- <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)"> -->
                     <p>{{child.childName}}</p>
-                </a>
+                <!-- </a> -->
             </div> 
-            <div class="panel-body container ">
-                <img ng-src="{{child.url}}" class="childProfilePic">
+            <div class="panel-body container col-xs-12">
+             <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)">
+                <img ng-src="{{child.url}}" class="childProfilePic ">
+                </a>
             </div>
-            <div ng-repeat="activity in child.activities">
+            <div ng-repeat="activity in child.activities" class="col-xs-12 activityList">
                 <p>{{activity.title}}</p>
-                <p>{{activity.fileName}}</p><br>
+                <p>{{activity.fileName}} </p> 
+                <br>
             </div>
         </div>
     </div>

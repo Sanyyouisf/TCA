@@ -1,7 +1,6 @@
 body.home {
   background: red; }
 
-/*body {*/
 .center {
   text-align: center;
   justify-content: center; }
@@ -34,7 +33,6 @@ object:focus {
   width: 400px;
   height: 300px;
   display: inline-block;
-  /*border: 2px solid red;*/
   margin: 25px; }
 
 .btn1 {
@@ -88,16 +86,9 @@ object:focus {
   background: #3cb0fd;
   text-decoration: none; }
 
-/*.container {*/
-/*width : 50%;
-	height: 50%;*/
-/*border: 2px red solid;*/
-/*overflow: scroll;*/
-/*}*/
 a {
   text-decoration: none; }
 
-/*}*/
 #footer {
   position: fixed;
   left: 0px;
@@ -121,6 +112,11 @@ a {
 
 .TCA {
   margin: 100px 0; }
+
+.activityList {
+  border-radius: 5px;
+  border: 1px solid #2f4f4f;
+  margin: 2px 0; }
 
 .flexContainer {
   display: flex;

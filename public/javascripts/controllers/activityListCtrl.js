@@ -71,7 +71,6 @@ app.controller("activityListCtrl", function($scope,$location, AuthFactory,Activi
     };
 
 
-
     if ($location.path() === '/logout') {
         AuthFactory.logout();
         $rootScope.user = {};
