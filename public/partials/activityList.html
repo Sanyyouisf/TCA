@@ -10,31 +10,27 @@
                 <li><a href="#!/childList">Child List</a></li>
             </ul>
         </li>
-        <li class="col-xs-2 col-xs-offset-5"><h3 class="username ">{{user.pName}}</h3></li>
+        <li class="col-xs-2 col-xs-offset-5">
+            <h3 class="username ">{{user.pName}}</h3></li>
     </ul>
 </nav>
-
 <!-- displaying all the activities -->
 <div class="container">
     <div ng-repeat="activity in activities">
         <div class=" panel col-xs-3 item">
-            <div class=" col-xs-12 "> 
-                <p>{{activity.title}}</p>
-                <p>{{activity.fileName}}</p>
+            <div class="container">
+                <div class="col-xs-1" ng-model="activity.title" ng-value="Reading">
+                    <ul ng-if="activity.title == 'Reading' ">
+                        <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+                    </ul>
+                    <ul ng-if="activity.title == 'Painting' ">
+                        <i class="fa fa-paint-brush fa-lg" aria-hidden="true"></i>
+                    </ul>
+                </div>
+                <div class="col-xs-9 col-xs-offset-1">
+                    <p> {{activity.fileName}}</p>
+                </div>
             </div>
-
-            <!-- <div class="col-xs-12" ng-model="{{activity.title}}" ng-init="activity.title = Reading"> 
-                <ul ng-if="{{activity.title == 'Reading'}} ">
-                    <i class="fa fa-book fa-fw" aria-hidden="true"></i>
-                    <p>{{activity.title}}</p> 
-                </ul>
-                <ul ng-if="{{activity.title == Painting}}">
-                    <i class="fa fa-paint-brush" aria-hidden="true"></i>
-                    <p>{{activity.title}}</p> 
-                </ul>
-            </div> -->
-           <!--  <p> {{activity.fileName}}</p> -->
-            
             <div class="panel-body col-xs-12">
                 <img ng-src="{{activity.picture}}" class="activityPic">
             </div>
@@ -45,17 +41,13 @@
         </div>
     </div>
 </div>
-
-
 <!-- display all the children   -->
 <div class="container">
     <div ng-repeat="child in selectedchildren">
         <div class="panel panel-success col-xs-4 item">
             <div class="panel-heading col-xs-12">
-                <!-- <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)"> -->
-                    <p>{{child.childName}}</p>
-                <!-- </a> -->
-            </div> 
+                <p>{{child.childName}}</p>
+            </div>
             <div class="panel-body container col-xs-12">
                 <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)">
                     <img ng-src="{{child.url}}" class="childProfilePic ">
@@ -63,11 +55,9 @@
             </div>
             <div ng-repeat="activity in child.activities" class="col-xs-12 activityList">
                 <p>{{activity.title}}</p>
-                <p>{{activity.fileName}} </p> 
+                <p>{{activity.fileName}} </p>
                 <br>
             </div>
         </div>
     </div>
 </div>
-
-

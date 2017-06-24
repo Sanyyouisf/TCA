@@ -20,7 +20,7 @@
             <div class=" panel-heading frame col-xs-5 item">
                 <p>{{activity.title}}</p>
                 <p>{{activity.fileName}}</p>
-                <p>{{activity.isCompleted}}</p>
+                <p>{{activity.isCompleted ? "completed" : "not completed"}}</p>
                 <div class="panel-body container ">
                     <a ng-href="#!/singleChildActivity/{{activity.childActivityId}}">
                         <img ng-src="{{activity.picture}}" class="activityPic">

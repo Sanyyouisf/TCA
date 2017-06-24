@@ -34,7 +34,7 @@
             <p>{{activity.title}}</p>
             <br>
             <p>{{activity.fileName}}</p>
-            <p>{{activity.isCompleted}}</p>
+            <p>{{activity.isCompleted ? "completed" : "not completed"}}</p>
             <div class="panel-body container ">
                 <img ng-src="{{activity.picture}}" class="activityPic">
             </div>

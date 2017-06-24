@@ -1,4 +1,4 @@
-app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildActivityFactory,$routeParams,$location){
+app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildActivityFactory,$routeParams,$location,ChildFactory,AvatarFactory){
 
 	$scope.childActivityId = "";
 	$scope.activity={};
@@ -11,6 +11,15 @@ app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildA
 			ActivityFactory.getSingleActivity(result.activityId)
 			.then((resultActivity)=>{
 				$scope.activity = resultActivity;
+				//to get the child name and avatat pic
+				ChildFactory.getSingleChild($scope.childActivity.childId)
+	    		.then((result) => {
+	        		$scope.selectedChild = result;
+	        		AvatarFactory.getSinglePicture($scope.selectedChild.pic)
+	        		.then((image) => {
+	            		$scope.selectedChild.url = image.path;
+	        		});
+	        	});
 			})
 			.catch((error)=>{
 			console.log("error",error);

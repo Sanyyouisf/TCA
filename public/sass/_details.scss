@@ -8,13 +8,27 @@ h2 {
     margin-left: 25px;
 }
 
-
+input[type="checkbox"] {
+  font-size: 50px;
+  transform:scale(2, 2);
+}
 
 .username {
     font-family: 'Lora', serif;
     font-weight: bold;
 }
 
+.pdf {
+  position: relative;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
 .containertext {
     display: flex;
