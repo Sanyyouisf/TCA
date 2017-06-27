@@ -22,9 +22,17 @@
 <div  class="container" >
     <h3 class="col-xs-4 col-xs-offset-5 "> {{activity.fileName}}</h3>
     <div class="col-xs-12">
-        <object data="{{activity.filePath}}" type="application/pdf"  class="pdf " width="100%" height="1200" >
-        <embed src="{{activity.filePath}}" type="application/pdf" class="embed-responsive"/>
-        </object>
+
+        <ul ng-if="activity.title == 'Exercise'">
+            <img ng-src="{{activity.filePath}}" class="exercisePic">
+        </ul>
+
+        <ul ng-if="activity.title !== 'Exercise'">
+            <object data="{{activity.filePath}}" type="application/pdf"  class="pdf " width="100%" height="1200" >
+            <embed src="{{activity.filePath}}" type="application/pdf" class="embed-responsive"/>
+            </object>
+        </ul>
+
     </div>
 </div>
 

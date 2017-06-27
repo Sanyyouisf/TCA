@@ -27,7 +27,6 @@ app.factory("ActivityFactory", function($q, $http, FIREBASE_CONFIG){
 			$http.get(`${FIREBASE_CONFIG.databaseURL}/activities/${activityId}.json`)
 			.then((fbactivity)=>{
                 resolve(fbactivity.data);
-                // console.log("activityz in getSingleActivity ",activityz);
 			})
 			.catch((error)=>{
 				reject(error);

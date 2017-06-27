@@ -18,7 +18,16 @@
         </div>
         <div ng-repeat="activity in activities">
             <div class=" panel-heading frame col-xs-5 item">
-                <p>{{activity.title}}</p>
+                <ul ng-if="activity.title == 'Reading'">
+                    <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+                </ul>
+                <ul ng-if="activity.title == 'Painting'">
+                    <i class="fa fa-paint-brush fa-lg" aria-hidden="true"></i>
+                </ul>
+                <ul ng-if="activity.title == 'Exercise'">
+                    <i class="fa fa-futbol-o fa-lg" aria-hidden="true"></i>
+                </ul>
+                <!-- <p>{{activity.title}}</p> -->
                 <p>{{activity.fileName}}</p>
                 <p>{{activity.isCompleted ? "completed" : "not completed"}}</p>
                 <div class="panel-body container ">

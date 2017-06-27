@@ -8,11 +8,9 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
 	$scope.childActivities =[];
 
 	let displaySingleChildData = () =>{
-	 	console.log("$routeParams.childId :",$routeParams.childId);
 	 	ChildFactory.getSingleChild($routeParams.childId)
 	    .then((result) => {
 	        $scope.selectedChild = result;
-	        console.log("$scope.selectedChild",$scope.selectedChild);
 	        AvatarFactory.getSinglePicture($scope.selectedChild.pic)
 	        .then((image) => {
 	            $scope.selectedChild.url = image.path;

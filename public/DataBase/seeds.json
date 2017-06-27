@@ -2,11 +2,11 @@
 	"parents":{
 		"parent01":{
 			"pName":"Sany Yousif",
-			"uid":"DnZppecHJhUJUaP8q2Bn4pdismH3"
+			"uid":"wIC8Gr0xXzNI9oNpBZPaj8p0dX52"
 		},
 		"parent02":{
 			"pName":"mariana Mena",
-			"uid":"Dh9HcP6volfl5zfu6YmlKdmpQth1"
+			"uid":"OA5Ti6V2RTZTTYhNwygSy6nhswH3"
 		},
 		"parent03":{
 			"pName":"Andrew jack",
@@ -14,30 +14,30 @@
 		},
 		"parent04":{
 			"pName":"Rayen Stewart",
-			"uid":"z3yZ8ToIcCPpUK1jJroqqThIeIt1"
+			"uid":"5JaO4XDmHchX93qfh10V0QhnvOK2"
 		}
 	},
 	"children":{
 		"child01":{
-			"parentId":"DnZppecHJhUJUaP8q2Bn4pdismH3",
+			"parentId":"wIC8Gr0xXzNI9oNpBZPaj8p0dX52",
 			"childName":"Sandra Yousif",
 			"age":"6",
 			"pic":"avatar01"
 		},
 		"child02":{
-			"parentId":"DnZppecHJhUJUaP8q2Bn4pdismH3",
+			"parentId":"wIC8Gr0xXzNI9oNpBZPaj8p0dX52",
 			"childName":"Celine Yousif",
 			"age":"5",
 			"pic":"avatar02"
 		},
 		"child03":{
-			"parentId":"Dh9HcP6volfl5zfu6YmlKdmpQth1",
+			"parentId":"OA5Ti6V2RTZTTYhNwygSy6nhswH3",
 			"childName":"Mick Mena",
 			"age":"7",
 			"pic":"avatar03"
 		},
 		"child04":{
-			"parentId":"Dh9HcP6volfl5zfu6YmlKdmpQth1",
+			"parentId":"OA5Ti6V2RTZTTYhNwygSy6nhswH3",
 			"childName":"Noi Mena",
 			"age":"9",
 			"pic":"avatar04"
@@ -55,13 +55,13 @@
 			"pic":"avatar06"
 		},
 		"child07":{
-			"parentId":"z3yZ8ToIcCPpUK1jJroqqThIeIt1",
+			"parentId":"5JaO4XDmHchX93qfh10V0QhnvOK2",
 			"childName":"lauren Stewart",
 			"age":"8",
 			"pic":"avatar07"
 		},
 		"child08":{
-			"parentId":"z3yZ8ToIcCPpUK1jJroqqThIeIt1",
+			"parentId":"5JaO4XDmHchX93qfh10V0QhnvOK2",
 			"childName":"maria Stewart",
 			"age":"6",
 			"pic":"avatar08"
@@ -139,37 +139,76 @@
 			"fileName":"Jesus Feeds 5000 People",
 			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_Feeds_5000_People_English_CB.pdf"
+		},
+		"activity13":{
+			"title":"Exercise",
+			"fileName":"10 minutes of exercise you like",
+			"picture":"./DataBase/images/exercise5.jpg",
+			"filePath":"./DataBase/images/exercise1.jpg"
+		},
+		"activity14":{
+			"title":"Exercise",
+			"fileName":"10 minutes of exercise you like",
+			"picture":"./DataBase/images/exercise6.jpg",
+			"filePath":"./DataBase/images/exercise2.jpg"
+		},
+		"activity15":{
+			"title":"Exercise",
+			"fileName":"10 minutes of exercise you like",
+			"picture":"./DataBase/images/exercise7.jpg",
+			"filePath":"./DataBase/images/exercise3.jpg"
+		},
+		"activity16":{
+			"title":"Exercise",
+			"fileName":"10 minutes of exercise you like",
+			"picture":"./DataBase/images/exercise8.jpg",
+			"filePath":"./DataBase/images/exercise4.jpg"
 		}
 	},
 
 	"avatars":{
 		
 		"avatar01":{
-			"path":"http://fanaru.com/disney-princess/image/89900-disney-princess-elsa.jpg"
+			"path":"./DataBase/images/avatar6.jpg"
 		},
 		"avatar02":{
-			"path":"http://fanaru.com/disney-princess/image/99201-disney-princess-princess.jpg"
+			"path":"./DataBase/images/avatar7.jpg"
 		},
 		"avatar03":{
-			"path":"http://fanaru.com/disney-princess/image/99115-disney-princess-snow-white.jpg"
+			"path":"./DataBase/images/avatar8.jpg"
 		},
 		"avatar04":{
-			"path":"http://fanaru.com/disney-princess/image/216163-disney-princess-tiana.png"
+			"path":"./DataBase/images/avatar9.jpg"
 		},
 		"avatar05":{
-			"path":"http://fanaru.com/disney-princess/image/99052-disney-princess-cindrella.jpg"
+			"path":"./DataBase/images/avatar10.jpg"
 		},
 		"avatar06":{
-			"path":"https://s-media-cache-ak0.pinimg.com/736x/49/cd/7e/49cd7e6775ba29aeb548f0df0f67969d.jpg"
+			"path":"./DataBase/images/avatar11.jpg"
 		},
 		"avatar07":{
-			"path":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS7Pzfo9B27kkL7I4HA80KpgYMB6m1gPu6SdHgR6lzJocOap1_Yg"
+			"path":"./DataBase/images/avatar12.jpg"
 		},
 		"avatar08":{
-			"path":"http://pm1.narvii.com/6342/d7c04a09160233a22d9d1c43d1cfe124678dc8ef_hq.jpg"
+			"path":"./DataBase/images/avatar13.jpg"
 		},
 		"avatar09":{
-			"path":"https://steamuserimages-a.akamaihd.net/ugc/792939615963306792/12E2E8F92218E7FEB594F7B9CCE30EF77989CAD9/"
+			"path":"./DataBase/images/avatar14.jpg"
+		},
+		"avatar10":{
+			"path":"./DataBase/images/avatar1.jpg"
+		},
+		"avatar11":{
+			"path":"./DataBase/images/avatar2.jpg"
+		},
+		"avatar12":{
+			"path":"./DataBase/images/avatar3.jpg"
+		},
+		"avatar13":{
+			"path":"./DataBase/images/avatar4.jpg"
+		},
+		"avatar14":{
+			"path":"./DataBase/images/avatar5.jpg"
 		}
 	},
 	"childActivities":{
@@ -218,6 +257,18 @@
 		"childActivity08":{
 			"activityId":"activity08",
 			"childId":"child04",
+			"isCompleted":"false",
+			"dueDate":"7/25/2017"
+		},
+		"childActivity09":{
+			"activityId":"activity15",
+			"childId":"child01",
+			"isCompleted":"false",
+			"dueDate":"7/25/2017"
+		},
+		"childActivity10":{
+			"activityId":"activity16",
+			"childId":"child02",
 			"isCompleted":"false",
 			"dueDate":"7/25/2017"
 		}

@@ -3,14 +3,10 @@ app.controller("editChildCtrl", function($scope, $routeParams,$location,ChildFac
 	$scope.selectedChild ="";
 	$scope.updatedChild = {};
 	$scope.allPictures =[];
-	// $scope.newChild= {};
 
-	console.log("$routeParams.childId :",$routeParams.childId);
 	ChildFactory.getSingleChild($routeParams.childId)
 	.then ((results) => {
-		console.log("results",results);
 		$scope.selectedChild = results;
-		console.log("$scope.selectedChild",$scope.selectedChild);
 	}).catch ((error) => {
 		console.log("error in Edit Address",error);
 	});

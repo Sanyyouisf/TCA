@@ -21,7 +21,6 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
 		return $q ((resolve,reject)=>{
 			$http.get(`${FIREBASE_CONFIG.databaseURL}/childActivities.json?orderBy="childId"&equalTo="${childId}"`)
 			.then((fbChildActivities)=>{
-                // console.log("fbChildActivities in getChildActivitiesForChild ",fbChildActivities);
 				let ChildActivityCollection = fbChildActivities.data;
                 if (ChildActivityCollection !== null) {
                     Object.keys(ChildActivityCollection).forEach((key) => {
@@ -30,7 +29,6 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
                         });
                     }
                 resolve(ChildActivityz);
-                // console.log("ChildActivityz in getChildActivitiesForChild ",ChildActivityz);
 			})
 			.catch((error)=>{
 				reject(error);
@@ -53,7 +51,6 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
     };
 
     let editChildActivity = (childActivity) => {
-    	console.log("childActivity :",childActivity);
         return $q((resolve, reject) => {
             $http.put(`${FIREBASE_CONFIG.databaseURL}/childActivities/${childActivity.childActivityId}.json`, JSON.stringify({
                     activityId: childActivity.activityId,
@@ -62,7 +59,6 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
                     dueDate: childActivity.dueDate
                 })).then((resultz) => {
                     resolve(resultz.data);
-                    console.log("resolved resultz",resultz.data);
                 })
                 .catch((error) => {
                     reject("error in editChildActivities",error);

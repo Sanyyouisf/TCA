@@ -7,7 +7,6 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
                     JSON.stringify(childData))
                 .then((storeChiledSuccess) => {
                     resolve(storeChiledSuccess);
-                    console.log("storeChiledSuccess in addChild", storeChiledSuccess);
                 })
                 .catch((error) => {
                     reject(error);
@@ -23,7 +22,6 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
                 .then((resultz) => {
                     resultz.data.id = id;
                     resolve(resultz.data);
-                    console.log("resultz.data in getSingleChild:", resultz.data);
                 })
                 .catch((error) => {
                     reject(error);
@@ -40,16 +38,13 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
             $http.get(`${FIREBASE_CONFIG.databaseURL}/children.json?orderBy="parentId"&equalTo="${parentId}"`)
                 .then((fbChildren) => {
                     var childrenCollection = fbChildren.data;
-                    // console.log("fbChildren.data in getChildrenForParent",fbChildren.data);
                     if (childrenCollection !== null) {
                         Object.keys(childrenCollection).forEach((key) => {
-                            // console.log("childrenCollection",childrenCollection);
                             childrenCollection[key].id = key;
                             selectedChildren.push(childrenCollection[key]);
                         });
                     }
                     resolve(selectedChildren);
-                    console.log("selectedChildren", selectedChildren);
                 })
                 .catch((error) => {
                     reject(error);
@@ -64,7 +59,6 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
             $http.get(`${FIREBASE_CONFIG.databaseURL}/children.json`)
                 .then((fbChildren) => {
                     resolve(fbChildren.data);
-                    console.log("fbChildren", fbChildren.data);
                 })
                 .catch((error) => {
                     reject(error);
@@ -89,32 +83,6 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
     };
 
 
-    // let editSingleChild = (child) => {
-    //     // console.log("child :",child);
-    //     // console.log("inside editSingleChild in factory");
-    //     return $q((resolve, reject) => {
-    //         $http.put(`${FIREBASE_CONFIG.databaseURL}/children/${child.id}.json`,
-    //                 JSON.stringify({
-    //                     childName:child.childName,
-    //                     parentId:child.parentId,
-    //                     age:child.age,
-    //                     pic:child.pic,
-    //                     id :child.id
-    //                 }))
-    //             .then((resultz) => {
-    //                 console.log("$routeParams.childId",$routeParams.childId);
-    //                 resultz.data.id =$routeParams.childId;
-    //                 resolve(resultz.data);
-    //                 console.log(" resolved resultz.data inside editChild : ", resultz.data);
-    //             })
-    //             .catch((error) => {
-    //                 reject(error);
-    //                 console.log("error in editChild :", error);
-    //             });
-    //     });
-    // };
-
-
     let editSingleChild = (child) => {
         console.log("child :",child);
         // console.log("inside editSingleChild in factory");
@@ -127,11 +95,8 @@ app.factory("ChildFactory", function($q, $http, FIREBASE_CONFIG,$routeParams) {
                         pic:child.pic,
                     }))
                 .then((resultz) => {
-                    console.log("$routeParams.childId",$routeParams.childId);
-                    console.log("resultz",resultz);
                     resultz.data.id =$routeParams.childId;
                     resolve(resultz.data);
-                    console.log(" resolved resultz.data inside editChild : ", resultz.data);
                 })
                 .catch((error) => {
                     reject(error);
