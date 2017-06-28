@@ -191,15 +191,6 @@
 		},
 		"avatar08":{
 			"path":"./DataBase/images/avatar8.jpg"
-		},
-		"avatar09":{
-			"path":"./DataBase/images/avatar9.jpg"
-		},
-		"avatar10":{
-			"path":"./DataBase/images/avatar10.jpg"
-		},
-		"avatar11":{
-			"path":"./DataBase/images/avatar11.jpg"
 		}
 	},
 	"childActivities":{
