@@ -73,10 +73,13 @@ object:focus {
   border-radius: 10px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 25px;
+  font-size: 15px;
   background: #aa34d9;
-  padding: 11px 20px 10px 20px;
-  text-decoration: none; }
+  padding: 5px;
+  text-decoration: none;
+  margin-top: 5px;
+  width: 210px;
+  opacity: .8; }
 
 .btn3 {
   -webkit-border-radius: 10;
@@ -84,10 +87,11 @@ object:focus {
   border-radius: 10px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 20px;
   background: #aa34d9;
-  padding: 11px 20px 10px 20px;
-  text-decoration: none; }
+  padding: 5px;
+  text-decoration: none;
+  opacity: .8; }
 
 .btn2:hover {
   background: #633cfc;
@@ -255,17 +259,18 @@ a {
 }*/
 /************************************************
 adjust the background for parent Child login page
+and parent profile page.
 *************************************************/
-.pCLogin-bg {
+.pCLogin-bg, .pProfile-bg {
   position: center;
   overflow: hidden;
   z-index: 1000; }
 
-.pCLogin-bg h2, .pCLogin-bg h4, .btn1 {
+.pCLogin-bg h2, .pCLogin-bg h4, .btn1, .pProfile-bg h3, .btn2, .btn3 {
   position: relative;
   z-index: 10; }
 
-.pCLogin-bg h2 {
+.pCLogin-bg h2, .pProfile-bg h2 {
   font-family: 'Cinzel', serif;
   font-weight: bold; }
 
