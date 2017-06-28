@@ -1,0 +1,45 @@
+#footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background: #D4CECE;
+    padding: 15px 50px;
+    z-index: 1000;
+    margin-top: 20px;
+	}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    height: 75px;
+    color: white;
+    background-color: #008080;
+    float: left;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+	}
+
+
+.TCA {
+    margin: 100px 0;
+	}
+
+.activityList {
+	border-radius: 5px;
+	border:1px solid #2f4f4f; 
+	margin: 2px 0;
+	}
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+

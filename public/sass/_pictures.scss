@@ -1,0 +1,184 @@
+.avatarPic {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.activityPic {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    }
+
+.frame {
+    box-shadow: 3px 3px 3px grey;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.item {
+	margin: 15px;
+	box-shadow: 10px 10px 5px grey;
+    border: 1px solid grey;
+    }
+
+.logo {
+	border: 1px dashed white;
+    border-radius: 5px;
+    width: 90px;
+    height: 60px;
+    margin: auto;
+}
+
+.home-bg{
+	background-image: url("../DataBase/images/homeBackground.jpg");
+	opacity: .9;
+    /*background-position: fixed ;*/
+    /*background-position: center center;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    top: 75px; 
+    left: 0; 
+    }
+/*
+    .pCLogin-bg{
+    background-image: url("../DataBase/images/pCLoginBackground.jpg");
+    opacity: .9;
+    background-position: fixed ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    top: 75px; 
+    left: 0; 
+    color: white;
+    }*/
+
+.exercisePic {
+    width: 100%;
+    height:1000px;
+    border: 1px solid #8b0000;
+    }
+
+.childProfile-bg{
+    background-image: url("../DataBase/images/childProfileBackground.jpg");
+    opacity: .9;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    /*position: fixed;*/
+    position: absolute; 
+    top: 75px; 
+    left: 0; 
+    }
+
+
+.childProfilePagePic {
+    background-image: url("../DataBase/images/childProfilePic.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    }
+
+.childLoginPic {
+    background-image: url("../DataBase/images/childLoginPic.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    }
+ 
+
+.childProfilePic {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+@media (min-width: 320px) and (max-width: 568px) {
+  body {
+    background-color: orange;
+  }
+}
+
+/*@media (min-width: 568px) {
+  #menu select, #menu button {
+    display:none;
+  }
+}*/
+
+/************************************************
+adjust the background for parent Child login page
+and parent profile page.
+*************************************************/
+.pCLogin-bg ,.pProfile-bg{
+    position: center;
+    overflow: hidden;
+    z-index: 1000;
+    }
+
+.pCLogin-bg h2, .pCLogin-bg h4, .btn1 ,.pProfile-bg h3, .btn2 ,.btn3{
+    position: relative;
+    z-index: 10;
+    }
+
+.pCLogin-bg h2,.pProfile-bg h2{
+font-family: 'Cinzel', serif;
+font-weight: bold;
+    }
+
+ .image {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 90%;
+    opacity: 0.6;
+    }
+
+/************************************************
+adjust the background for add Child  page
+*************************************************/
+.newChild-bg {
+    position: center;
+    overflow: hidden;
+    z-index: 1000;
+    }
+
+.newChild-bg .input-group, .newChild-bg .btn,.newChild-bg .avatarPic{
+    position: relative;
+    z-index: 10;
+    }
+
+
+ .image {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 90%;
+    opacity: 0.7;
+    }
+
+/***************************************************/
+
+

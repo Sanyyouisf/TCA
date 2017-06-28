@@ -2,16 +2,20 @@
 <html>
 <head>
 	<title>TCA</title>
+	<link href="https://fonts.googleapis.com/css?family=Lora|Cinzel" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <body ng-app="TcaApp">
+	
+	<div class="TCA" ng-view> </div>
 
-	<div class="aligner">
-		<h1 class= "title">TCA</h1>
+	<div id="footer">
+		<footer >
+		  	<p>© 2017 Sany Yousif ALL RIGHTS RESERVED</p>
+		</footer>
 	</div>
-	<div class="col-md-8 col-xs-offset-2" ng-view> </div>
 
 
 	<!-- //THIRD PARTY JAVASCRIPT FILES -->
@@ -39,7 +43,7 @@
 	<script src="./javascripts/controllers/activityListCtrl.js"></script>
 	<script src="./javascripts/controllers/authCtrl.js"></script>
 	<script src="./javascripts/controllers/childLoginCtrl.js"></script>
-	<script src="./javascripts/controllers/childActivityCtrl.js"></script>
+	<script src="./javascripts/controllers/childProfileCtrl.js"></script>
 	<script src="./javascripts/controllers/childListCtrl.js"></script>
 	<script src="./javascripts/controllers/editChildCtrl.js"></script>
 	<script src="./javascripts/controllers/newChildCtrl.js"></script>

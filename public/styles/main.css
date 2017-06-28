@@ -1,12 +1,30 @@
-/*body {*/
-.avatarPic {
-  width: 100px;
-  height: 100px;
-  display: inline-block; }
+body.home {
+  background: red; }
 
-.childProfilePic {
-  width: 100px;
-  height: 100px; }
+/*.center {
+    text-align: center;
+    justify-content: center;
+}*/
+h2 {
+  margin-left: 25px; }
+
+input[type="checkbox"] {
+  font-size: 50px;
+  transform: scale(2, 2); }
+
+.username {
+  font-family: 'Lora', serif;
+  font-weight: bold; }
+
+.pdf {
+  position: relative; }
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden; }
 
 .containertext {
   display: flex;
@@ -16,16 +34,272 @@
   overflow: auto;
   max-width: 300px; }
 
-.activityPic {
-  width: 100px;
-  height: 100px; }
-
 .title {
   text-align: center; }
 
 object:focus {
   outline: none; }
 
-/*}*/
-body {
-  background-color: #dbbaff; }
+.inline {
+  display: inline-block; }
+
+.box {
+  width: 400px;
+  height: 300px;
+  display: inline-block;
+  margin: 25px;
+  border: 1px solid red; }
+
+.btn1 {
+  background: #6033db;
+  background-image: -webkit-linear-gradient(top, #6033db, #892bb8);
+  background-image: -moz-linear-gradient(top, #6033db, #892bb8);
+  background-image: -ms-linear-gradient(top, #6033db, #892bb8);
+  background-image: -o-linear-gradient(top, #6033db, #892bb8);
+  background-image: linear-gradient(to bottom, #6033db, #892bb8);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  text-shadow: 3px 2px 3px #080808;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 60px;
+  padding: 21px 30px 21px 28px;
+  text-decoration: none; }
+
+.btn2 {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #aa34d9;
+  padding: 5px;
+  text-decoration: none;
+  margin-top: 5px;
+  width: 235px;
+  opacity: .8; }
+
+.btn3 {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #aa34d9;
+  padding: 5px;
+  text-decoration: none;
+  opacity: .8; }
+
+.btn2:hover {
+  background: #633cfc;
+  text-decoration: none; }
+
+.btn3:hover {
+  background: #633cfc;
+  text-decoration: none; }
+
+.btn:hover {
+  background: #3cb0fd;
+  text-decoration: none; }
+
+a {
+  text-decoration: none; }
+
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  background: #D4CECE;
+  padding: 15px 50px;
+  z-index: 1000;
+  margin-top: 20px; }
+
+.navBar {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+  height: 75px;
+  color: white;
+  background-color: #008080;
+  float: left;
+  left: 0px;
+  top: 0px;
+  z-index: 1000; }
+
+.TCA {
+  margin: 100px 0; }
+
+.activityList {
+  border-radius: 5px;
+  border: 1px solid #2f4f4f;
+  margin: 2px 0; }
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.avatarPic {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px; }
+
+.activityPic {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #ddd;
+  border-radius: 5px; }
+
+.frame {
+  box-shadow: 3px 3px 3px grey;
+  border: 1px solid grey;
+  border-radius: 3px; }
+
+.item {
+  margin: 15px;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px solid grey; }
+
+.logo {
+  border: 1px dashed white;
+  border-radius: 5px;
+  width: 90px;
+  height: 60px;
+  margin: auto; }
+
+.home-bg {
+  background-image: url("../DataBase/images/homeBackground.jpg");
+  opacity: .9;
+  /*background-position: fixed ;*/
+  /*background-position: center center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 75px;
+  left: 0; }
+
+/*
+    .pCLogin-bg{
+    background-image: url("../DataBase/images/pCLoginBackground.jpg");
+    opacity: .9;
+    background-position: fixed ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    top: 75px; 
+    left: 0; 
+    color: white;
+    }*/
+.exercisePic {
+  width: 100%;
+  height: 1000px;
+  border: 1px solid #8b0000; }
+
+.childProfile-bg {
+  background-image: url("../DataBase/images/childProfileBackground.jpg");
+  opacity: .9;
+  /*background-position: center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  /*position: fixed;*/
+  position: absolute;
+  top: 75px;
+  left: 0; }
+
+.childProfilePagePic {
+  background-image: url("../DataBase/images/childProfilePic.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  border-radius: 5px; }
+
+.childLoginPic {
+  background-image: url("../DataBase/images/childLoginPic.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  border-radius: 5px; }
+
+.childProfilePic {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #ddd; }
+
+@media (min-width: 320px) and (max-width: 568px) {
+  body {
+    background-color: orange; } }
+
+/*@media (min-width: 568px) {
+  #menu select, #menu button {
+    display:none;
+  }
+}*/
+/************************************************
+adjust the background for parent Child login page
+and parent profile page.
+*************************************************/
+.pCLogin-bg, .pProfile-bg {
+  position: center;
+  overflow: hidden;
+  z-index: 1000; }
+
+.pCLogin-bg h2, .pCLogin-bg h4, .btn1, .pProfile-bg h3, .btn2, .btn3 {
+  position: relative;
+  z-index: 10; }
+
+.pCLogin-bg h2, .pProfile-bg h2 {
+  font-family: 'Cinzel', serif;
+  font-weight: bold; }
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: 90%;
+  opacity: 0.6; }
+
+/************************************************
+adjust the background for add Child  page
+*************************************************/
+.newChild-bg {
+  position: center;
+  overflow: hidden;
+  z-index: 1000; }
+
+.newChild-bg .input-group, .newChild-bg .btn, .newChild-bg .avatarPic {
+  position: relative;
+  z-index: 10; }
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: 90%;
+  opacity: 0.7; }
+
+/***************************************************/

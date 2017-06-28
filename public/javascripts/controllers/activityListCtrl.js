@@ -7,11 +7,8 @@ app.controller("activityListCtrl", function($scope,$location, AuthFactory,Activi
 
 
     let displayAllActivities = () => {
-        // $scope.activityId = id;
-        // console.log("$scope.activityId",$scope.activityId);
         ActivityFactory.getAllActivities()
             .then((results) => {
-                console.log("results", results);
                 $scope.activities = results;
             })
             .catch((error) => {
@@ -27,7 +24,6 @@ app.controller("activityListCtrl", function($scope,$location, AuthFactory,Activi
         ChildFactory.getChildrenForParent($rootScope.user.uid)
         .then((result) => {
             $scope.selectedchildren = result;
-            // console.log("$scope.selectedchildren",$scope.selectedchildren);
             $scope.selectedchildren.forEach((kid) => {
                 $scope.childId = kid.id;
                 AvatarFactory.getSinglePicture(kid.pic)
@@ -69,7 +65,6 @@ app.controller("activityListCtrl", function($scope,$location, AuthFactory,Activi
                 console.log("error in addChildActivity: ", error);
         });
     };
-
 
 
     if ($location.path() === '/logout') {

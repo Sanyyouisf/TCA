@@ -1,4 +1,4 @@
-app.controller("childLoginCtrl", function($scope, ChildFactory, AvatarFactory, $rootScope) {
+app.controller("childLoginCtrl", function($scope, ChildFactory, AvatarFactory, $rootScope,$location) {
     console.log(" inside childLoginCtrl");
 
 
@@ -26,6 +26,11 @@ app.controller("childLoginCtrl", function($scope, ChildFactory, AvatarFactory, $
     };
 
     displayChildData();
+
+
+    $scope.goToProfile = (childId) => {
+        $location.url(`/childProfile/${childId}`);
+    };
 
 
 });

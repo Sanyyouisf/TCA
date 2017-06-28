@@ -1,28 +1,30 @@
-<div class="aligner">
-    <h1 class="username">{{user.pName}}</h1>
-</div>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <ul class="nav navbar-nav navbar-right">
-        <li><a ng-href="#!/parentProfile">Parent</a></li>
+<!-- navbar  -->
+    <nav class="navbar navbar-inverse navBar">
+        <ul class=" nav navbar-nav navbar-left col-md-12">
+            <li class="col-xs-1"> <img ng-src="./DataBase/images/logo.png" class="logo"></li>
+            <li class="col-xs-1"><a ng-href="#!/logout">Logout</a></li>
+            <li class="col-xs-1"><a ng-href="#!/parentProfile">Parent</a></li>
+            <li class="col-xs-2 col-xs-offset-6">
+                <h3 class="username ">{{user.pName}}</h3></li>
         </ul>
-    </div>
-</nav>
+    </nav>
 
-<div ng-repeat="child in selectedchildren">
-    <div class="panel panel-success col-xs-4">
-        
-        <div class="panel-heading">
-            <a href="#!/childProfile/{{child.id}}" >
-                <p> Name :{{child.childName}}</p>
-                <p> Age :{{child.age}}</p>
-            </a>
+    <!-- display the children -->
+    <div class="container">
+        <div class="col-xs-5 pull-left">
+            <div ng-repeat="child in selectedchildren">
+                <div class="panel panel-success col-xs-8 item ">
+                    <div class="panel-heading">
+                        <p> {{child.childName}}</p>
+                    </div>
+                    <a href="">
+                        <div class="panel-body">
+                            <img ng-src="{{child.url}}" class="avatarPic" ng-click="goToProfile(child.id)">
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-        
-        <div class="panel-body container ">
-            <img ng-src="{{child.url}}" class="childProfilePic">
-        </div>
-        
+        <!-- nice picture -->
+        <div class="childLoginPic col-xs-7 pull-right"></div>
     </div>
-</div>
-

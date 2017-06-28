@@ -8,11 +8,9 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
 	$scope.childActivities =[];
 
 	let displaySingleChildData = () =>{
-	 	console.log("$routeParams.childId :",$routeParams.childId);
 	 	ChildFactory.getSingleChild($routeParams.childId)
 	    .then((result) => {
 	        $scope.selectedChild = result;
-	        console.log("$scope.selectedChild",$scope.selectedChild);
 	        AvatarFactory.getSinglePicture($scope.selectedChild.pic)
 	        .then((image) => {
 	            $scope.selectedChild.url = image.path;
@@ -23,13 +21,9 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
 
 		    ChildActivityFactory.getChildActivitiesForChild($scope.selectedChild.id)
 		    .then((childActivities) => {
-		    	// console.log("childActivities from getChildActivitiesForChild:",childActivities);
 		        let kidActivities = [];
-		        // console.log("childActivities", childActivities);
 		        $scope.childActivities = childActivities;
-		        // console.log("$scope.childActivities", $scope.childActivities);
 		        childActivities.forEach((x) => {
-		            // console.log("childActivities.isCompleted :",x.isCompleted);
 		            ActivityFactory.getSingleActivity(x.activityId)
 		            .then((result) => {
 		            	result.childActivityId = x.id;
@@ -45,6 +39,7 @@ app.controller("viewSingleChildCtrl", function($routeParams,$scope,AuthFactory,C
 	        console.log("error in displayChildrenForParent: ", error);
 	    });
 	};
+
 
 	displaySingleChildData();
 

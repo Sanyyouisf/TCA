@@ -2,11 +2,11 @@
 	"parents":{
 		"parent01":{
 			"pName":"Sany Yousif",
-			"uid":"DnZppecHJhUJUaP8q2Bn4pdismH3"
+			"uid":"wIC8Gr0xXzNI9oNpBZPaj8p0dX52"
 		},
 		"parent02":{
 			"pName":"mariana Mena",
-			"uid":"Dh9HcP6volfl5zfu6YmlKdmpQth1"
+			"uid":"OA5Ti6V2RTZTTYhNwygSy6nhswH3"
 		},
 		"parent03":{
 			"pName":"Andrew jack",
@@ -14,30 +14,30 @@
 		},
 		"parent04":{
 			"pName":"Rayen Stewart",
-			"uid":"z3yZ8ToIcCPpUK1jJroqqThIeIt1"
+			"uid":"5JaO4XDmHchX93qfh10V0QhnvOK2"
 		}
 	},
 	"children":{
 		"child01":{
-			"parentId":"DnZppecHJhUJUaP8q2Bn4pdismH3",
+			"parentId":"wIC8Gr0xXzNI9oNpBZPaj8p0dX52",
 			"childName":"Sandra Yousif",
 			"age":"6",
 			"pic":"avatar01"
 		},
 		"child02":{
-			"parentId":"DnZppecHJhUJUaP8q2Bn4pdismH3",
+			"parentId":"wIC8Gr0xXzNI9oNpBZPaj8p0dX52",
 			"childName":"Celine Yousif",
 			"age":"5",
 			"pic":"avatar02"
 		},
 		"child03":{
-			"parentId":"Dh9HcP6volfl5zfu6YmlKdmpQth1",
+			"parentId":"OA5Ti6V2RTZTTYhNwygSy6nhswH3",
 			"childName":"Mick Mena",
 			"age":"7",
 			"pic":"avatar03"
 		},
 		"child04":{
-			"parentId":"Dh9HcP6volfl5zfu6YmlKdmpQth1",
+			"parentId":"OA5Ti6V2RTZTTYhNwygSy6nhswH3",
 			"childName":"Noi Mena",
 			"age":"9",
 			"pic":"avatar04"
@@ -55,13 +55,13 @@
 			"pic":"avatar06"
 		},
 		"child07":{
-			"parentId":"z3yZ8ToIcCPpUK1jJroqqThIeIt1",
+			"parentId":"5JaO4XDmHchX93qfh10V0QhnvOK2",
 			"childName":"lauren Stewart",
 			"age":"8",
 			"pic":"avatar07"
 		},
 		"child08":{
-			"parentId":"z3yZ8ToIcCPpUK1jJroqqThIeIt1",
+			"parentId":"5JaO4XDmHchX93qfh10V0QhnvOK2",
 			"childName":"maria Stewart",
 			"age":"6",
 			"pic":"avatar08"
@@ -69,107 +69,128 @@
 	},
 	"activities":{
 		"activity01":{
-			"title":"reading",
-			"fileName":"The_Birth_of_Jesus",
-			"picture":"/DataBase/images/Jesus_Birth.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/The_Birth_of_Jesus_English.pdf"
+			"title":"Reading",
+			"fileName":"The Birth of Jesus",
+			"picture":"./DataBase/images/Jesus_Birth.png",
+			"filePath":"./DataBase/pdf/The_Birth_of_Jesus_English.pdf"
 		},
 		"activity02":{
-			"title":"reading",
-			"fileName":"Samuel_Gods_BoyServant",
-			"picture":"/DataBase/images/Samuel.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Samuel_Gods_BoyServant_English.pdf"
+			"title":"Reading",
+			"fileName":"Samuel Gods BoyServant",
+			"picture":"./DataBase/images/Samuel.png",
+			"filePath":"./DataBase/pdf/Samuel_Gods_BoyServant_English.pdf"
 		},
 		"activity03":{
-			"title":"reading",
-			"fileName":"David_the_King_Part_1",
-			"picture":"/DataBase/images/David_1.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/David_the_King_Part_1_English.pdf"
+			"title":"Reading",
+			"fileName":"David the King 1",
+			"picture":"./DataBase/images/David_1.png",
+			"filePath":"./DataBase/pdf/David_the_King_Part_1_English.pdf"
 		},
 		"activity04":{
-			"title":"reading",
-			"fileName":"David_the_King_Part_2",
-			"picture":"/DataBase/images/David_2.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/David_the_King_Part_2_English.pdf"
+			"title":"Reading",
+			"fileName":"David the King 2",
+			"picture":"./DataBase/images/David_2.png",
+			"filePath":"./DataBase/pdf/David_the_King_Part_2_English.pdf"
 		},
 		"activity05":{
-			"title":"reading",
-			"fileName":"Noah_and_the_Great_Flood",
-			"picture":"/DataBase/images/Noah.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Noah_and_the_Great_Flood_English.pdf"
+			"title":"Reading",
+			"fileName":"Noah and the Great Flood",
+			"picture":"./DataBase/images/Noah.png",
+			"filePath":"./DataBase/pdf/Noah_and_the_Great_Flood_English.pdf"
 		},
 		"activity06":{
-			"title":"reading",
-			"fileName":"Jacob_the_Deceiver",
-			"picture":"/DataBase/images/Jacob.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Jacob_the_Deceiver_English.pdf"
+			"title":"Reading",
+			"fileName":"Jacob the Deceiver",
+			"picture":"./DataBase/images/Jacob.png",
+			"filePath":"./DataBase/pdf/Jacob_the_Deceiver_English.pdf"
 		},
 		"activity07":{
-			"title":"reading",
-			"fileName":"Rich_Man_Poor_Man",
+			"title":"Reading",
+			"fileName":"Rich Man Poor Man",
 			"picture":"./DataBase/images/Rich_Man_Poor_Man.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Rich_Man_Poor_Man_English.pdf"
+			"filePath":"./DataBase/pdf/Rich_Man_Poor_Man_English.pdf"
 		},
 		"activity08":{
-			"title":"reading",
-			"fileName":"Jesus_and_Lazarus",
+			"title":"Reading",
+			"fileName":"Jesus and Lazarus",
 			"picture":"./DataBase/images/Jesus_and_Lazarus.png",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_and_Lazarus_English.pdf"
+			"filePath":"./DataBase/pdf/Jesus_and_Lazarus_English.pdf"
 		},
 		"activity09":{
-			"title":"painting",
-			"fileName":"When_God_Made_Everything",
+			"title":"Painting",
+			"fileName":"When God Made Everything",
 			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/When_God_Made_Everything_English_CB.pdf"
 		},
 		"activity10":{
-			"title":"painting",
-			"fileName":"The_Good_Samaritan",
+			"title":"Painting",
+			"fileName":"The Good Samaritan",
 			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/The_Good_Samaritan_English_CB.pdf"
 		},
 		"activity11":{
-			"title":"painting",
-			"fileName":"Samson_Gods_Strong_Man",
+			"title":"Painting",
+			"fileName":"Samson Gods Strong Man",
 			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Samson_Gods_Strong_Man_English_CB.pdf"
 		},
 		"activity12":{
-			"title":"painting",
-			"fileName":"Jesus_Feeds_5000_People",
+			"title":"Painting",
+			"fileName":"Jesus Feeds 5000 People",
 			"picture":"",
 			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_Feeds_5000_People_English_CB.pdf"
+		},
+		"activity13":{
+			"title":"Exercise",
+			"fileName":"10 minutes of exercise you like",
+			"picture":"./DataBase/images/exercise5.jpg",
+			"filePath":"./DataBase/images/exercise1.jpg"
+		},
+		"activity14":{
+			"title":"Exercise",
+			"fileName":"10 minutes of exercise you like",
+			"picture":"./DataBase/images/exercise6.jpg",
+			"filePath":"./DataBase/images/exercise2.jpg"
+		},
+		"activity15":{
+			"title":"Exercise",
+			"fileName":"10 minutes of exercise you like",
+			"picture":"./DataBase/images/exercise7.jpg",
+			"filePath":"./DataBase/images/exercise3.jpg"
+		},
+		"activity16":{
+			"title":"Exercise",
+			"fileName":"10 minutes of exercise you like",
+			"picture":"./DataBase/images/exercise8.jpg",
+			"filePath":"./DataBase/images/exercise4.jpg"
 		}
 	},
 
 	"avatars":{
 		
 		"avatar01":{
-			"path":"http://fanaru.com/disney-princess/image/89900-disney-princess-elsa.jpg"
+			"path":"./DataBase/images/avatar1.jpg"
 		},
 		"avatar02":{
-			"path":"http://fanaru.com/disney-princess/image/99201-disney-princess-princess.jpg"
+			"path":"./DataBase/images/avatar2.jpg"
 		},
 		"avatar03":{
-			"path":"http://fanaru.com/disney-princess/image/99115-disney-princess-snow-white.jpg"
+			"path":"./DataBase/images/avatar3.jpg"
 		},
 		"avatar04":{
-			"path":"http://fanaru.com/disney-princess/image/216163-disney-princess-tiana.png"
+			"path":"./DataBase/images/avatar4.jpg"
 		},
 		"avatar05":{
-			"path":"http://fanaru.com/disney-princess/image/99052-disney-princess-cindrella.jpg"
+			"path":"./DataBase/images/avatar5.jpg"
 		},
 		"avatar06":{
-			"path":"https://s-media-cache-ak0.pinimg.com/736x/49/cd/7e/49cd7e6775ba29aeb548f0df0f67969d.jpg"
+			"path":"./DataBase/images/avatar6.jpg"
 		},
 		"avatar07":{
-			"path":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS7Pzfo9B27kkL7I4HA80KpgYMB6m1gPu6SdHgR6lzJocOap1_Yg"
+			"path":"./DataBase/images/avatar7.jpg"
 		},
 		"avatar08":{
-			"path":"http://pm1.narvii.com/6342/d7c04a09160233a22d9d1c43d1cfe124678dc8ef_hq.jpg"
-		},
-		"avatar09":{
-			"path":"https://steamuserimages-a.akamaihd.net/ugc/792939615963306792/12E2E8F92218E7FEB594F7B9CCE30EF77989CAD9/"
+			"path":"./DataBase/images/avatar8.jpg"
 		}
 	},
 	"childActivities":{
@@ -218,6 +239,18 @@
 		"childActivity08":{
 			"activityId":"activity08",
 			"childId":"child04",
+			"isCompleted":"false",
+			"dueDate":"7/25/2017"
+		},
+		"childActivity09":{
+			"activityId":"activity15",
+			"childId":"child01",
+			"isCompleted":"false",
+			"dueDate":"7/25/2017"
+		},
+		"childActivity10":{
+			"activityId":"activity16",
+			"childId":"child02",
 			"isCompleted":"false",
 			"dueDate":"7/25/2017"
 		}

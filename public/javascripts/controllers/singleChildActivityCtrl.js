@@ -1,4 +1,4 @@
-app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildActivityFactory,$routeParams){
+app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildActivityFactory,$routeParams,$location,ChildFactory,AvatarFactory){
 
 	$scope.childActivityId = "";
 	$scope.activity={};
@@ -7,14 +7,19 @@ app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildA
 	let displayChildActivity =()=>{
 		ChildActivityFactory.getSingleChildActivity($routeParams.childActivityId)
 		.then((result)=>{
-			// console.log("tvhe result ChildActivity",result);
 			$scope.childActivity = result ;
-			// console.log("$scope.childActivity",$scope.childActivity);
 			ActivityFactory.getSingleActivity(result.activityId)
 			.then((resultActivity)=>{
-				// console.log("resultActivity",resultActivity);
 				$scope.activity = resultActivity;
-				// console.log("$scope.activity",$scope.activity);
+				//to get the child name and avatat pic
+				ChildFactory.getSingleChild($scope.childActivity.childId)
+	    		.then((result) => {
+	        		$scope.selectedChild = result;
+	        		AvatarFactory.getSinglePicture($scope.selectedChild.pic)
+	        		.then((image) => {
+	            		$scope.selectedChild.url = image.path;
+	        		});
+	        	});
 			})
 			.catch((error)=>{
 			console.log("error",error);
@@ -29,12 +34,10 @@ app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildA
 
 
 	$scope.completedChange = (completed) => {
-		console.log("completed",completed);
 		$scope.childActivity.childActivityId = $routeParams.childActivityId;
-		console.log("final $scope.childActivity",$scope.childActivity);
     	ChildActivityFactory.editChildActivity($scope.childActivity)
     	.then((resulted)=>{
-    		console.log("resulted",resulted);
+    		$location.url(`/childProfile/${$scope.childActivity.childId}`);
     	}).catch((error)=>{
     		console.log("inputChange error",error);
     	});

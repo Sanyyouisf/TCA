@@ -1,52 +1,45 @@
-<div class="aligner">
-    <h1 class="username">{{user.pName}}</h1>
-</div>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a ng-href="#!/logout">Logout</a></li>
-            <li><a ng-href="#!/activityList">activities</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">child <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#!/newChild">Add Child</a></li>
-                    <li><a href="#!/childList">Child List</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+<!-- navbar -->
+<nav class="navbar navbar-inverse navBar">
+    <ul class=" nav navbar-nav navbar-left col-md-12">
+        <li class="col-xs-1"> <img ng-src="./DataBase/images/logo.png" class="logo"></li>
+        <li class="col-xs-1"><a ng-href="#!/logout">Logout</a></li>
+        <li class="col-xs-1"><a ng-href="#!/activityList">activities</a></li>
+        <li class="col-xs-1.5"><a href="#!/childLogin">Child Login</a></li>
+        <li class="col-xs-1.5"><a href="#!/childList">Child List</a></li>
+        <li class="dropdown col-xs-2">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Child Manager<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#!/newChild">Add Child</a></li>
+            </ul>
+        </li>
+        <li class="col-xs-2 col-xs-offset-4">
+            <h3 class="username ">{{user.pName}}</h3>
+        </li>
+    </ul>
 </nav>
- 
-<div class="panel panel-success col-lg-10">
-    <div class="panel-heading ">
-        <h1> Name :{{selectedChild.childName}}</h1>
-        <p> Age :{{selectedChild.age}}</p>
-        <div class="btn-group col-xs-4 col-xs-offset-5 ">
-            <a href="#!/editChild/{{selectedChild.id}}" >
-                <button class="btn btn-danger fa fa-pencil-square-o"></button>
-            </a>
+
+<!-- all the child data -->
+<div class="panel panel-success col-xs-10 col-xs-offset-1">
+    <div class="panel-heading col-xs-12 frame">
+        <img ng-src="{{selectedChild.url}}" class="childProfilePic pull-left ">
+        <h3 class=" col-xs-3"> {{selectedChild.childName}}</h3><br>
+        <h4 class=" col-xs-1"> age:{{selectedChild.age}} </h4>
+        <a href="#!/editChild/{{selectedChild.id}}">
+            <button class="btn btn-success fa fa-pencil-square-o pull-right">Edit</button>
+        </a>
+    </div>
+<!-- activities -->
+<div class="container">
+    <div ng-repeat="activity in activities" >
+        <div class="panel-heading frame col-xs-3 ">
+            <p>{{activity.title}}</p>
+            <br>
+            <p>{{activity.fileName}}</p>
+            <p>{{activity.isCompleted ? "completed" : "not completed"}}</p>
+            <div class="panel-body container ">
+                <img ng-src="{{activity.picture}}" class="activityPic">
+            </div>
+            <button class="btn btn-success fa fa-trash-o pull-right" ng-click="deleteChildActivity(activity.childActivityId)"></button>
         </div>
-    </div>
-
-    <div class="panel-body container ">
-        <img ng-src="{{selectedChild.url}}" class="childProfilePic">
-    </div>
-
-    <div ng-repeat="activity in activities">
-        <ul>
-            <li>
-                <div class="panel-heading">
-                    <p>{{activity.title}}</p>
-                    <br>
-                    <p>{{activity.fileName}}</p>
-                    <p>{{activity.isCompleted}}</p>
-                </div>
-
-                <div class="panel-body container ">
-                    <img ng-src="{{activity.picture}}" class="activityPic">
-                </div>
-                    <button class="btn btn-danger fa fa-trash-o" ng-click="deleteChildActivity(activity.childActivityId)"></button>
-            </li>
-        </ul>
     </div>
 </div>

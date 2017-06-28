@@ -13,19 +13,12 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
     ChildFactory.getChildrenForParent($rootScope.user.uid)
         .then((result) => {
             $scope.selectedchildren = result;
-            // console.log("result in displayChildrenForParent",result);
-
             //loop through the selectedchildren to get image url 
             $scope.selectedchildren.forEach((kid) => {
-                // console.log("kid inside forEach :",kid);
-                // console.log("kid.id inside forEach :",kid.id);
                 $scope.childId = kid.id;
                 AvatarFactory.getSinglePicture(kid.pic)
                     .then((image) => {
-                        // console.log("image inside forEach :",image);
                         kid.url = image.path;
-                        // console.log("kid.path",kid.url);
-                        // console.log("image.path",image.path);
                     })
                     .catch((error) => {
                         console.log("error in getSinglePicture :", error);
@@ -34,12 +27,9 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
                 ChildActivityFactory.getChildActivitiesForChild(kid.id)
                     .then((childActivities) => {
                         kid.activities = [];
-                        // console.log("childActivities", childActivities);
                         childActivities.forEach((x) => {
                             ActivityFactory.getSingleActivity(x.activityId)
                                 .then((result) => {
-                                    // console.log("result", result);
-                                    // console.log("kid.childName", kid.childName);
                                     kid.activities.push(result);
                                 });
                         });
@@ -106,6 +96,10 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
         $rootScope.user = {};
         $location.url('/auth');
     }
+
+    $scope.displaySingleChild = (childId) =>{
+        $location.url(`/viewSingleChild/${childId}`);
+    };
 
 
 });
