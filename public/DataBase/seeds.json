@@ -117,48 +117,30 @@
 			"filePath":"./DataBase/pdf/Jesus_and_Lazarus_English.pdf"
 		},
 		"activity09":{
-			"title":"Painting",
-			"fileName":"When God Made Everything",
-			"picture":"",
-			"filePath":"http://bibleforchildren.org/PDFs/english/When_God_Made_Everything_English_CB.pdf"
+			"title":"Drawing",
+			"fileName":"20 minutes of drawing ",
+			"picture":"./DataBase/images/draw.jpg",
+			"filePath":"./DataBase/images/draw2.jpg"
 		},
 		"activity10":{
-			"title":"Painting",
-			"fileName":"The Good Samaritan",
-			"picture":"",
-			"filePath":"http://bibleforchildren.org/PDFs/english/The_Good_Samaritan_English_CB.pdf"
-		},
-		"activity11":{
-			"title":"Painting",
-			"fileName":"Samson Gods Strong Man",
-			"picture":"",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Samson_Gods_Strong_Man_English_CB.pdf"
-		},
-		"activity12":{
-			"title":"Painting",
-			"fileName":"Jesus Feeds 5000 People",
-			"picture":"",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_Feeds_5000_People_English_CB.pdf"
-		},
-		"activity13":{
 			"title":"Exercise",
 			"fileName":"10 minutes of exercise you like",
 			"picture":"./DataBase/images/exercise5.jpg",
 			"filePath":"./DataBase/images/exercise1.jpg"
 		},
-		"activity14":{
+		"activity11":{
 			"title":"Exercise",
 			"fileName":"10 minutes of exercise you like",
 			"picture":"./DataBase/images/exercise6.jpg",
 			"filePath":"./DataBase/images/exercise2.jpg"
 		},
-		"activity15":{
+		"activity12":{
 			"title":"Exercise",
 			"fileName":"10 minutes of exercise you like",
 			"picture":"./DataBase/images/exercise7.jpg",
 			"filePath":"./DataBase/images/exercise3.jpg"
 		},
-		"activity16":{
+		"activity13":{
 			"title":"Exercise",
 			"fileName":"10 minutes of exercise you like",
 			"picture":"./DataBase/images/exercise8.jpg",

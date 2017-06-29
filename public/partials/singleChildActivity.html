@@ -27,7 +27,7 @@
             <img ng-src="{{activity.filePath}}" class="exercisePic">
         </ul>
 
-        <ul ng-if="activity.title !== 'Exercise'">
+        <ul ng-if="activity.title == 'Reading'">
             <object data="{{activity.filePath}}" type="application/pdf"  class="pdf " width="100%" height="1200" >
             <embed src="{{activity.filePath}}" type="application/pdf" class="embed-responsive"/>
             </object>
@@ -42,3 +42,5 @@
             <input type="checkbox" name="isCompleted" ng-checked="childActivity.isCompleted" ng-change="completedChange(childActivity)" ng-model="childActivity.isCompleted"/>
         </a>
 </div>
+
+

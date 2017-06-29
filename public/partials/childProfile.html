@@ -11,17 +11,19 @@
 </nav>
 <!-- display all child data -->
 <div class="container">
-    <div class="col-xs-6 pull-left">
+    <!-- <div class="col-xs-6 pull-left"> -->
         <div class="panel panel-success col-xs-12">
             <img ng-src="{{pic}}" class="avatarPic pull-left col-xs-12">
             <h2 class=" col-xs-6 pull-right"> {{selectedChild.childName}}</h2>
         </div>
+        
+        <div class="col-xs-6 pull-left">
         <div ng-repeat="activity in activities">
             <div class=" panel-heading frame col-xs-5 item">
                 <ul ng-if="activity.title == 'Reading'">
                     <i class="fa fa-book fa-lg" aria-hidden="true"></i>
                 </ul>
-                <ul ng-if="activity.title == 'Painting'">
+                <ul ng-if="activity.title == 'Drawing'">
                     <i class="fa fa-paint-brush fa-lg" aria-hidden="true"></i>
                 </ul>
                 <ul ng-if="activity.title == 'Exercise'">
@@ -29,13 +31,29 @@
                 </ul>
                 <p>{{activity.fileName}}</p>
                 <p>{{activity.isCompleted ? "completed" : "not completed"}}</p>
+
                 <div class="panel-body container ">
+                    <div ng-if="activity.title == 'Drawing'">
+                        <a ng-href="#!/paintActivity/{{activity.childActivityId}}">
+                            <img ng-src="{{activity.picture}}" class="activityPic">
+                        </a>
+                    </div>
+
+                    <div ng-if="activity.title == 'Reading'|| activity.title == 'Exercise'">
+                        <a ng-href="#!/singleChildActivity/{{activity.childActivityId}}">
+                            <img ng-src="{{activity.picture}}" class="activityPic">
+                        </a>                    
+                    </div>
+                </div>
+
+                <!-- <div class="panel-body container ">
                     <a ng-href="#!/singleChildActivity/{{activity.childActivityId}}">
                         <img ng-src="{{activity.picture}}" class="activityPic">
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
+
     </div>
     <div class="childProfilePagePic col-xs-6 pull-right"></div>
     </div>

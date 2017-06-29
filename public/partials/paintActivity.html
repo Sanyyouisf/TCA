@@ -1,0 +1,62 @@
+<!-- navbar -->
+<nav class="navbar navbar-inverse navBar ">
+    <ul class=" nav navbar-nav navbar-left col-md-12">
+        <li class="col-xs-2"> <img ng-src="./DataBase/images/logo.png" class="logo"></li>
+        <li class="col-xs-1"><a ng-href="#!/parentProfile">Parent</a></li>
+        <li class="col-xs-1.5"><a href="#!/childLogin">Child Login</a></li>
+        <li class="col-xs-2 col-xs-offset-4">
+            <h3 class="username ">{{user.pName}}</h3>
+        </li>
+    </ul>
+</nav>
+<!-- child name -->
+<div class="container">
+    <div class="col-xs-12">
+        <div class="panel panel-success col-xs-12">
+            <img ng-src="{{selectedChild.url}}" class="avatarPic pull-left col-xs-12">
+            <h2 class=" col-xs-6 pull-right"> {{selectedChild.childName}}</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container contain2">
+<!--     <h3 class="col-xs-4 col-xs-offset-5 "> {{activity.fileName}}</h3>
+ -->    <div class="col-xs-10 col-xs-offset-1">
+        <canvas width="600" height="400"></canvas>
+        <div class="controls">
+            <ul>
+                <li class="red selected"></li>
+                <li class="blue"></li>
+                <li class="yellow"></li>
+            </ul>
+            <button id="revealColorSelect">New Color</button>
+            <div id="colorSelect">
+                <span id="newColor"></span>
+                <div class="sliders">
+                    <p>
+                        <label for="red">Red</label>
+                        <input id="red" name="red" type="range" min=0 max=255 value=0>
+                    </p>
+                    <p>
+                        <label for="green">Green</label>
+                        <input id="green" name="green" type="range" min=0 max=255 value=0>
+                    </p>
+                    <p>
+                        <label for="blue">Blue</label>
+                        <input id="blue" name="blue" type="range" min=0 max=255 value=0>
+                    </p>
+                </div>
+                <div>
+                    <button id="addNewColor">Add Color</button>
+                </div>
+            </div>
+        </div>
+        <!-- Done checkbox -->
+        <div class="col-xs-4 col-xs-offset-2">
+            <label> Done . </label>
+            <a ng-href="#!/childProfile/{{childActivity.childId}}">
+                <input type="checkbox" name="isCompleted" ng-checked="childActivity.isCompleted" ng-change="completedChange(childActivity)" ng-model="childActivity.isCompleted" />
+            </a>
+        </div>
+    </div>
+</div>
