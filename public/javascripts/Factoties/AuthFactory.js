@@ -8,6 +8,12 @@ app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
   	};
 
 
+  	//Firebase: Return email, UID for user that is currently logged in.
+  	let getUser = () => {
+    return firebase.auth().currentUser;
+  	};
+
+
   	//function to register the new user with email and password
 	let registerWithEmail =(user)=>{
 		return $q((resolve,reject)=>{
@@ -31,7 +37,7 @@ app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
 			})
 			.catch((error)=>{
 				reject(error);
-				console.log("error in authenticate :",error);
+				// console.log("error in authenticate :",error);
 			});
 		});
 	};
@@ -42,5 +48,5 @@ app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
 	};
 
 
-	return{isAuthenticated:isAuthenticated, registerWithEmail:registerWithEmail ,authenticate:authenticate ,logout:logout};
+	return{isAuthenticated:isAuthenticated, getUser:getUser, registerWithEmail:registerWithEmail ,authenticate:authenticate ,logout:logout};
 });

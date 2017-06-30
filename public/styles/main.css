@@ -1,10 +1,6 @@
 /***********
 painting
 ************/
-/*body {
-	background: #384047;
-	font-family: sans-serif;
-}*/
 .contain2 canvas {
   background: #f0f8ff;
   display: block;
@@ -238,6 +234,16 @@ object:focus {
 
 a {
   text-decoration: none; }
+
+.alert {
+  position: fixed;
+  width: 40%;
+  padding: 10px;
+  margin: auto;
+  height: 75px;
+  float: left;
+  left: 450px;
+  top: 250px; }
 
 #footer {
   position: fixed;
