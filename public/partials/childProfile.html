@@ -17,7 +17,7 @@
     </div>
     <div class="col-xs-6 pull-left">
         <div ng-repeat="activity in activities">
-        
+
             <div class=" panel-heading frame col-xs-5 item activityBG">
                 <ul ng-if="activity.title == 'Reading'">
                     <i class="fa fa-book fa-lg" aria-hidden="true"></i>
@@ -29,8 +29,17 @@
                     <i class="fa fa-futbol-o fa-lg" aria-hidden="true"></i>
                 </ul>
                 <p>{{activity.fileName}}</p>
-                <p>{{activity.isCompleted}}</p>
-                <!-- <p>{{activity.isCompleted ? "completed" : "not completed"}}</p> -->
+                <!-- <p>{{activity.isCompleted}}</p> -->
+                <!-- <p>{{activity.isCompleted ? " Not Completed" : " Completed"}}</p> -->
+                <div ng-if="activity.isCompleted == 'false'">
+                    <p>not Completed</p>
+                </div>
+
+                <div ng-if="activity.isCompleted !== 'false'">
+                    <p>Completed</p>
+                </div>             
+
+                             
 
                 <div class="panel-body container ">
 

@@ -24,7 +24,6 @@ app.controller("childProfileCtrl", function($scope, ChildActivityFactory, ChildF
                     });
             });
             $scope.activities = kidActivities;
-            console.log("$scope.activities", $scope.activities);
         })
         .catch((error) => {
             console.log("error in displayChildActivities", error);
