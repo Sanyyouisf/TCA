@@ -1,4 +1,4 @@
-app.controller("activityListCtrl", function($scope, $location, AuthFactory, ActivityFactory, ChildFactory, $rootScope, AvatarFactory, ChildActivityFactory) {
+app.controller("activityListCtrl", function ($scope, $location, AuthFactory, ActivityFactory, ChildFactory, $rootScope, AvatarFactory, ChildActivityFactory) {
 
     $scope.activityId = "";
     $scope.tempSelectChild = "";
@@ -53,12 +53,12 @@ app.controller("activityListCtrl", function($scope, $location, AuthFactory, Acti
     };
 
 
-    //add child activity
     $scope.addChildActivity = (childId) => {
-        console.log("$scope.newChildActivity.dueDate :", $scope.newChildActivity.dueDate);
+        // console.log("$scope.newChildActivity.dueDate :", $scope.newChildActivity.dueDate);
         $scope.newChildActivity.isCompleted = false;
         $scope.newChildActivity.childId = childId;
         $scope.newChildActivity.activityId = $scope.activityId;
+        // console.log("$scope.newChildActivit",$scope.newChildActivity);
         ChildActivityFactory.postChildActivity($scope.newChildActivity)
             .then((response) => {
                 $scope.displayAllChildren($scope.activityId);
@@ -68,6 +68,7 @@ app.controller("activityListCtrl", function($scope, $location, AuthFactory, Acti
                 console.log("error in addChildActivity: ", error);
             });
     };
+
 
 
     if ($location.path() === '/logout') {
