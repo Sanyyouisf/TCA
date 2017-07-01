@@ -9,17 +9,16 @@
         </li>
     </ul>
 </nav>
-<!-- display all child data -->
+
 <div class="container">
-    <!-- <div class="col-xs-6 pull-left"> -->
-        <div class="panel panel-success col-xs-12">
-            <img ng-src="{{pic}}" class="avatarPic pull-left col-xs-12">
-            <h2 class=" col-xs-6 pull-right"> {{selectedChild.childName}}</h2>
-        </div>
-        
-        <div class="col-xs-6 pull-left">
+    <div class="panel panel-success col-xs-12 childBG">
+        <img ng-src="{{pic}}" class="avatarPic pull-left col-xs-12 childBG">
+        <h2 class=" col-xs-6 pull-right"> {{selectedChild.childName}}</h2>
+    </div>
+    <div class="col-xs-6 pull-left">
         <div ng-repeat="activity in activities">
-            <div class=" panel-heading frame col-xs-5 item">
+        
+            <div class=" panel-heading frame col-xs-5 item activityBG">
                 <ul ng-if="activity.title == 'Reading'">
                     <i class="fa fa-book fa-lg" aria-hidden="true"></i>
                 </ul>
@@ -30,31 +29,26 @@
                     <i class="fa fa-futbol-o fa-lg" aria-hidden="true"></i>
                 </ul>
                 <p>{{activity.fileName}}</p>
-                <p>{{activity.isCompleted ? "completed" : "not completed"}}</p>
+                <p>{{activity.isCompleted}}</p>
+                <!-- <p>{{activity.isCompleted ? "completed" : "not completed"}}</p> -->
 
                 <div class="panel-body container ">
+
                     <div ng-if="activity.title == 'Drawing'">
-                        <a ng-href="#!/paintActivity/{{activity.childActivityId}}">
-                            <img ng-src="{{activity.picture}}" class="activityPic">
+                        <a href="">
+                            <img ng-src="{{activity.picture}}" class="activityPic" ng-click="goToPaintActivityPage(activity.childActivityId)">
                         </a>
                     </div>
 
                     <div ng-if="activity.title == 'Reading'|| activity.title == 'Exercise'">
-                        <a ng-href="#!/singleChildActivity/{{activity.childActivityId}}">
-                            <img ng-src="{{activity.picture}}" class="activityPic">
-                        </a>                    
+                        <a href="">
+                            <img ng-src="{{activity.picture}}" class="activityPic" ng-click="goTosingleChildActivityPage(activity.childActivityId)">
+                        </a>
                     </div>
+                    
                 </div>
-
-                <!-- <div class="panel-body container ">
-                    <a ng-href="#!/singleChildActivity/{{activity.childActivityId}}">
-                        <img ng-src="{{activity.picture}}" class="activityPic">
-                    </a>
-                </div> -->
             </div>
         </div>
-
     </div>
     <div class="childProfilePagePic col-xs-6 pull-right"></div>
-    </div>
 </div>

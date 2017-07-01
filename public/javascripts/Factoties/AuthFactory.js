@@ -1,52 +1,52 @@
-app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG){
+app.factory("AuthFactory", function($q, $http, FIREBASE_CONFIG) {
 
-	let currentUser = null;
+    let currentUser = null;
 
-	//function to check if the user is authenticated or not 
-	let isAuthenticated = () => {
-    	return firebase.auth().currentUser ? true : false;
-  	};
-
-
-  	//Firebase: Return email, UID for user that is currently logged in.
-  	let getUser = () => {
-    return firebase.auth().currentUser;
-  	};
+    //function to check if the user is authenticated or not 
+    let isAuthenticated = () => {
+        return firebase.auth().currentUser ? true : false;
+    };
 
 
-  	//function to register the new user with email and password
-	let registerWithEmail =(user)=>{
-		return $q((resolve,reject)=>{
-      		firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-			.then((resultz)=>{
-				resolve(resultz);
-			})
-			.catch((error)=>{
-				reject(error);
-				console.log("error in registerWithEmail :",error);
-			});
-		});
-	};
+    //Firebase: Return email, UID for user that is currently logged in.
+    let getUser = () => {
+        return firebase.auth().currentUser;
+    };
 
 
-	let authenticate =(credentials)=>{
-		return $q ((resolve,reject)=>{
-			firebase.auth().signInWithEmailAndPassword(credentials.email,credentials.password)
-			.then((resultz)=>{
-				resolve(resultz);
-			})
-			.catch((error)=>{
-				reject(error);
-				// console.log("error in authenticate :",error);
-			});
-		});
-	};
+    //function to register the new user with email and password
+    let registerWithEmail = (user) => {
+        return $q((resolve, reject) => {
+            firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+                .then((resultz) => {
+                    resolve(resultz);
+                })
+                .catch((error) => {
+                    reject(error);
+                    console.log("error in registerWithEmail :", error);
+                });
+        });
+    };
 
 
-	let logout =() => {
-		firebase.auth().signOut();
-	};
+    let authenticate = (credentials) => {
+        return $q((resolve, reject) => {
+            firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
+                .then((resultz) => {
+                    resolve(resultz);
+                })
+                .catch((error) => {
+                    reject(error);
+                    // console.log("error in authenticate :",error);
+                });
+        });
+    };
 
 
-	return{isAuthenticated:isAuthenticated, getUser:getUser, registerWithEmail:registerWithEmail ,authenticate:authenticate ,logout:logout};
+    let logout = () => {
+        firebase.auth().signOut();
+    };
+
+
+    return { isAuthenticated: isAuthenticated, getUser: getUser, registerWithEmail: registerWithEmail, authenticate: authenticate, logout: logout };
 });

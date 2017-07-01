@@ -1,17 +1,10 @@
-$green : #dbbaff;
-
-/*.center {
-    text-align: center;
-    justify-content: center;
-}*/
-
 h2 {
     margin-left: 25px;
 }
 
 input[type="checkbox"] {
-  font-size: 50px;
-  transform:scale(2, 2);
+    font-size: 50px;
+    transform: scale(2, 2);
 }
 
 .username {
@@ -20,7 +13,7 @@ input[type="checkbox"] {
 }
 
 .pdf {
-  position: relative;
+    position: relative;
 }
 
 .embed-responsive {
@@ -29,15 +22,6 @@ input[type="checkbox"] {
     height: 0;
     padding: 0;
     overflow: hidden;
-}
-
-.containertext {
-    display: flex;
-    /*flex-flow: row nowrap;*/
-    flex-direction: row;
-    /*justify-content: flex-start;*/
-    overflow: auto;
-    max-width: 300px;
 }
 
 
@@ -77,44 +61,45 @@ object:focus {
     font-size: 60px;
     padding: 21px 30px 21px 28px;
     text-decoration: none;
+    opacity: .8;
 }
 
 .btn2 {
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
-  border-radius: 10px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 15px;
-  background: #aa34d9;
-  padding: 5px;
-  text-decoration: none;
-  margin-top: 5px;
-  width: 235px;
-  opacity: .8;
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    background: #aa34d9;
+    padding: 5px;
+    text-decoration: none;
+    margin-top: 5px;
+    width: 235px;
+    opacity: .8;
 }
 
 .btn3 {
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
-  border-radius: 10px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  background: #aa34d9;
-  padding: 5px;
-  text-decoration: none;
-  opacity: .8;
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #aa34d9;
+    padding: 5px;
+    text-decoration: none;
+    opacity: .8;
 }
 
 .btn2:hover {
-  background: #633cfc;
-  text-decoration: none;
+    background: #633cfc;
+    text-decoration: none;
 }
 
 .btn3:hover {
-  background: #633cfc;
-  text-decoration: none;
+    background: #633cfc;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -123,7 +108,5 @@ object:focus {
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
-
-

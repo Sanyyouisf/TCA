@@ -1,9 +1,10 @@
-app.controller("activityListCtrl", function($scope,$location, AuthFactory,ActivityFactory, ChildFactory, $rootScope, AvatarFactory, ChildActivityFactory) {
-    console.log(" inside activityList-Ctrl");
+app.controller("activityListCtrl", function($scope, $location, AuthFactory, ActivityFactory, ChildFactory, $rootScope, AvatarFactory, ChildActivityFactory) {
 
-    $scope.activityId ="";
-    $scope.tempSelectChild ="";
+    $scope.activityId = "";
+    $scope.tempSelectChild = "";
     $scope.newChildActivity = {};
+    $scope.dueDate = "";
+    $scope.tempDueDate = "";
 
 
     let displayAllActivities = () => {
@@ -22,48 +23,50 @@ app.controller("activityListCtrl", function($scope,$location, AuthFactory,Activi
     $scope.displayAllChildren = (activityId) => {
         $scope.activityId = activityId;
         ChildFactory.getChildrenForParent($rootScope.user.uid)
-        .then((result) => {
-            $scope.selectedchildren = result;
-            $scope.selectedchildren.forEach((kid) => {
-                $scope.childId = kid.id;
-                AvatarFactory.getSinglePicture(kid.pic)
-                .then((image) => {
-                    kid.url = image.path;
-                })
-                .catch((error) => {
-                    console.log("error in getSinglePicture :", error);
-                });
-                ChildActivityFactory.getChildActivitiesForChild(kid.id)
-                .then((childActivities) => {
-                    kid.activities = [];
-                    childActivities.forEach((x) => {
-                        ActivityFactory.getSingleActivity(x.activityId)
-                        .then((result) => {
-                            kid.activities.push(result);
+            .then((result) => {
+                $scope.selectedchildren = result;
+                $scope.selectedchildren.forEach((kid) => {
+                    $scope.childId = kid.id;
+                    AvatarFactory.getSinglePicture(kid.pic)
+                        .then((image) => {
+                            kid.url = image.path;
+                        })
+                        .catch((error) => {
+                            console.log("error in getSinglePicture :", error);
                         });
-                    });
-                });
+                    ChildActivityFactory.getChildActivitiesForChild(kid.id)
+                        .then((childActivities) => {
+                            kid.activities = [];
+                            childActivities.forEach((x) => {
+                                $scope.dueDate = x.dueDate;
+                                ActivityFactory.getSingleActivity(x.activityId)
+                                    .then((result) => {
+                                        kid.activities.push(result);
+                                    });
+                            });
+                        });
                 });
             })
-        .catch((error) => {
-            console.log("error in displayChildrenForParent: ", error);
-        });
+            .catch((error) => {
+                console.log("error in displayChildrenForParent: ", error);
+            });
     };
 
 
-//add child activity
+    //add child activity
     $scope.addChildActivity = (childId) => {
+        console.log("$scope.newChildActivity.dueDate :", $scope.newChildActivity.dueDate);
         $scope.newChildActivity.isCompleted = false;
         $scope.newChildActivity.childId = childId;
         $scope.newChildActivity.activityId = $scope.activityId;
         ChildActivityFactory.postChildActivity($scope.newChildActivity)
-        .then((response) => {
-            $location.url('/activityList');
-            $scope.displayAllChildren($scope.activityId);
-        })
-        .catch((error) => {
+            .then((response) => {
+                $scope.displayAllChildren($scope.activityId);
+                $location.url('/activityList');
+            })
+            .catch((error) => {
                 console.log("error in addChildActivity: ", error);
-        });
+            });
     };
 
 

@@ -1,5 +1,4 @@
 app.controller("childLoginCtrl", function($scope, ChildFactory, AvatarFactory, $rootScope,$location) {
-    console.log(" inside childLoginCtrl");
 
 
     $scope.selectedchildren = [];

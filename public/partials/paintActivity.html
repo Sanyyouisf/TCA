@@ -18,10 +18,9 @@
         </div>
     </div>
 </div>
-
+<!-- paint -->
 <div class="container contain2">
-<!--     <h3 class="col-xs-4 col-xs-offset-5 "> {{activity.fileName}}</h3>
- -->    <div class="col-xs-10 col-xs-offset-1">
+    <div class="col-xs-10 col-xs-offset-1">
         <canvas width="600" height="400"></canvas>
         <div class="controls">
             <ul>
@@ -54,7 +53,7 @@
         <!-- Done checkbox -->
         <div class="col-xs-4 col-xs-offset-2">
             <label> Done . </label>
-            <a ng-href="#!/childProfile/{{childActivity.childId}}">
+            <a href="">
                 <input type="checkbox" name="isCompleted" ng-checked="childActivity.isCompleted" ng-change="completedChange(childActivity)" ng-model="childActivity.isCompleted" />
             </a>
         </div>

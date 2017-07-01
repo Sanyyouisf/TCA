@@ -60,6 +60,7 @@ app.controller("paintActivityCtrl", function($routeParams, $scope, AuthFactory, 
 
     //When "New Color" is pressed
     $("#revealColorSelect").click(function() {
+        //Show color select or hide the color select
         changeColor();
         $("#colorSelect").toggle();
     });
@@ -74,6 +75,7 @@ app.controller("paintActivityCtrl", function($routeParams, $scope, AuthFactory, 
 
     //When color sliders change
     $("input[type=range]").change(changeColor);
+
     //When "Add Color" is pressed
     $("#addNewColor").click(function() {
         //Append the color to the controls ul
@@ -103,7 +105,6 @@ app.controller("paintActivityCtrl", function($routeParams, $scope, AuthFactory, 
     }).mouseleave(function() {
         $canvas.mouseup();
     });
-
 
 
 });

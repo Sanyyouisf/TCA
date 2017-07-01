@@ -1,18 +1,18 @@
-
-
 <div class="home-bg">
     <nav class="navbar navbar-inverse navBar">
         <ul class=" nav navbar-nav navbar-left">
             <li> <img ng-src="./DataBase/images/logo.png" class="logo"></li>
-            <li><a ng-click="loginUser()">Login</a></li>
-            <li><a ng-click="registerUser()">Register</a></li>
+            <li><a href="" ng-click="loginUser()">Login</a></li>
+            <li><a href="" ng-click="registerUser()">Register</a></li>
         </ul>
     </nav>
-<div class="container">
-    <div  uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)" class="alert col-xs-4 col-xs-offset-4">
-    {{alert.msg}}</div>
-</div>
+    <!-- alert  -->
 
+    <div class="container">
+        <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)" class="alert col-xs-4 col-xs-offset-4">
+            {{alert.msg}}</div>
+    </div>
+    <!-- text input -->
     <div class="input-group mt-2 col-xs-3 col-xs-offset-6">
         <span class="input-group-addon">
         <i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i>
