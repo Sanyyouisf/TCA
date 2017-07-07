@@ -9,36 +9,37 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
 
 
     // displayChildrenForParent
-    let displayChildData =()=>{
-    ChildFactory.getChildrenForParent($rootScope.user.uid)
-        .then((result) => {
-            $scope.selectedchildren = result;
-            //loop through the selectedchildren to get image url 
-            $scope.selectedchildren.forEach((kid) => {
-                $scope.childId = kid.id;
-                AvatarFactory.getSinglePicture(kid.pic)
-                    .then((image) => {
-                        kid.url = image.path;
-                    })
-                    .catch((error) => {
-                        console.log("error in getSinglePicture :", error);
-                    });
-
-                ChildActivityFactory.getChildActivitiesForChild(kid.id)
-                    .then((childActivities) => {
-                        kid.activities = [];
-                        childActivities.forEach((x) => {
-                            ActivityFactory.getSingleActivity(x.activityId)
-                                .then((result) => {
-                                    kid.activities.push(result);
-                                });
+    let displayChildData = () => {
+        ChildFactory.getChildrenForParent($rootScope.user.uid)
+            .then((result) => {
+                $scope.selectedchildren = result;
+                //loop through the selectedchildren to get image url 
+                $scope.selectedchildren.forEach((kid) => {
+                    $scope.childId = kid.id;
+                    AvatarFactory.getSinglePicture(kid.pic)
+                        .then((image) => {
+                            kid.url = image.path;
+                        })
+                        .catch((error) => {
+                            console.log("error in getSinglePicture :", error);
                         });
-                    });
+
+                    ChildActivityFactory.getChildActivitiesForChild(kid.id)
+                        .then((childActivities) => {
+                            console.log("childActivities :", childActivities);
+                            kid.activities = [];
+                            childActivities.forEach((x) => {
+                                ActivityFactory.getSingleActivity(x.activityId)
+                                    .then((result) => {
+                                        kid.activities.push(result);
+                                    });
+                            });
+                        });
+                });
+            })
+            .catch((error) => {
+                console.log("error in displayChildrenForParent: ", error);
             });
-        })
-        .catch((error) => {
-            console.log("error in displayChildrenForParent: ", error);
-        });
 
     };
 
@@ -62,12 +63,9 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
 
 
     $scope.addChildActivity = (activityId) => {
-        // console.log("$scope.tempSelectChild", $scope.tempSelectChild);
-        // console.log("activityId insideaddChildActivity ", activityId);
         $scope.newChildActivity.isCompleted = false;
         $scope.newChildActivity.childId = $scope.tempSelectChild;
         $scope.newChildActivity.activityId = activityId;
-        console.log("$scope.newChildActivity in postChildActivity:",$scope.newChildActivity);
         ChildActivityFactory.postChildActivity($scope.newChildActivity)
             .then((response) => {
                 $location.url('/childList');
@@ -78,16 +76,16 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
             });
     };
 
-    $scope.deleteChild = (id)=>{
-    	console.log("id inside the delete",id);
-    	$scope.tempSelectChild = id;
-    	ChildFactory.deletz($scope.tempSelectChild)
-    	.then(()=>{
-    		displayChildData();
-    	})
-    	.catch((error) => {
-            console.log("error in deleteChild: ", error);
-        });
+    $scope.deleteChild = (id) => {
+        console.log("id inside the delete", id);
+        $scope.tempSelectChild = id;
+        ChildFactory.deletz($scope.tempSelectChild)
+            .then(() => {
+                displayChildData();
+            })
+            .catch((error) => {
+                console.log("error in deleteChild: ", error);
+            });
     };
 
 
@@ -97,7 +95,7 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
         $location.url('/auth');
     }
 
-    $scope.displaySingleChild = (childId) =>{
+    $scope.displaySingleChild = (childId) => {
         $location.url(`/viewSingleChild/${childId}`);
     };
 

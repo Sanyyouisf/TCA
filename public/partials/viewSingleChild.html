@@ -1,4 +1,3 @@
-<!-- navbar -->
 <nav class="navbar navbar-inverse navBar">
     <ul class=" nav navbar-nav navbar-left col-md-12">
         <li class="col-xs-1"> <img ng-src="./DataBase/images/logo.png" class="logo"></li>
@@ -6,36 +5,40 @@
         <li class="col-xs-1"><a ng-href="#!/activityList">activities</a></li>
         <li class="col-xs-1.5"><a href="#!/childLogin">Child Login</a></li>
         <li class="col-xs-1.5"><a href="#!/childList">Child List</a></li>
-        <li class="dropdown col-xs-2">
-            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Child Manager<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#!/newChild">Add Child</a></li>
-            </ul>
-        </li>
+        <li class="col-xs-1.5"><a href="#!/newChild">Add Child</a></li>
         <li class="col-xs-2 col-xs-offset-4">
             <h3 class="username ">{{user.pName}}</h3>
         </li>
     </ul>
 </nav>
 
-<!-- all the child data -->
 <div class="panel panel-success col-xs-10 col-xs-offset-1">
-    <div class="panel-heading col-xs-12 frame">
+    <div class="panel-heading col-xs-12 ">
         <img ng-src="{{selectedChild.url}}" class="childProfilePic pull-left ">
         <h3 class=" col-xs-3"> {{selectedChild.childName}}</h3><br>
         <h4 class=" col-xs-1"> age:{{selectedChild.age}} </h4>
-        <a href="#!/editChild/{{selectedChild.id}}">
-            <button class="btn btn-success fa fa-pencil-square-o pull-right">Edit</button>
+        <a href="">
+            <button class="btn btn-success fa fa-pencil-square-o pull-right" ng-click="goToEditPage(selectedChild.id)">Edit</button>
         </a>
     </div>
-<!-- activities -->
+
 <div class="container">
     <div ng-repeat="activity in activities" >
-        <div class="panel-heading frame col-xs-3 ">
+        <div class="panel-heading frame col-xs-3 childBG item">
             <p>{{activity.title}}</p>
             <br>
             <p>{{activity.fileName}}</p>
-            <p>{{activity.isCompleted ? "completed" : "not completed"}}</p>
+            <!-- <p>{{activity.isCompleted}}</p> -->
+            <!-- <p>{{activity.isCompleted ? "completed" : "not completed"}}</p> -->
+
+            <div ng-if="activity.isCompleted == 'false'">
+                <p>not Completed</p>
+            </div>
+
+            <div ng-if="activity.isCompleted !== 'false'">
+                <p>Completed</p>
+            </div> 
+            
             <div class="panel-body container ">
                 <img ng-src="{{activity.picture}}" class="activityPic">
             </div>

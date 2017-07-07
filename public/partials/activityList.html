@@ -11,31 +11,38 @@
         </li>
     </ul>
 </nav>
-
 <!-- displaying all the activities -->
 <div class="container">
-    <div ng-repeat="activity in activities">
-        <div class=" panel col-xs-4 item">
-            <div class="col-xs-1" ng-model="activity.title" ng-value="Reading">
-                <ul ng-if="activity.title == 'Reading'">
-                    <i class="fa fa-book fa-lg" aria-hidden="true"></i>
-                </ul>
-                <ul ng-if="activity.title == 'Painting'">
-                    <i class="fa fa-paint-brush fa-lg" aria-hidden="true"></i>
-                </ul>
-                <ul ng-if="activity.title == 'Exercise'">
-                    <i class="fa fa-futbol-o fa-lg" aria-hidden="true"></i>
-                </ul>
-            </div>
-            <div class="col-xs-8 col-xs-offset-2">
-                <p> {{activity.fileName}}</p>
-            </div>
-            <div class="panel-body col-xs-12">
-                <img ng-src="{{activity.picture}}" class="activityPic">
-            </div>
-            <div class="col-xs-12">
-                <button type="button" class="btn btn-default" ng-click="displayAllChildren(activity.id)"> assign to child
-                </button>
+    <div class="col-xs-12">
+        <div ng-repeat="activity in activities">
+
+            <div class=" panel col-xs-4 item activityBG">
+
+                <div class="col-xs-1" ng-model="activity.title" ng-value="Reading">
+                    <ul ng-if="activity.title == 'Reading'">
+                        <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+                    </ul>
+                    <ul ng-if="activity.title == 'Drawing'">
+                        <i class="fa fa-paint-brush fa-lg" aria-hidden="true"></i>
+                    </ul>
+                    <ul ng-if="activity.title == 'Exercise'">
+                        <i class="fa fa-futbol-o fa-lg" aria-hidden="true"></i>
+                    </ul>
+                </div>
+
+                <div class="col-xs-8 col-xs-offset-2">
+                    <p> {{activity.fileName}}</p>
+                </div>
+
+                <div class="panel-body col-xs-8 col-xs-offset-2">
+                    <img ng-src="{{activity.picture}}" class="activityPic">
+                </div>
+
+                <div class="col-xs-4 col-xs-offset-3">
+                    <button type="button" class="btn btn-default" ng-click="displayAllChildren(activity.id)"> assign to child
+                    </button>
+                </div>
+
             </div>
         </div>
     </div>
@@ -43,19 +50,25 @@
 <!-- display all the children   -->
 <div class="container">
     <div ng-repeat="child in selectedchildren">
-        <div class="panel panel-success col-xs-4 item">
+        <div class="panel panel-success col-xs-4 item childBG">
             <div class="panel-heading col-xs-12">
-                <p>{{child.childName}}</p>
+                <p class="col-xs-12">{{child.childName}}</p>
+                <!-- date picker -->
+                <!-- <p class="input-group">
+                    <input type="date" class="form-control" uib-datepicker-popup ng-model="newChildActivity.dueDate" is-open="isOpened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-change="vm.dateString = (dateObj | date: 'MM/dd/yyyy')" ng-required="true" close-text="Close" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="isOpened2 = !isOpened2"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p> -->
             </div>
-            <div class="panel-body container col-xs-12">
-                <a ng-href="#!/activityList" ng-click="addChildActivity(child.id)">
+            <div class="panel-body container col-xs-5 col-xs-offset-3 ">
+                <a href="" ng-click="addChildActivity(child.id)">
                     <img ng-src="{{child.url}}" class="childProfilePic ">
                 </a>
             </div>
             <div ng-repeat="activity in child.activities" class="col-xs-12 activityList">
                 <p>{{activity.title}}</p>
                 <p>{{activity.fileName}} </p>
-                <br>
             </div>
         </div>
     </div>

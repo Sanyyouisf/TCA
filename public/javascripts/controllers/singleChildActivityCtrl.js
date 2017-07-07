@@ -8,7 +8,7 @@ app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildA
 		ChildActivityFactory.getSingleChildActivity($routeParams.childActivityId)
 		.then((result)=>{
 			$scope.childActivity = result ;
-			ActivityFactory.getSingleActivity(result.activityId)
+			ActivityFactory.getSingleActivity($scope.childActivity.activityId)
 			.then((resultActivity)=>{
 				$scope.activity = resultActivity;
 				//to get the child name and avatat pic
@@ -42,5 +42,6 @@ app.controller("singleChildActivityCtrl", function($scope,ActivityFactory,ChildA
     		console.log("inputChange error",error);
     	});
     };
+
 
 });

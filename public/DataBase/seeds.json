@@ -117,51 +117,21 @@
 			"filePath":"./DataBase/pdf/Jesus_and_Lazarus_English.pdf"
 		},
 		"activity09":{
-			"title":"Painting",
-			"fileName":"When God Made Everything",
-			"picture":"",
-			"filePath":"http://bibleforchildren.org/PDFs/english/When_God_Made_Everything_English_CB.pdf"
+			"title":"Drawing",
+			"fileName":"20M drawing ",
+			"picture":"./DataBase/images/draw1.jpg",
+			"filePath":"./DataBase/images/draw2.jpg"
 		},
 		"activity10":{
-			"title":"Painting",
-			"fileName":"The Good Samaritan",
-			"picture":"",
-			"filePath":"http://bibleforchildren.org/PDFs/english/The_Good_Samaritan_English_CB.pdf"
-		},
-		"activity11":{
-			"title":"Painting",
-			"fileName":"Samson Gods Strong Man",
-			"picture":"",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Samson_Gods_Strong_Man_English_CB.pdf"
-		},
-		"activity12":{
-			"title":"Painting",
-			"fileName":"Jesus Feeds 5000 People",
-			"picture":"",
-			"filePath":"http://bibleforchildren.org/PDFs/english/Jesus_Feeds_5000_People_English_CB.pdf"
-		},
-		"activity13":{
 			"title":"Exercise",
-			"fileName":"10 minutes of exercise you like",
-			"picture":"./DataBase/images/exercise5.jpg",
-			"filePath":"./DataBase/images/exercise1.jpg"
-		},
-		"activity14":{
-			"title":"Exercise",
-			"fileName":"10 minutes of exercise you like",
-			"picture":"./DataBase/images/exercise6.jpg",
+			"fileName":"10M exercise you like",
+			"picture":"./DataBase/images/exercise1.jpg",
 			"filePath":"./DataBase/images/exercise2.jpg"
 		},
-		"activity15":{
+		"activity11":{
 			"title":"Exercise",
-			"fileName":"10 minutes of exercise you like",
-			"picture":"./DataBase/images/exercise7.jpg",
-			"filePath":"./DataBase/images/exercise3.jpg"
-		},
-		"activity16":{
-			"title":"Exercise",
-			"fileName":"10 minutes of exercise you like",
-			"picture":"./DataBase/images/exercise8.jpg",
+			"fileName":"10M exercise you like",
+			"picture":"./DataBase/images/exercise3.jpg",
 			"filePath":"./DataBase/images/exercise4.jpg"
 		}
 	},
@@ -198,61 +168,73 @@
 			"activityId":"activity01",
 			"childId":"child01",
 			"isCompleted":"false",
-			"dueDate":"7/25/2017"
+			"dueDate":"8/01/2017"
 		},
 		"childActivity02":{
 			"activityId":"activity02",
 			"childId":"child01",
 			"isCompleted":"false",
-			"dueDate":"7/25/2017"
+			"dueDate":"8/11/2017"
 		},
 		"childActivity03":{
+			"activityId":"activity09",
+			"childId":"child01",
+			"isCompleted":"false",
+			"dueDate":"7/10/2017"
+		},
+		"childActivity04":{
+			"activityId":"activity10",
+			"childId":"child01",
+			"isCompleted":"false",
+			"dueDate":"7/22/2017"
+		},
+		"childActivity05":{
 			"activityId":"activity03",
 			"childId":"child02",
 			"isCompleted":"false",
-			"dueDate":"7/17/2017"
+			"dueDate":"7/15/2017"
 		},
-		"childActivity04":{
+		"childActivity06":{
 			"activityId":"activity04",
 			"childId":"child02",
 			"isCompleted":"false",
-			"dueDate":"7/9/2017"
+			"dueDate":"7/19/2017"
 		},
-		"childActivity05":{
+		"childActivity07":{
+			"activityId":"activity09",
+			"childId":"child02",
+			"isCompleted":"false",
+			"dueDate":"7/22/2017"
+		},
+		"childActivity08":{
+			"activityId":"activity11",
+			"childId":"child02",
+			"isCompleted":"false",
+			"dueDate":"7/8/2017"
+		},
+		"childActivity09":{
 			"activityId":"activity05",
 			"childId":"child03",
 			"isCompleted":"false",
 			"dueDate":"7/11/2017"
 		},
-		"childActivity06":{
+		"childActivity10":{
 			"activityId":"activity06",
 			"childId":"child03",
 			"isCompleted":"false",
-			"dueDate":"7/25/2017"
+			"dueDate":"7/21/2017"
 		},
-		"childActivity07":{
+		"childActivity11":{
 			"activityId":"activity07",
 			"childId":"child04",
 			"isCompleted":"false",
-			"dueDate":"7/25/2017"
+			"dueDate":"7/11/2017"
 		},
-		"childActivity08":{
+		"childActivity12":{
 			"activityId":"activity08",
 			"childId":"child04",
 			"isCompleted":"false",
-			"dueDate":"7/25/2017"
-		},
-		"childActivity09":{
-			"activityId":"activity15",
-			"childId":"child01",
-			"isCompleted":"false",
-			"dueDate":"7/25/2017"
-		},
-		"childActivity10":{
-			"activityId":"activity16",
-			"childId":"child02",
-			"isCompleted":"false",
-			"dueDate":"7/25/2017"
+			"dueDate":"7/10/2017"
 		}
 	}
 }

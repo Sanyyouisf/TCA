@@ -82,5 +82,10 @@ app.config(function($routeProvider){
 		controller:"editChildCtrl",
 		resolve:{isAuth}
 	})
+	.when('/paintActivity/:childActivityId',{
+		templateUrl:"partials/paintActivity.html",
+		controller:"paintActivityCtrl",
+		resolve:{isAuth}
+	})
 	.otherwise('/auth');
 });

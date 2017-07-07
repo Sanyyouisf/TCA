@@ -13,12 +13,12 @@
     <div class="container">
         <div class="col-xs-5 pull-left">
             <div ng-repeat="child in selectedchildren">
-                <div class="panel panel-success col-xs-8 item ">
+                <div class="panel panel-success col-xs-8 item childBG">
                     <div class="panel-heading">
                         <p> {{child.childName}}</p>
                     </div>
                     <a href="">
-                        <div class="panel-body">
+                        <div class="panel-body col-xs-5 col-xs-offset-3">
                             <img ng-src="{{child.url}}" class="avatarPic" ng-click="goToProfile(child.id)">
                         </div>
                     </a>

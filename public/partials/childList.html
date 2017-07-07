@@ -1,4 +1,4 @@
-<!-- navbar -->
+<!-- navbar  -->
 <nav class="navbar navbar-inverse navBar">
     <ul class=" nav navbar-nav navbar-left col-md-12">
         <li class="col-xs-1"> <img ng-src="./DataBase/images/logo.png" class="logo"></li>
@@ -11,37 +11,38 @@
     </ul>
 </nav>
 
-<!-- display children -->
 <div class="container">
     <div ng-repeat="child in selectedchildren">
-        <div class="panel panel-success col-xs-5 item">
+        <div class="panel panel-success col-xs-5 item childBG">
             <div class="panel-heading">
                 <div>{{child.childName}}
                     <button class="btn btn-success fa fa-trash-o  pull-right" ng-click="deleteChild(child.id)"></button>
                 </div>
             </div>
+            
             <a href="">
-                <div class="panel-body container ">
+                <div class="panel-body container col-xs-5 col-xs-offset-4 ">
                     <img ng-src="{{child.url}}" class="childProfilePic" ng-click="displaySingleChild(child.id)">
                 </div>
             </a>
+
             <div ng-repeat="activity in child.activities" class="col-xs-12 activityList">
                 <p>{{activity.title}}</p>
-                <p>{{activity.fileName}}</p>
-                <br>
+                <p>{{activity.fileName}}</p>               
             </div>
+
             <div class="btn-group col-xs-4 col-xs-offset-5 ">
                 <button type="button" class="btn btn-default" ng-click="displayAllActivities(child.id)"> assign activity
                 </button>
             </div>
+
         </div>
     </div>
 </div>
 
-<!-- display the activities-->
 <div class="container">
     <div ng-repeat="activity in activities">
-        <div class=" panel col-xs-3 item">
+        <div class=" panel col-xs-3 item activityBG">
             <div class=" col-xs-12 ">
                 <p> {{activity.title}}</p>
                 <p> {{activity.fileName}}</p>

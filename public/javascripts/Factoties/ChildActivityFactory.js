@@ -73,7 +73,6 @@ app.factory("ChildActivityFactory", function($q, $http, FIREBASE_CONFIG){
     		$http.get(`${FIREBASE_CONFIG.databaseURL}/childActivities/${childActivityId}.json`)
     		.then((fbResult)=>{
     			resolve(fbResult.data);
-    			console.log("fbResult.data",fbResult.data);
     		})
     		.catch((error) => {
                 reject(error);

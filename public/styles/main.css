@@ -1,9 +1,151 @@
-body.home {
-  background: red; }
+/*******
+Drawing
+********/
+.contain2 canvas {
+  background: #f0f8ff;
+  display: block;
+  margin: 50px auto 10px;
+  border: 1px grey solid;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 0 #222;
+  cursor: url(../DataBase/images/cursor.png), crosshair; }
 
-/*.center {
-    text-align: center;
-    justify-content: center;
+.controls {
+  min-height: 60px;
+  margin: 0 auto;
+  width: 600px;
+  border-radius: 5px;
+  overflow: hidden; }
+
+.contain2 ul {
+  list-style: none;
+  margin: 0;
+  float: left;
+  padding: 10px 0 20px;
+  width: 100%;
+  text-align: center; }
+
+.contain2 ul li, #newColor {
+  display: block;
+  height: 54px;
+  width: 54px;
+  border-radius: 60px;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0 3px 0 0 #222; }
+
+.contain2 ul li {
+  display: inline-block;
+  margin: 0 5px 10px; }
+
+.red {
+  background: #fc4c4f; }
+
+.blue {
+  background: #4fa3fc; }
+
+.yellow {
+  background: #ECD13F; }
+
+.selected {
+  border: 7px solid #fff;
+  width: 40px;
+  height: 40px; }
+
+.contain2 button {
+  background: #68B25B;
+  box-shadow: 0 3px 0 0 #6A845F;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  text-shadow: 0 1px #6A845F;
+  display: block;
+  font-size: 16px;
+  line-height: 40px; }
+
+#revealColorSelect {
+  border: none;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 5px 20px;
+  width: 160px; }
+
+/* New Color Palette */
+#colorSelect {
+  background: #fff;
+  border-radius: 5px;
+  clear: both;
+  margin: 20px auto 0;
+  padding: 10px;
+  width: 305px;
+  position: relative;
+  display: none; }
+
+#colorSelect:after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px; }
+
+#newColor {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  box-shadow: none;
+  float: left;
+  border: none;
+  margin: 10px 20px 20px 10px; }
+
+.sliders p {
+  margin: 8px 0;
+  vertical-align: middle; }
+
+.sliders label {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 35px;
+  font-size: 14px;
+  color: #6D574E; }
+
+.sliders input {
+  position: relative;
+  top: 2px; }
+
+#colorSelect button {
+  border: none;
+  border-top: 1px solid #6A845F;
+  border-radius: 0 0 5px 5px;
+  clear: both;
+  margin: 10px -10px -7px;
+  padding: 5px 10px;
+  width: 325px; }
+
+/*.canvas__container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.canvas__canvas {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.canvas__mirror {
+  height: 100%;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%; 
 }*/
 h2 {
   margin-left: 25px; }
@@ -25,14 +167,6 @@ input[type="checkbox"] {
   height: 0;
   padding: 0;
   overflow: hidden; }
-
-.containertext {
-  display: flex;
-  /*flex-flow: row nowrap;*/
-  flex-direction: row;
-  /*justify-content: flex-start;*/
-  overflow: auto;
-  max-width: 300px; }
 
 .title {
   text-align: center; }
@@ -65,7 +199,8 @@ object:focus {
   color: #ffffff;
   font-size: 60px;
   padding: 21px 30px 21px 28px;
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: .8; }
 
 .btn2 {
   -webkit-border-radius: 10;
@@ -108,6 +243,16 @@ object:focus {
 a {
   text-decoration: none; }
 
+.alert {
+  position: fixed;
+  width: 40%;
+  padding: 10px;
+  margin: auto;
+  height: 75px;
+  float: left;
+  left: 450px;
+  top: 250px; }
+
 #footer {
   position: fixed;
   left: 0px;
@@ -146,6 +291,9 @@ a {
   flex-wrap: wrap;
   justify-content: flex-start; }
 
+/**********************
+pictures and background
+***********************/
 .avatarPic {
   width: 100px;
   height: 100px;
@@ -154,21 +302,22 @@ a {
   border-radius: 4px;
   padding: 5px; }
 
+.exercisePic {
+  width: 100%;
+  height: 1000px;
+  border: 1px solid #8b0000; }
+
 .activityPic {
   width: 150px;
   height: 150px;
   border: 1px solid #ddd;
   border-radius: 5px; }
 
-.frame {
-  box-shadow: 3px 3px 3px grey;
-  border: 1px solid grey;
-  border-radius: 3px; }
+.activityBG {
+  background-color: #f0ffff; }
 
-.item {
-  margin: 15px;
-  box-shadow: 10px 10px 5px grey;
-  border: 1px solid grey; }
+.childBG {
+  background-color: #fffaf0; }
 
 .logo {
   border: 1px dashed white;
@@ -180,8 +329,6 @@ a {
 .home-bg {
   background-image: url("../DataBase/images/homeBackground.jpg");
   opacity: .9;
-  /*background-position: fixed ;*/
-  /*background-position: center center;*/
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -190,42 +337,20 @@ a {
   top: 75px;
   left: 0; }
 
-/*
-    .pCLogin-bg{
-    background-image: url("../DataBase/images/pCLoginBackground.jpg");
-    opacity: .9;
-    background-position: fixed ;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: fixed; 
-    top: 75px; 
-    left: 0; 
-    color: white;
-    }*/
-.exercisePic {
-  width: 100%;
-  height: 1000px;
-  border: 1px solid #8b0000; }
-
 .childProfile-bg {
   background-image: url("../DataBase/images/childProfileBackground.jpg");
   opacity: .9;
-  /*background-position: center;*/
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
-  /*position: fixed;*/
   position: absolute;
   top: 75px;
   left: 0; }
 
 .childProfilePagePic {
   background-image: url("../DataBase/images/childProfilePic.jpg");
-  background-position: center center;
+  /*background-position: center center;*/
   background-repeat: no-repeat;
   background-size: cover;
   width: 500px;
@@ -248,29 +373,37 @@ a {
   border-radius: 5px;
   border: 1px solid #ddd; }
 
-@media (min-width: 320px) and (max-width: 568px) {
-  body {
-    background-color: orange; } }
+.frame {
+  box-shadow: 3px 3px 3px grey;
+  border: 1px solid grey;
+  border-radius: 3px; }
 
-/*@media (min-width: 568px) {
-  #menu select, #menu button {
-    display:none;
-  }
-}*/
+.item {
+  margin: 15px;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px solid grey; }
+
 /************************************************
 adjust the background for parent Child login page
 and parent profile page.
 *************************************************/
-.pCLogin-bg, .pProfile-bg {
+.pCLogin-bg,
+.pProfile-bg {
   position: center;
   overflow: hidden;
   z-index: 1000; }
 
-.pCLogin-bg h2, .pCLogin-bg h4, .btn1, .pProfile-bg h3, .btn2, .btn3 {
+.pCLogin-bg h2,
+.pCLogin-bg h4,
+.btn1,
+.pProfile-bg h3,
+.btn2,
+.btn3 {
   position: relative;
   z-index: 10; }
 
-.pCLogin-bg h2, .pProfile-bg h2 {
+.pCLogin-bg h2,
+.pProfile-bg h2 {
   font-family: 'Cinzel', serif;
   font-weight: bold; }
 
@@ -282,15 +415,17 @@ and parent profile page.
   height: 90%;
   opacity: 0.6; }
 
-/************************************************
-adjust the background for add Child  page
-*************************************************/
+/*****************************
+background for add Child  page
+******************************/
 .newChild-bg {
   position: center;
   overflow: hidden;
   z-index: 1000; }
 
-.newChild-bg .input-group, .newChild-bg .btn, .newChild-bg .avatarPic {
+.newChild-bg .input-group,
+.newChild-bg .btn,
+.newChild-bg .avatarPic {
   position: relative;
   z-index: 10; }
 

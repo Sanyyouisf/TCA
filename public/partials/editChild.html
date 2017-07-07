@@ -1,4 +1,4 @@
-<div class="newChild-bg">
+ <div class="newChild-bg">
     <!-- navbar -->
     <nav class="navbar navbar-inverse navBar">
         <ul class=" nav navbar-nav navbar-left col-md-12">
@@ -37,17 +37,19 @@
         <input type="text" class="form-control" placeholder="{{selectedChild.pic}}" ng-model="updatedChild.pic">
     </div>
     <!-- display avatar pic -->
+
     <div class="container">
         <div ng-repeat="picture in allPictures">
-            <!-- <a ng-href="#!/editChild/{{selectedChild.id}}" > -->
             <a href="" class="col-xs-2 fram">
                 <img ng-src="{{picture.path}}" class="avatarPic" ng-click="updateProfilePicture(picture.id)">
             </a>
         </div>
     </div>
+
     <div class="btn-group col-xs-4 col-xs-offset-5">
         <button type="button" class="btn btn-default" ng-click="updateChild(updatedChild)"> Update
         </button>
     </div>
+    
     <img src="../DataBase/images/newChildBackground.jpg" class="image">
 </div>
