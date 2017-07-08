@@ -1,0 +1,21 @@
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true",
+    "parents": {
+      ".indexOn": "uid"
+    },
+    "children": {
+      ".indexOn": "parentId"
+    },
+    "activities": {
+      ".indexOn": "uid"
+    },
+    "avatars": {
+      ".indexOn": "uid"
+    },
+    "childActivities": {
+      ".indexOn": "childId"
+    }
+  }
+}
