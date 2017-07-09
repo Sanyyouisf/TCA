@@ -66,7 +66,7 @@ This app helps parents to track the activities of their kids during the summer.
 
 
 ### To Run The Deployed App
-![https://tca-capstone.firebaseapp.com](https://tca-capstone.firebaseapp.com)
+[https://tca-capstone.firebaseapp.com](https://tca-capstone.firebaseapp.com)
 
 
 ### Contributor
