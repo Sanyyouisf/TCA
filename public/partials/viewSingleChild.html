@@ -28,17 +28,8 @@
             <p>{{activity.title}}</p>
             <br>
             <p>{{activity.fileName}}</p>
-            <!-- <p>{{activity.isCompleted}}</p> -->
-            <!-- <p>{{activity.isCompleted ? "completed" : "not completed"}}</p> -->
-
-            <div ng-if="activity.isCompleted == 'false'">
-                <p>not Completed</p>
-            </div>
-
-            <div ng-if="activity.isCompleted !== 'false'">
-                <p>Completed</p>
-            </div> 
-            
+            <p>{{activity.isCompleted ? "Completed" : " Not Completed"}}</p>
+               
             <div class="panel-body container ">
                 <img ng-src="{{activity.picture}}" class="activityPic">
             </div>

@@ -7,7 +7,7 @@ This app helps parents to track the activities of their kids during the summer.
 
 
 #### App User Login/Register 
-- The app `add`s a new user upon Register, and automatically completes log-in.
+- The app `add` a new user upon Register, and automatically completes log-in.
 ![Blog Screengrab](https://raw.githubusercontent.com/Sanyyouisf/TCA/README/public/DataBase/ReadMePic/HomePage.jpg)
 
 
