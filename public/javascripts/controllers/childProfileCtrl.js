@@ -2,6 +2,7 @@ app.controller("childProfileCtrl", function($scope, ChildActivityFactory, ChildF
 
     $scope.childActivities = [];
 
+
     ChildFactory.getSingleChild($routeParams.childId)
         .then((resultChild) => {
             $scope.selectedChild = resultChild;
@@ -28,6 +29,8 @@ app.controller("childProfileCtrl", function($scope, ChildActivityFactory, ChildF
         .catch((error) => {
             console.log("error in displayChildActivities", error);
         });
+
+
 
     $scope.goTosingleChildActivityPage = (Id) => {
         $location.url(`/singleChildActivity/${Id}`);

@@ -26,7 +26,6 @@ app.controller("ChildListCtrl", function($location, ChildFactory, $scope, $rootS
 
                     ChildActivityFactory.getChildActivitiesForChild(kid.id)
                         .then((childActivities) => {
-                            console.log("childActivities :", childActivities);
                             kid.activities = [];
                             childActivities.forEach((x) => {
                                 ActivityFactory.getSingleActivity(x.activityId)
